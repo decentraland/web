@@ -38536,13 +38536,15 @@ Client.prototype.receiveBlock = function(block, peerID) {
     var amount = result.confirmed.length - result.unconfirmed.length;
     var mine = !!self.wallet[block.transactions[0].owner];
 
-    var message = mine ? 'You now own a new pixel at position ' + block.transactions[0].position.x + ', ' + block.transactions[0].position.y + '!' : amount === 1 ? 'New pixel created!' : amount + ' new pixels!'
+    if (mine) {
+      var message = 'You now own a new pixel at position ' + block.transactions[0].position.x + ', ' + block.transactions[0].position.y;
+      jQuery.notify({
+        message: message
+      }, {
+        showProgressbar: false
+      });
+    }
 
-    jQuery.notify({
-      message: message
-    }, {
-      showProgressbar: false
-    });
 
     // Remove old transactions
     result.confirmed.forEach(function(newBlock) {
@@ -39379,7 +39381,7 @@ var Sidebar = React.createClass({displayName: "Sidebar",
               "Pixels you control"
             ), 
             React.createElement("div", {className: "col-md-6"}, 
-              "20"
+              this.props.client.controlled.length
             )
           ), 
           React.createElement("div", {className: "row"}, 
