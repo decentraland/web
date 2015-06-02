@@ -11,6 +11,11 @@
  
     <style type="text/css">body{font-family:Helvetica,Arial,sans-serif;font-weight:400;background-color:#eaeaea;}.button{font-family:Helvetica,Arial,sans-serif;}.button-group li{padding-top:3%;}.button-group a{color:rgba(0,0,0,1);background-color:transparent;}.button-group a:hover{color:rgba(0,0,0,0.4);background-color:transparent;}.button-group{float:none;}@media only screen and (min-width: 40.063em) {.button-group{float:right;}}.namelogo{padding:20px 10px 0px 10px;}@media only screen and (min-width: 40.063em) {.namelogo{padding-bottom:20px;}}.namelogo h1{font-size:1.5em;text-align:center;}@media only screen and (min-width: 40.063em) {.namelogo h1{font-size:16px;text-align:left;}}@media only screen and (min-width: 64.063em) {.namelogo h1{font-size:24px;text-align:left;}}.hero{height:60%;}.intro-text{padding-top:20%;text-align:center;}@media only screen and (min-width: 40.063em) {.intro-text{padding-top:15%;}}@media only screen and (min-width: 64.063em) {.intro-text{padding-top:8%;}}.intro-text p{font-family:Karla,Helvetica,Arial,sans-serif;font-size:44px;}.intro-text button{font-family:Karla,Helvetica;font-weight:200;font-size: 1.6em; border-radius: 8px;} .about,.work,.contact{padding:50px 0 0 0;}.about img{width:250px;height:250px;border-radius:150px;-webkit-border-radius:150px;-moz-border-radius:150px;}.work img:hover{opacity:0.5;-webkit-transition:0.3s ease;-moz-transition:0.3s ease;-ms-transition:0.3s ease;-o-transition:0.3s ease;transition:0.3s ease;}.work li{height:140px;overflow:hidden;}hr{border:0;height:1px;background-image:-webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));opacity:0.8;}footer{padding:80px 0 10px 0;}footer a:hover{color:rgba(0,0,0,0.4);background-color:transparent;} .button-group > li > button, .button-group > li .button {border: none;}</style>
 
+    <style type="text/css">
+      .team { text-align: center; font-family: Karla,Helvetica,Arial,sans-serif; }
+      .author { width: 50%; border-radius: 100%;}
+      .team h4 { margin-top: 20px; }
+    </style>
        
       <div class="row">
         <div class="small-12 medium-4 large-6 columns namelogo">
@@ -33,7 +38,7 @@
             <p><img src="./img/decentraland.svg" width="20%"/></p>
             <p>A blockchain-based virtual reality world.</p>
             <br/>
-            <button class="btn btn-large">Alpha Prototype: Stone Age →</button>
+            <a href="./app/index.html"><button class="btn btn-large">Alpha Prototype: Stone Age →</button></a>
           </div>
         </div>
       </div>
@@ -45,7 +50,49 @@
         </div>
         <div class="medium-6 large-6 columns">
           <h4>Alpha Prototype: Stone Age</h4>
-          <p>Stone Age is the first proof of concept of the Decentraland Project. Land is modelled as a simple grid, and a Bitcoin-like proof of work algorithm is used to allocate pixels to users. It's a browser-only client featuring a visual representation of the virtual world. <a href="">Try it now</a>.</p>
+          <p>Stone Age is the first proof of concept of the Decentraland Project. Land is modelled as a simple grid, and a Bitcoin-like proof of work algorithm is used to allocate pixels to users. It's a browser-only client featuring a visual representation of the virtual world. <a href="./app/index.html">Try it now</a>.</p>
+        </div>
+      </div>
+
+      <div class="row roadmap">
+        <hr>
+        <div class="large-12 columns">
+          <h3>Roadmap</h3>
+          <div class="row">
+            <div class="large-4 columns">
+              <h4>Bronze Age</h4>
+            </div>
+            <div class="large-8 columns">
+              <p>Move from a grid to a 2.5-dimensional world. Add textures, items, scripting to the land you own.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 columns">
+              <h4>Iron Age</h4>
+            </div>
+            <div class="large-8 columns">
+              <p>A full-fledged 3D world, with full Occulus Rift support and customization of the laws of physics. Live in the blockchain.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row team">
+        <hr>
+        <div class="large-12 columns">
+          <h3>Team</h3>
+          <div class="large-6 columns">
+            <img src="https://pbs.twimg.com/profile_images/447138998893297664/e3xwcc7-.jpeg" class="author"/>
+            <h4 class="team-name">Manuel Araoz</h4>
+            <p><a href="https://twitter.com/maraoz">@maraoz</a></p>
+            <p></p>
+          </div>
+          <div class="large-6 columns">
+            <img src="https://pbs.twimg.com/profile_images/846827688/avatar_400x400.jpg" class="author"/>
+            <h4 class="team-name">Esteban Ordano</h4>
+            <p><a href="https://twitter.com/eordano">@eordano</a></p>
+            <p></p>
+          </div>
         </div>
       </div>
 
