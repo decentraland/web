@@ -20,6 +20,27 @@
     <![endif]-->
   </head>
   <body>
+    <div class="modal fade" id="finish">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">The First Decentraland Experiment</h4>
+          </div>
+          <div class="modal-body">
+            <p>Hi everybody!</p>
+            <p>The first experiment with Decentraland has been a success. We'd like to thank everyone who helped testing it! We gathered a lot of feedback while the app stressed our connections and CPUs.</p>
+            <p>We are working on improving performance and the network protocol. We'll release a new genesis block in a couple of weeks. We switched this live version to test mode, so you can still try it out.</p>
+            <p>We started a mailing list, <a href="https://groups.google.com/forum/#!forum/decentraland-dev">decentraland-dev</a> and a <a href="https://reddit.com/r/decentraland">subreddit</a> where we'll discuss the strategy and next steps.</p>
+            <p>Stay tuned!</p>
+            <p>The Decentraland Team</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Test mode</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <div id="content">
     </div>
@@ -29,14 +50,24 @@
     <script src="./vendor/bootstrap.min.js"></script>
     <script src="./vendor/peer.min.js"></script>
     <script src="./vendor/bootstrap-notify.min.js"></script>
-    <script src="./js/decentraland-core.js"></script>
-    <script src="./js/bundle.js"></script>
     <script type="text/javascript">
       $(function () {
-        $('[data-toggle="popover"]').popover();
+        $('#finish').modal('show');
       })
     </script>
+    <script src="./js/decentraland-core.js"></script>
+    <script src="./js/bundle.js"></script>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63691338-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>
 
