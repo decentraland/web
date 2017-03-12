@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decentraland - a blockchain-based Virtual Reality World</title>
     <link rel="stylesheet" href="css/foundation.css" />
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="img/decentraland.ico" />
     <meta property="og:title" content="Decentraland - a blockchain-based Virtual Reality World">
     <meta property="og:description" content="Decentraland is an open-source initiative to build a decentralized virtual reality. Blockchain technology is used to claim and transfer land, keeping a permanent record of ownership.">
@@ -21,7 +22,7 @@
       .roadmap { text-align: center; font-family: Karla,Helvetica,Arial,sans-serif; }
       .author { width: 50%; border-radius: 100%;}
       .team h4 { margin-top: 20px; }
-      .components h4 { margin-top: 30px; }
+      .components h4 { margin-top: 15px; }
       .components { margin-bottom: 20px; }
       .roadmap h4 { margin-bottom: 20px; }
       .roadmap { margin-bottom: 20px; }
@@ -32,6 +33,13 @@
       .label { vertical-align: middle; margin-bottom: 4px; }
       .mailing-list { margin-bottom: 30px; }
       .mailing-list form { margin-top: 35px; }
+      .component-icon { height: 50px; margin-top: 30px; }
+      #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+
+      @media (max-width: 768px) {
+        #mc_embed_signup .button { width: 85%;}
+        #mc_embed_signup input.email { width: 85%; }
+      }
     </style>
 
       <div class="row">
@@ -67,10 +75,6 @@
 
       <div class="row mailing-list">
         <hr>
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-            #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-        </style>
         <div id="mc_embed_signup">
             <form action="//decentraland.us15.list-manage.com/subscribe/post?u=6f74047a4693dbc82dc4f3131&amp;id=da075b1985" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
@@ -88,16 +92,19 @@
       <div class="row components">
         <hr>
         <div class="medium-4 large-4 columns">
+          <img src="./img/icons/icon-small-browser.svg" class="component-icon"/>
           <h4>Browser</h4>
           <br/>
           <p>Web-based virtual world browser, powered by Unity3D and WebGL.</p>
         </div>
         <div class="medium-4 large-4 columns">
+          <img src="./img/icons/icon-small-nodes.svg" class="component-icon"/>
           <h4>Node</h4>
           <br/>
           <p>Trustless land ownership records and 3D content distribution, powered by Blockchain and Torrent.</p>
         </div>
         <div class="medium-4 large-4 columns">
+          <img src="./img/icons/icon-small-editor.svg" class="component-icon"/>
           <h4>Editor</h4>
           <br/>
           <p>Publish a scene to a land tile you own, right from the Unity editor.</p>
@@ -110,21 +117,24 @@
           <h3 class="section-title">Roadmap</h3>
           <div class="row" style="margin-bottom: 30px">
             <div class="large-6 columns">
-              <h4>Stone Age <span class="label">June 2015</span></h4>
+              <img src="./img/icons/icon-age-stone.svg" class="age-icon"/>
+              <h4>Stone Age<br><span class="label">June 2015</span></h4>
               <p>Land is modeled as a simple grid, and a Bitcoin-like proof of work algorithm is used to allocate pixels to users.</p>
             </div>
             <div class="large-6 columns">
-              <!-- <h4>Bronze Age <span class="label">Current!</span></h4> -->
-              <h4>Bronze Age <span class="label">March 2017</span></h4>
+              <img src="./img/icons/icon-age-bronze.svg" class="age-icon"/>
+              <h4>Bronze Age<br><span class="label">March 2017</span></h4>
               <p>Land is modeled in a 3D space. Blockchain and torrent full node. World Editor. Unity Browser. <!-- <a href="./app/">Try it now</a>. --></p>
             </div>
           </div>
           <div class="row">
             <div class="large-6 columns">
+              <img src="./img/icons/icon-age-iron-gray.svg" class="age-icon"/>
               <h4>Iron Age</h4>
               <p>Add multiplayer support with avatars and live chat. Allow custom items and scripting on the land you own.</p>
             </div>
             <div class="large-6 columns">
+              <img src="./img/icons/icon-age-silicon-gray.svg" class="age-icon"/>
               <h4>Silicon Age</h4>
               <p>A full-fledged 3D world, with full VR support and customization of the laws of physics. Live in the blockchain.</p>
             </div>
