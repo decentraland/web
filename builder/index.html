@@ -15,9 +15,64 @@
   <body class="template">
     <div class="row center">
       <div data-alert style="margin: 10px;" class="alert-box ">
-        <strong>Note: </strong>You're in building mode.
+        <p> <strong>Welcome to the Decentraland Editor.</strong> You're in building mode. </p>
+        <p>Press '1', '2', '3', '4', '5' to select different textures.</p>
+        <p>Click to place a cube in the selected position.</p>
+        <p>When you're ready, <button id="publish">Publish your tile to Decentraland</button></p>
       </div>
     </div>
     <iframe id="browser" style="border: 0; width: 100%; height: 100%" src="./browser.html"></iframe>
+    <div id="modal" style="visibility: hidden; width: 50%; background: white; position: fixed; top: 25%; left: 10%; border: 1px solid black;">
+      <form id="form">
+        <input id="nameOfTile">
+        <button type="submit">Publish</button>
+      </form>
+    </div>
+    <script type="text/javascript">
+      (function() {
+        var publish = document.getElementById('publish')
+        var iframe = document.getElementById('browser')
+        var modal = document.getElementById('modal')
+        var form = document.getElementById('form')
+        var input = document.getElementById('nameOfTile')
+
+        var _hex = ''
+        var _name = ''
+
+        publish.addEventListener('click', function(event) {
+          console.log('clicked', _name)
+          modal.style.visibility = 'visible'
+        })
+
+        form.addEventListener('submit', function(ev) {
+          _name = input.value
+          console.log('submited', _name)
+
+          iframe.contentWindow.postMessage('publish', _name)
+
+          ev.preventDefault()
+          return false
+        })
+
+        window.addEventListener('message', function processTile(hex) {
+          _hex = hex
+          console.log('received', hex)
+
+          submitTile()
+        })
+
+        function submitTile() {
+          fetch({
+            url: '138.197.44.64:6748/',
+            method: 'POST',
+            body: hex
+          }).then(result => {
+            console.log(result)
+          }).catch(err => {
+            console.log(err)
+          })
+        }
+      })()
+    </script>
   </body>
 </html>
