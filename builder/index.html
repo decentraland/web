@@ -36,7 +36,6 @@
         var form = document.getElementById('form')
         var input = document.getElementById('nameOfTile')
 
-        var _hex = ''
         var _name = ''
 
         publish.addEventListener('click', function(event) {
@@ -48,22 +47,18 @@
           _name = input.value
           console.log('submited', _name)
 
-          iframe.contentWindow.postMessage('publish', _name)
+          iframe.contentWindow.postMessage(_name, '*')
 
           ev.preventDefault()
           return false
         })
 
         window.addEventListener('message', function processTile(hex) {
-          _hex = hex
-          console.log('received', hex)
-
-          submitTile()
+          submitTile(hex.data)
         })
 
-        function submitTile() {
-          fetch({
-            url: '138.197.44.64:6748/',
+        function submitTile(hex) {
+          fetch('http://138.197.44.64:6748/', {
             method: 'POST',
             body: hex
           }).then(result => {

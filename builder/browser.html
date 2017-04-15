@@ -43,13 +43,13 @@
     <script type="text/javascript">
       (function() {
         window.processTile = function(hex) {
-          window.top.postMessage(hex)
+          window.top.postMessage(hex, '*')
         }
       })()
 
       window.addEventListener('message', function(event) {
         console.log('received', event)
-        SendMessage('Serializer', 'Serializer', event.data)
+        SendMessage('Serializer', 'Serialize', event.data)
       })
     </script>
 
