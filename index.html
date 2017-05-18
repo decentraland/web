@@ -1,247 +1,214 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Decentraland - a blockchain-based Virtual Reality World</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" href="img/decentraland.ico" />
-    <meta property="og:title" content="Decentraland - a blockchain-based Virtual Reality World">
-    <meta property="og:description" content="Decentraland is an open-source initiative to build a decentralized virtual reality. Blockchain technology is used to claim and transfer land, keeping a permanent record of ownership.">
-    <meta property="og:image" content="http://decentraland.org/img/decentraland.png">
-    <meta property="og:url" content="http://decentraland.org/">
-    <script src="js/vendor/modernizr.js"></script>
-  </head>
-  <body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Decentraland | A blockchain-based VR world</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style type="text/css">body{font-family:Helvetica,Arial,sans-serif;font-weight:400;background-color:#eaeaea;}.button{font-family:Helvetica,Arial,sans-serif;}.button-group li{padding-top:3%;}.button-group a{color:rgba(0,0,0,1);background-color:transparent;}.button-group a:hover{color:rgba(0,0,0,0.4);background-color:transparent;}.button-group{float:none;}@media only screen and (min-width: 40.063em) {.button-group{float:right;}}.namelogo{padding:20px 10px 0px 10px;}@media only screen and (min-width: 40.063em) {.namelogo{padding-bottom:20px;}}.namelogo h1{font-size:1.5em;text-align:center;}@media only screen and (min-width: 40.063em) {.namelogo h1{font-size:16px;text-align:left;}}@media only screen and (min-width: 64.063em) {.namelogo h1{font-size:24px;text-align:left;}}.hero{height:60%;}.intro-text{padding-top:20%;text-align:center;}@media only screen and (min-width: 40.063em) {.intro-text{padding-top:15%;}}@media only screen and (min-width: 64.063em) {.intro-text{padding-top:8%;}}.intro-text p{font-family:Karla,Helvetica,Arial,sans-serif;font-size:44px;}.intro-text button{font-family:Karla,Helvetica;font-weight:200;font-size: 1.6em; border-radius: 8px;} .about,.work,.contact{padding:50px 0 0 0;}.about img{width:250px;height:250px;border-radius:150px;-webkit-border-radius:150px;-moz-border-radius:150px;}.work img:hover{opacity:0.5;-webkit-transition:0.3s ease;-moz-transition:0.3s ease;-ms-transition:0.3s ease;-o-transition:0.3s ease;transition:0.3s ease;}.work li{height:140px;overflow:hidden;}hr{border:0;height:1px;background-image:-webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));opacity:0.8;}footer{padding:80px 0 10px 0;}footer a:hover{color:rgba(0,0,0,0.4);background-color:transparent;} .button-group > li > button, .button-group > li .button {border: none;}</style>
-
-    <style type="text/css">
-      .team, .subscribe { text-align: center; font-family: Karla,Helvetica,Arial,sans-serif; }
-      .roadmap { text-align: center; font-family: Karla,Helvetica,Arial,sans-serif; }
-      .author { width: 50%; border-radius: 100%;}
-      .team h4 { margin-top: 20px; }
-      .components h4 { margin-top: 15px; }
-      .components { margin-bottom: 20px; }
-      .roadmap h4 { margin-bottom: 20px; }
-      .roadmap { margin-bottom: 20px; }
-      .intro-text { margin-bottom: 50px; }
-      .section-title { text-align: center; margin-top: 30px; margin-bottom: 50px; }
-      .intro-text .description { font-size: 20px; }
-      .components { text-align: center; }
-      .label { vertical-align: middle; margin-bottom: 4px; }
-      .mailing-list { margin-bottom: 30px; }
-      .mailing-list form { margin-top: 35px; }
-      .component-icon { height: 50px; margin-top: 30px; }
-      #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-
-      @media (max-width: 768px) {
-        #mc_embed_signup .button { width: 85%;}
-        #mc_embed_signup input.email { width: 85%; }
+    <link rel="shortcut icon" href="img/decentraland.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      body {
+        padding-top: 50px;
+        padding-bottom: 20px;
       }
     </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Decentraland</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>A blockchain-based virtual reality world.</h1>
+        <p>Decentraland is an open-source initiative to build a virtual reality world with no central ownership. It uses blockchain technology to claim and transfer virtual land, keeping a permanent record of ownership.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Explore Decentraland</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Why Decentraland?</h3>
+        </div>
+      </div>
 
       <div class="row">
-        <div class="small-12 medium-4 large-6 columns namelogo">
-          <h1>Decentraland</h1>
+        <div class="col-md-6">
+          <p>A public VR world should be ruled by open standards, shielded from the agenda of any central organization. In Decentraland, users define the content they want to build on the land they own and maintain ownership over their data.</p>
+          <p>To make this possible, Decentraland uses blockchain technology as a permanent immutable record of ownership.</p>
         </div>
-        <div class="small-12 medium-8 large-6 columns">
-          <div class="nav-bar">
-            <ul class="button-group">
-            <li><a href="https://github.com/decentraland" class="button">GitHub</a></li>
-            <li><a href="https://twitter.com/decentraland" class="button">Twitter</a></li>
-            <li><a href="https://slack.decentraland.org" class="button">Slack</a></li>
-            <li><a href="./faq.html" class="button">FAQ</a></li>
-            </ul>
-          </div>
+        <div class="col-md-6">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xxmPJ0DFRPI" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>ICO</h3>
+          <p>Crowdsale of first Decentraland city</p> 
         </div>
       </div>
 
-      <div class="hero">
-        <div class="row">
-          <div class="large-12 columns intro-text">
-            <p><img src="./img/decentraland.svg" width="20%"/></p>
-            <p>A blockchain-based virtual reality world.</p>
-            <p class="description">
-              Decentraland is an open-source initiative to build a decentralized virtual reality.<br>
-              It uses blockchain technology to claim and transfer land, keeping a permanent record of ownership.
-            </p>
-            <br/>
-            <a href="./app/"><button class="btn btn&#45;large">Explore Decentraland →</button></a>
-            <!-- <button class="btn btn-large" disabled>Launching on Monday 03/13/17</button> -->
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>To bootstrap the Decentraland Network and its development, we will be creating the first Decentraland City and selling its plots land to the public.</p>
+          <p>To be announced soon.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Who is this for?</h3>
         </div>
       </div>
 
-      <div class="row mailing-list">
-        <hr>
-        <div id="mc_embed_signup">
-            <form action="//decentraland.us15.list-manage.com/subscribe/post?u=6f74047a4693dbc82dc4f3131&amp;id=da075b1985" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                    <h5>Stay tuned with our latest updates:</h5>
-                    <br/>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6f74047a4693dbc82dc4f3131_da075b1985" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-            </form>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Artists</p>
+          <p>To create immersive experiences.</p>
+        </div>
+        <div class="col-md-6">
+          <p>Developers</p>
+          <p>To push the limits of what is possible.</p>
         </div>
       </div>
 
-      <div class="row components">
-        <hr>
-        <div class="medium-4 large-4 columns">
-          <img src="./img/icons/icon-small-browser.svg" class="component-icon"/>
-          <h4>Browser</h4>
-          <br/>
-          <p>Web-based virtual world browser, powered by Unity3D and WebGL.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Online Communities</p>
+          <p>To gather and share experiences.</p>
         </div>
-        <div class="medium-4 large-4 columns">
-          <img src="./img/icons/icon-small-nodes.svg" class="component-icon"/>
-          <h4>Node</h4>
-          <br/>
-          <p>Trustless land ownership records and 3D content distribution, powered by Blockchain and Torrent.</p>
+        <div class="col-md-6">
+          <p>Samples →</p>
         </div>
-        <div class="medium-4 large-4 columns">
-          <img src="./img/icons/icon-small-editor.svg" class="component-icon"/>
-          <h4>Editor</h4>
-          <br/>
-          <p>Publish a scene to a land tile you own, right from the Unity editor.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Future plan</h3>
+          <p>Decentraland Foundation Incorporation</p>
         </div>
       </div>
 
-      <div class="row roadmap">
-        <hr>
-        <div class="large-12 columns">
-          <h3 class="section-title">Roadmap</h3>
-          <div class="row" style="margin-bottom: 30px">
-            <div class="large-6 columns">
-              <img src="./img/icons/icon-age-stone.svg" class="age-icon"/>
-              <h4>Stone Age<br><span class="label">June 2015</span></h4>
-              <p>Land is modeled as a simple grid, and a Bitcoin-like proof of work algorithm is used to allocate pixels to users.</p>
-            </div>
-            <div class="large-6 columns">
-              <img src="./img/icons/icon-age-bronze.svg" class="age-icon"/>
-              <h4>Bronze Age<br><span class="label">March 2017</span></h4>
-              <p>Land is modeled in a 3D space. Blockchain and torrent full node. World Editor. Unity Browser. <!-- <a href="./app/">Try it now</a>. --></p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 columns">
-              <img src="./img/icons/icon-age-iron-gray.svg" class="age-icon"/>
-              <h4>Iron Age</h4>
-              <p>Add multiplayer support with avatars and live chat. Allow custom items and scripting on the land you own.</p>
-            </div>
-            <div class="large-6 columns">
-              <img src="./img/icons/icon-age-silicon-gray.svg" class="age-icon"/>
-              <h4>Silicon Age</h4>
-              <p>A full-fledged 3D world, with full VR support and customization of the laws of physics. Live in the blockchain.</p>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Add multiplayer support with avatars and live chat. Allow custom items and scripting on the land you own.</p>
+        </div>
+        <div class="col-md-6">
+          <p>A full-fledged 3D world, with full VR support and customization of the laws of physics.</p>
         </div>
       </div>
 
-
-      <div class="row team">
-        <hr>
-        <div class="large-12 columns">
-          <h3 class="section-title">Core Team</h3>
-          <div class="large-4 medium-4 columns">
-            <img src="https://pbs.twimg.com/profile_images/765584710147932160/KoYjrlM6_400x400.jpg" class="author"/>
-            <h4 class="team-name">Manuel Araoz</h4>
-            <p><a href="https://twitter.com/maraoz">@maraoz</a></p>
-            <p></p>
-          </div>
-          <div class="large-4 medium-4 columns">
-            <img src="https://pbs.twimg.com/profile_images/714507572968034304/lHRadCJv_400x400.jpg" class="author"/>
-            <h4 class="team-name">Esteban Ordano</h4>
-            <p><a href="https://twitter.com/eordano">@eordano</a></p>
-            <p></p>
-          </div>
-          <div class="large-4 medium-4 columns">
-            <img src="https://pbs.twimg.com/profile_images/815258714869559296/DykSX7fO_400x400.jpg" class="author"/>
-            <h4 class="team-name">Yemel Jardi</h4>
-            <p><a href="https://twitter.com/yemeljardi">@yemeljardi</a></p>
-            <p></p>
-          </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p>This year we’ll grow a community of content creators and developers that will join us building our virtual world.</p>
         </div>
-        <div class="large-12 columns">
-          <div class="large-push-2 medium-push-2 large-4 medium-4 columns">
-            <img src="https://pbs.twimg.com/profile_images/205213394/avatar_400x400.PNG" class="author"/>
-            <h4 class="team-name">Dario Sneidermanis</h4>
-            <p><a href="https://twitter.com/esneider">@esneider</a></p>
-            <p></p>
-          </div>
-          <div class="large-push-2 medium-push-2 large-4 medium-4 columns">
-            <img src="https://pbs.twimg.com/profile_images/755491116464635904/y24VvDlN.jpg" class="author"/>
-            <h4 class="team-name">Mariano Rodriguez</h4>
-            <p><a href="https://twitter.com/marianorod1541">@marianorod1541</a></p>
-            <p></p>
-          </div>
-          <div class="large-1 columns"></div>
+        <div class="col-md-6">
+          <p>We will host a land pre-sale to fund development of the livenet version of the network, and content creation.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>FAQs</h3>
         </div>
       </div>
 
-      <div class="row contact">
-        <hr>
-        <div class="large-12 columns">
-          <h3 class="section-title">Contact Us</h3>
-          <div class="large-3 medium-3 columns">
-              <strong>Email</strong>: <br/> <a href="mailto:hello@decentraland.org">hello@decentraland.org</a>
-          </div>
-          <div class="large-3 medium-3 columns">
-              <strong>Twitter</strong>: <br/> <a href="https://twitter.com/decentraland">@decentraland</a>
-          </div>
-          <div class="large-3 medium-3 columns">
-            <strong>GitHub</strong>: <br/> <a href="https://github.com/decentraland">@decentraland</a>
-          </div>
-          <div class="large-3 medium-3 columns">
-            <strong>Slack</strong>: <br/> <a href="https://slack.decentraland.org">Decentraland</a>
-          </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="question">Why is Decentraland important for VR?</p>
+          <p class="answer">For VR to reach its full potential, users need to own the content they build. Blockchain technology is a tool that enables a decentralized digital record of ownership, so it seemed like the perfect tool to create a fair VR world were no-one is in control.</p>
+
+          <p class="question">Does it run on top of Bitcoin's blockchain?</p>
+          <p class="answer">No. Decentraland utilizes its own blockchain and network, and thus requires some users to run mining nodes.</p>
+
+          <p class="question">How is land assigned to miners?</p>
+          <p class="answer">A miner chooses a random tile to mine. It needs to be a adjacent to existing land.</p>
+
+          <p class="question">How can I become a land owner?</p>
+          <p class="answer">You can become a land owner either by having someone transfer you some of their tiles, or by mining a new one.</p>
+
+          <p class="question">How can I create content for my land?</p>
+          <p class="answer">You can use Unity3D Editor to create and publish your tile to the Blockchain. Check out these instructions or this video to see how to do it.</p>
+
+          <p class="question">Does it support Oculus Rift or HTC Vive?</p>
+          <p class="answer">The current version doesn't support it, but we are almost there! You can still explore Decentraland here.</p>
+        </div>
+
+        <div class="col-md-6">
+          <p class="question">Is Decentraland open source?</p>
+          <p class="answer">Yes, it is. We ❤️ open source.</p>
+
+          <p class="question">Who validates transactions?</p>
+          <p class="answer">Miners validates transactions. The network rewards miners by assigning them land. Decentraland uses proof of work, just like Bitcoin.</p>
+
+          <p class="question">How often is land created?</p>
+          <p class="answer">Land is created on every new block. Time between blocks is 10 minutes for testnet. For livenet it will be ~6 hours.</p>
+
+          <p class="question">How is world content distributed?</p>
+          <p class="answer">In the Decentraland blockchain, transactions can transfer the ownership of a given tile, as well as announce the hash of the scene content of the tile. The actual content of a tile is distributed in a P2P manner, via the torrent network.</p>
+
+          <p class="question">What kind of content can I add to my land?</p>
+          <p class="answer">There are some limitations on what you can do on your tile. For the moment, the browser implementation only supports primitive meshes (Cube, Plane, Sphere, Cylinder and Capsule), plain colors and textures.</p>
+
+          <p class="question">How can I keep in touch?</p>
+          <p class="answer">Please subscribe to our newsletter for important updates and join the conversation on Slack.</p>
         </div>
       </div>
-
-      <footer class="row">
-        <div class="large-12 columns">
-          <div class="row">
-            <div class="large-8 columns">
-              <p>Copyleft. Code is under the MIT license. Website is Public Domain.</p>
-            </div>
-            <div class="large-4 columns">
-              <ul class="inline-list right">
-                <li><a href="https://unenumerated.blogspot.com">An inspiring blog</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+    </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/foundation/foundation.clearing.js"></script>
+    <footer>
+      <p>Decentraland</p>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
     <script>
-      $(document).foundation();
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-63691338-1','auto');ga('send','pageview');
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: ['Karla']
-        }
-      });
-    </script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-63691338-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
   </body>
 </html>
