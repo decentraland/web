@@ -1,6 +1,18 @@
 body {
   padding-top: 0;
+  padding-bottom: 20px;
   font-family: 'Montserrat';
+}
+
+.container {
+  /* hacking bootstrap, not cool */
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
 }
 
 /* NAVBAR */
@@ -12,7 +24,7 @@ body {
 }
 
 .navbar .container {
-  margin-top: 65px;
+  margin-top: 45px;
 }
 
 .navbar a {
@@ -36,7 +48,23 @@ body {
 }
 
 .header p {
+  margin: 50px 0;
   font-size: 15px;
+}
+
+.header-image {
+  position: absolute;
+  left: -46px;
+  bottom: -295px;
+
+  width: 627px;
+  height: 660px; 
+}
+
+@media (max-width: 1024px) {
+  .header-image {
+    display: none;
+  }
 }
 
 .header .btn {
@@ -69,11 +97,11 @@ body {
 
 section {
   position: relative;
-  padding: 100px;
+  padding: 40px 140px 100px;
 }
 
 section.odd {
-  background-color: #fbfbfb;
+  background-color: #f6f6f6;
 }
 
 .section-icon {
@@ -93,12 +121,12 @@ section .heading {
 }
 
 section .heading h3 {
-  font-size: 44px;
+  font-size: 36px;
   text-align: center;
 }
 
 section p {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 section .heading p {
@@ -112,6 +140,22 @@ section .heading p {
   margin-top: 100px;
 }
 
+.why p {
+  max-width: 400px;
+  margin: 0 auto 50px;
+}
+
+/* ICO */
+
+.ico p {
+}
+
+/* Who? */
+
+.who p {
+}
+
+
 /* FAQs */
 
 .faqs .question {
@@ -119,5 +163,5 @@ section .heading p {
 }
 
 .faqs .answer {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
