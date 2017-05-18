@@ -35,13 +35,6 @@ a {
   text-transform: uppercase;
 }
 
-/* FOOTER */
-
-footer {
-  margin: 0;
-  padding: 30px 45px 0;
-}
-
 /* HEADING */
 
 .header {
@@ -70,7 +63,7 @@ footer {
   height: 660px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1160px) {
   .header-image {
     display: none;
   }
@@ -84,8 +77,12 @@ footer {
   text-transform: uppercase;
   color: white;
 
-  background-color: #f47e33;
+  background-color: #F47E23;
   border-radius: 0;
+}
+
+.header .btn:hover {
+  background-color: #FFAE2D;
 }
 
 .skew {
@@ -151,6 +148,10 @@ section .heading p {
   margin-top: 100px;
 }
 
+.video {
+  margin: 0 auto;
+}
+
 /* Who? */
 
 .who p.strong {
@@ -168,7 +169,6 @@ section .heading p {
   margin-bottom: 60px;
 }
 
-
 /* FAQs */
 
 .faqs .question {
@@ -178,4 +178,64 @@ section .heading p {
 
 .faqs .answer {
   margin-bottom: 60px;
+}
+
+/* FOOTER */
+
+footer {
+  margin: 0;
+  padding: 30px 45px 0;
+}
+
+footer p {
+  float: left;
+}
+
+footer .social {
+  text-align: right;
+}
+
+footer .social a {
+  margin: 0 10px;
+}
+
+footer .social a:before {
+  content: '';
+  display: inline-block;
+
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 2px 0;
+
+  vertical-align: middle;
+}
+
+footer .social .github:before {
+  background: url('/img/github-icon.svg');
+}
+
+footer .social .twitter:before {
+  height: 13px;
+  background: url('/img/twitter-icon.svg');
+}
+
+footer .social .slack:before {
+  background: url('/img/slack-icon.svg');
+}
+
+@media (max-width: 610px) {
+  section {
+    padding: 40px;
+  }
+
+  footer p {
+    float: none;
+    display: block;
+
+    text-align: center;
+  }
+
+  footer .social {
+    text-align: center;
+  }
 }
