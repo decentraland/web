@@ -5,7 +5,7 @@ body {
 }
 
 a {
-  color: #4A535D;
+  color: #F47E23;
   cursor: pointer;
 }
 
@@ -136,6 +136,7 @@ section .heading p {
 }
 
 .video {
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -156,11 +157,15 @@ section .heading p {
   margin-bottom: 60px;
 }
 
-/* Who? */
+/* Team */
 
 .team p {
   text-align: center;
   margin-bottom: 60px;
+}
+
+.team .handle {
+  margin-bottom: 5px;
 }
 
 .team p.strong {
@@ -196,6 +201,7 @@ footer .social {
 
 footer .social a {
   margin: 0 10px;
+  color: black;
 }
 
 footer .social a:before {
@@ -237,8 +243,20 @@ footer .social .slack:before {
 }
 
 @media (max-width: 610px) {
+  .header {
+    height: 510px;
+  }
+
+  .header .explore {
+    text-align: center;
+  }
+
   section {
     padding: 40px;
+  }
+
+  section .heading {
+    margin-bottom: 50px;
   }
 
   footer p {
