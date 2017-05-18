@@ -141,7 +141,7 @@ section p {
 
 section .heading p {
   margin: 0;
-  font-weight: lighter;
+  font-weight: 300;
   text-align: center;
 }
 
