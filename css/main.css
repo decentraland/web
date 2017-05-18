@@ -161,11 +161,11 @@ section .heading p {
 
 .team p {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 5px;
 }
 
 .team .handle {
-  margin-bottom: 5px;
+  margin-bottom: 60px;
 }
 
 .team p.strong {
