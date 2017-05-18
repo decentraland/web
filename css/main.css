@@ -4,6 +4,11 @@ body {
   font-family: 'Montserrat';
 }
 
+a {
+  color: #4A535D;
+  cursor: pointer;
+}
+
 .container {
   /* hacking bootstrap, not cool */
   max-width: 100%;
@@ -19,18 +24,22 @@ body {
 
 .navbar {
   margin: 0;
+  padding: 30px 45px 0;
   background-color: #14162d;
   border-radius: 0;
-}
-
-.navbar .container {
-  margin-top: 45px;
 }
 
 .navbar a {
   font-size: 16px;
   color: white;
   text-transform: uppercase;
+}
+
+/* FOOTER */
+
+footer {
+  margin: 0;
+  padding: 30px 45px 0;
 }
 
 /* HEADING */
@@ -127,9 +136,11 @@ section .heading h3 {
 
 section p {
   font-size: 16px;
+  margin-bottom: 30px;
 }
 
 section .heading p {
+  margin: 0;
   font-weight: lighter;
   text-align: center;
 }
@@ -140,25 +151,28 @@ section .heading p {
   margin-top: 100px;
 }
 
-.why p {
-  max-width: 400px;
-  margin: 0 auto 50px;
-}
-
-/* ICO */
-
-.ico p {
-}
-
 /* Who? */
 
+.who p.strong {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
 .who p {
+  margin-bottom: 60px;
+}
+
+/* Future */
+
+.future p {
+  margin-bottom: 60px;
 }
 
 
 /* FAQs */
 
 .faqs .question {
+  margin-bottom: 5px;
   font-weight: 700;
 }
 
