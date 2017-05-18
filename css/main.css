@@ -14,12 +14,6 @@ a {
   max-width: 100%;
 }
 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 800px;
-  }
-}
-
 /* NAVBAR */
 
 .navbar {
@@ -61,12 +55,6 @@ a {
 
   width: 627px;
   height: 660px;
-}
-
-@media (max-width: 1160px) {
-  .header-image {
-    display: none;
-  }
 }
 
 .header .btn {
@@ -153,19 +141,31 @@ section .heading p {
 
 /* Who? */
 
+.who p {
+  margin-bottom: 60px;
+}
+
 .who p.strong {
   margin-bottom: 5px;
   font-weight: 700;
-}
-
-.who p {
-  margin-bottom: 60px;
 }
 
 /* Future */
 
 .future p {
   margin-bottom: 60px;
+}
+
+/* Who? */
+
+.team p {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.team p.strong {
+  margin-bottom: 5px;
+  font-weight: 700;
 }
 
 /* FAQs */
@@ -220,6 +220,20 @@ footer .social .twitter:before {
 
 footer .social .slack:before {
   background: url('/img/slack-icon.svg');
+}
+
+/* Media Queries */
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .header-image {
+    display: none;
+  }
 }
 
 @media (max-width: 610px) {
