@@ -67,28 +67,57 @@ body {
 
 /* SECTIONS */
 
-.section {
-  margin-top: 100px;
+section {
+  position: relative;
+  padding: 100px;
 }
 
-.section .heading h3 {
+section.odd {
+  background-color: #fbfbfb;
+}
+
+.section-icon {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto;
+}
+
+section .heading {
+  margin: 10px 0 100px;
+}
+
+section .heading h3 {
   font-size: 44px;
   text-align: center;
 }
 
-.section p {
+section p {
   font-size: 22px;
 }
 
-.section .heading p {
+section .heading p {
   font-weight: lighter;
+  text-align: center;
 }
 
+/* Why? */
 
+.why {
+  margin-top: 100px;
+}
 
+/* FAQs */
 
+.faqs .question {
+  font-weight: 700;
+}
 
-
-
-
-
+.faqs .answer {
+  margin-bottom: 80px;
+}
