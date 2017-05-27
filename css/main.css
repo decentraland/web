@@ -68,6 +68,11 @@ a {
   border-radius: 0;
 }
 
+.header .secondary {
+  background-color: rgba(0, 0, 0, 0);;
+  border: 2px solid #4A4A4A;
+}
+
 .header .btn:hover {
   background-color: #FFAE2D;
 }
