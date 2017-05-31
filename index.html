@@ -243,13 +243,16 @@
         <div class="row">
           <div class="col-md-6">
             <p class="question">Why is Decentraland important for VR?</p>
-            <p class="answer">For VR to reach its full potential, users need to own the content they build. Blockchain technology is a tool that enables a decentralized digital record of ownership, so it seemed like the perfect tool to create a fair VR world were no-one is in control.</p>
+            <p class="answer">For VR to reach its full potential, users need to own the content they build. Blockchain technology is a tool that enables a decentralized digital record of ownership, so it seemed like the perfect tool to create a fair VR world were nobody is in control.</p>
 
             <p class="question">Does it run on top of Bitcoin's blockchain?</p>
             <p class="answer">No. Decentraland utilizes its own blockchain and network, and thus requires some users to run mining nodes.</p>
 
             <p class="question">How is land assigned to miners?</p>
             <p class="answer">A miner chooses a random tile to mine. It needs to be adjacent to existing land.</p>
+
+            <p class="question">How large is a tile of land?</p>
+            <p class="answer">25m x 25m, or 82ft x 82ft (vertical height to be specified in the near future).</p>
 
             <p class="question">How can I become a land owner?</p>
             <p class="answer">You can become a land owner either by having someone transfer you some of their tiles, or by <a href="https://github.com/decentraland/bronzeage-node" target="_blank">mining a new one</a>.</p>
@@ -258,7 +261,7 @@
             <p class="answer">You can use Unity3D Editor to create and publish your tile to the Blockchain. Check out <a href="https://github.com/decentraland/bronzeage-editor#how-to-edit-your-tiles-content" target="_blank">these instructions</a> or <a href="https://www.youtube.com/watch?v=H34gES_CJiY" target="_blank">this video</a> to see how to do it.</p>
 
             <p class="question">Does it support Oculus Rift or HTC Vive?</p>
-            <p class="answer">The current version doesn't support it, but we are almost there! You can still explore Decentraland <a href="https://decentraland.org/app" target="_blank">here</a>.</p>
+            <p class="answer">The current version doesn't support either of them, but we are almost there! You can still explore Decentraland <a href="https://decentraland.org/app" target="_blank">here</a>.</p>
           </div>
 
           <div class="col-md-6">
@@ -269,10 +272,13 @@
             <p class="answer">Miners validates transactions. The network rewards miners by assigning them land. Decentraland uses proof of work, just like Bitcoin.</p>
 
             <p class="question">How often is land created?</p>
-            <p class="answer">Land is created on every new block. Time between blocks is 10 minutes for testnet. For livenet it will be ~6 hours.</p>
+            <p class="answer">Land is created on every new block. Time between blocks is 10 minutes for testnet. For livenet it will be ~6 hours (livenet is not yet enabled).</p>
 
             <p class="question">How is world content distributed?</p>
-            <p class="answer">In the Decentraland blockchain, transactions can transfer the ownership of a given tile, as well as announce the hash of the scene content of the tile. The actual content of a tile is distributed in a P2P manner, via the torrent network.</p>
+            <p class="answer">In the Decentraland blockchain, transactions can transfer the ownership of a given tile, as well as announce the hash of the scene content of the tile.</p>
+
+            <p class="question">How is the content (i.e., asset files, graphics, etc.) for my land hosted?</p>
+            <p class="answer">Content of each tile is distributed in a P2P manner via the BitTorrent network.</p>
 
             <p class="question">What kind of content can I add to my land?</p>
             <p class="answer">There are some limitations on what you can do on your tile. For the moment, the browser implementation only supports primitive meshes (Cube, Plane, Sphere, Cylinder and Capsule), plain colors and textures.</p>
