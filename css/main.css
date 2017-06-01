@@ -162,6 +162,10 @@ section .heading p {
   margin-bottom: 60px;
 }
 
+.timeline p {
+  margin-bottom: 0px;
+}
+
 /* Team */
 
 .team p {
