@@ -29,6 +29,17 @@ a {
   text-transform: uppercase;
 }
 
+#navbar {
+    padding: 15px 0px 0;
+}
+
+#navbar a {
+  font-weight: lighter;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 /* HEADING */
 
 .header {
@@ -195,25 +206,24 @@ section .heading p {
 
 /* FOOTER */
 
-footer {
+footer,{
   margin: 0;
   padding: 30px 45px 0;
 }
 
-footer p {
+footer p, #navbar p{
   float: left;
 }
 
-footer .social {
+footer .social, #navbar .social {
   text-align: right;
 }
 
-footer .social a {
+footer .social a, #navbar .social a  {
   margin: 0 10px;
-  color: black;
 }
 
-footer .social a:before {
+footer .social a:before, #navbar  .social a:before  {
   content: '';
   display: inline-block;
 
@@ -224,17 +234,21 @@ footer .social a:before {
   vertical-align: middle;
 }
 
-footer .social .github:before {
+footer .social .github:before, #navbar  .social .github:before  {
   background: url('/img/github-icon.svg');
 }
 
-footer .social .twitter:before {
+footer .social .twitter:before, #navbar  .social .twitter:before {
   height: 13px;
   background: url('/img/twitter-icon.svg');
 }
 
-footer .social .slack:before {
+footer .social .slack:before, #navbar  .social .slack:before  {
   background: url('/img/slack-icon.svg');
+}
+
+footer .social .forum:before, #navbar  .social .forum::before  {
+  background: url('/img/forum-icon.svg');
 }
 
 /* Media Queries */
