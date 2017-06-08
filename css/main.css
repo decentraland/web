@@ -120,10 +120,7 @@ a {
 
 /* SECTIONS */
 
-section {
-  position: relative;
-  padding: 40px 140px 100px;
-}
+
 
 section.odd {
   background-color: #f6f6f6;
@@ -282,6 +279,11 @@ footer .social .forum:before, #navbar  .social .forum::before  {
   p.introtext{
     margin: 50px 0;
     font-size: 15px;}
+section {
+  position: relative;
+  padding: 40px 140px 100px;
+}
+
 }
 
 @media (max-width: 1160px) {
@@ -291,7 +293,10 @@ footer .social .forum:before, #navbar  .social .forum::before  {
    p.introtext{
     margin: 30px 0;
     font-size: 16px;}
-  }
+  section {
+  position: relative;
+  padding: 40px 140px 100px;
+}
 }
 
 @media (max-width: 610px) {
@@ -307,9 +312,10 @@ footer .social .forum:before, #navbar  .social .forum::before  {
     text-align: center;
   }
 
-  section {
-    padding: 40px;
-  }
+section {
+  position: relative;
+  padding: 40px 10px 100px;
+}
 
   section .heading {
     margin-bottom: 50px;
