@@ -40,6 +40,7 @@ a {
   font-size: 14px;
 }
 
+
 /* HEADING */
 
 .header {
@@ -206,7 +207,7 @@ section .heading p {
 
 /* FOOTER */
 
-footer,{
+footer{
   margin: 0;
   padding: 30px 45px 0;
 }
@@ -236,19 +237,23 @@ footer .social a:before, #navbar  .social a:before  {
 
 footer .social .github:before, #navbar  .social .github:before  {
   background: url('/img/github-icon.svg');
+  filter: invert(100%);
 }
 
 footer .social .twitter:before, #navbar  .social .twitter:before {
   height: 13px;
   background: url('/img/twitter-icon.svg');
+  filter: invert(100%);
 }
 
 footer .social .slack:before, #navbar  .social .slack:before  {
   background: url('/img/slack-icon.svg');
+  filter: invert(100%);
 }
 
 footer .social .forum:before, #navbar  .social .forum::before  {
   background: url('/img/forum-icon.svg');
+  filter: invert(100%);
 }
 
 /* Media Queries */
