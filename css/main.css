@@ -1,3 +1,13 @@
+.red {
+  background-color: red !important;
+    padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eee;
+  color: inherit;
+  max-width: 100%;
+  }
+
 body {
   padding-top: 0;
   padding-bottom: 20px;
@@ -11,7 +21,7 @@ a {
 
 .container {
   /* hacking bootstrap, not cool */
-  max-width: 100%;
+  max-width: 100% !important;
 }
 
 /* NAVBAR */
@@ -52,12 +62,12 @@ a {
 }
 
 .header h1 {
-  font-size: 48px;
+  
 }
 
 .header p {
-  margin: 50px 0;
-  font-size: 15px;
+  font-weight: 200;
+
 }
 
 .header-image {
@@ -78,15 +88,20 @@ a {
 
   background-color: #F47E23;
   border-radius: 0;
+  margin-bottom: 6px;
 }
 
 .header .secondary {
-  background-color: rgba(0, 0, 0, 0);;
-  border: 2px solid #4A4A4A;
+  background-color: #000000;
+  font-weight: 200;
 }
 
 .header .btn:hover {
   background-color: #FFAE2D;
+}
+
+.header .secondary:hover {
+  background-color: #222550;
 }
 
 .skew {
@@ -262,11 +277,20 @@ footer .social .forum:before, #navbar  .social .forum::before  {
   .container {
     max-width: 800px;
   }
+  h1 {
+    font-size: 4.6rem} 
+  p.introtext{
+    margin: 50px 0;
+    font-size: 15px;}
 }
 
 @media (max-width: 1160px) {
   .header-image {
-    display: none;
+    display: none;}
+     h1 {font-size:3.6rem;}
+   p.introtext{
+    margin: 30px 0;
+    font-size: 16px;}
   }
 }
 
@@ -274,6 +298,10 @@ footer .social .forum:before, #navbar  .social .forum::before  {
   .header {
     height: 510px;
   }
+   h1 {font-size:3rem;}
+   p.introtext{
+    margin: 40px 0;
+    font-size: 16px;}
 
   .header .explore {
     text-align: center;
