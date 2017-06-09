@@ -1,13 +1,3 @@
-.red {
-  background-color: red !important;
-    padding: 30px 15px;
-  margin-bottom: 30px;
-  color: inherit;
-  background-color: #eee;
-  color: inherit;
-  max-width: 100%;
-  }
-
 body {
   padding-top: 0;
   padding-bottom: 20px;
@@ -22,6 +12,16 @@ a {
 .container {
   /* hacking bootstrap, not cool */
   max-width: 100% !important;
+}
+
+.red {
+  background-color: red !important;
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eee;
+  color: inherit;
+  max-width: 100%;
 }
 
 /* NAVBAR */
@@ -44,30 +44,24 @@ a {
 }
 
 #navbar a {
-  font-weight: lighter;
   color: white;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
 }
-
 
 /* HEADING */
 
 .header {
   position: relative;
   height: 440px;
+  padding-top: 75px;
 
   color: white;
   background-color: #14162d;
 }
 
-.header h1 {
-  
-}
-
 .header p {
   font-weight: 200;
-
 }
 
 .header-image {
@@ -80,6 +74,7 @@ a {
 }
 
 .header .btn {
+  margin: 0 10px 10px 0;
   padding: 25px 45px;
 
   font-size: 15px;
@@ -88,12 +83,12 @@ a {
 
   background-color: #F47E23;
   border-radius: 0;
-  margin-bottom: 6px;
 }
 
 .header .secondary {
-  background-color: #000000;
-  font-weight: 200;
+  color: #14162d;
+  background-color: white;
+  border: 2px solid #4A4A4A;
 }
 
 .header .btn:hover {
@@ -101,7 +96,7 @@ a {
 }
 
 .header .secondary:hover {
-  background-color: #222550;
+  background-color: #ddd;
 }
 
 .skew {
@@ -119,8 +114,6 @@ a {
 }
 
 /* SECTIONS */
-
-
 
 section.odd {
   background-color: #f6f6f6;
@@ -287,35 +280,48 @@ section {
 }
 
 @media (max-width: 1160px) {
+  .header .hidden-ms,
   .header-image {
-    display: none;}
-     h1 {font-size:3.6rem;}
-   p.introtext{
+    display: none;
+  }
+
+  h1 {
+    font-size:3.6rem;
+  }
+
+  p.introtext {
     margin: 30px 0;
-    font-size: 16px;}
+    font-size: 16px;
+  }
+
   section {
-  position: relative;
-  padding: 40px 140px 100px;
-}
+    position: relative;
+    padding: 40px 140px 100px;
+  }
 }
 
 @media (max-width: 610px) {
   .header {
     height: 510px;
   }
-   h1 {font-size:3rem;}
-   p.introtext{
+
+  h1 {
+    font-size:3rem;
+  }
+
+  p.introtext {
     margin: 40px 0;
-    font-size: 16px;}
+    font-size: 16px;
+  }
 
   .header .explore {
     text-align: center;
   }
 
-section {
-  position: relative;
-  padding: 40px 10px 100px;
-}
+  section {
+    position: relative;
+    padding: 40px 10px 100px;
+  }
 
   section .heading {
     margin-bottom: 50px;
