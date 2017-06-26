@@ -1,385 +1,627 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Decentraland | A blockchain-based VR world</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decentraland</title>
 
-    <link rel="shortcut icon" href="img/decentraland.ico">
+    <meta name="description" content=" Decentraland is a VR world that uses a blockchain to determine ownership of land, and its own coin to trade land and purchase goods and services inside the world.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link rel="canonical" href="https://decentraland.org" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/monserrat.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/main.min.css">
 
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css">
   </head>
+  <body class="landing">
+    <header class="container-fluid">
+      <video id="js-background-video" src="videos/background.mp4" class="hidden-xs hidden-sm" autoplay loop></video>
+      <div class="video-overlay"></div>
 
-  <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <nav class="navbar" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Decentraland</a>
+      <div class="row news-bar">
+       <span class="news-label hidden-xs">Breaking News:</span>
+        Decentraland Token Sale Announcement - <a href="https://medium.com/decentraland/announcing-the-decentraland-token-sale-da46f9c6d2ed" target="_blank">Lean more</a>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <div class="social">
-          <a class="github inverted" href="https://github.com/decentraland" target="_blank">Github</a>
-          <a class="twitter inverted" href="https://twitter.com/decentraland" target="_blank">Twitter</a>
-          <a class="slack inverted" href="https://slack.decentraland.org" target="_blank">Slack</a>
-          <a class="forum inverted" href="https://forum.decentraland.org/" target="_blank">Forum</a>
+
+
+      <div class="navbar" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="icon icon-hamburger"></i>
+          </button>
+          <a href="/" class="navbar-logo">
+            <i class="icon icon-decentraland pull-left"></i>
+            <h1 class="pull-left">Decentraland</h1>
+          </a>
         </div>
-      </div>
-    </nav>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right min-nav">
+            <li><a href="#why-decentraland">Why Decentraland?</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="https://decentraland.slack.com" target="_blank">Slack <i class="contact-icon contact-icon-slack"></i></a></li>
+          </ul>
 
-    <div class="header">
-      <img class="header-image" src="img/image-header.png">
+          <div class="full-nav">
+            <h4>Menu <i id="js-close-navbar" class="icon icon-close"></i></h4>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 hidden-ms"></div>
-          <div class="col-md-6 col-sm-12">
-            <span><h1>A blockchain-based virtual reality world</h1></span>
-            <p class="introtext">Decentraland is an open-source initiative to build a virtual reality world. It uses blockchain technology to claim and transfer virtual land, keeping a permanent record of ownership.</p>
-            <p class="explore">
-              <a class="btn btn-lg" href="/app" role="button"><strong>Explore Decentraland</strong></a>
-              <a class="btn btn-lg secondary" href="http://eepurl.com/cGdaAv" role="button">Subscribe</a>
-            </p>
+            <div class="row">
+              <div class="col-xs-12 menu-item"><a href="#why-decentraland">Why Decentraland?</a></div>
+              <div class="col-xs-12 menu-item"><a href="/tokensale#token-sale-terms">Token Sale Terms</a></div>
+              <div class="col-xs-12 menu-item"><a href="#team">Our team</a></div>
+              <div class="col-xs-12 menu-item"><a href="#partners">Technical Advisors</a></div>
+            </div>
+
+            <div class="dash"></div>
+
+            <div class="row link-list-in-columns">
+              <div class="col-xs-6">
+                <a href="#blog">Blog</a>
+                <a href="#faqs">FAQs</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="https://medium.com/decentraland" target="_blank">Press</a>
+                <a href="/tokensale" target="_blank">Token Sale</a>
+              </div>
+            </div>
+
+            <div class="link text-center">Get in touch: <a class="email-link" href="mailto:hello@decentraland.org">hello@decentraland.org</a></div>
+
+            <div class="contact-icons">
+              <a class="contact-icon contact-icon-twitter" href="https://twitter.com/decentraland" target="_blank"></a>
+              <a class="contact-icon contact-icon-slack" href="https://decentraland.slack.com" target="_blank"></a>
+              <a class="contact-icon contact-icon-github" href="https://github.com/decentraland" target="_blank"></a>
+              <a class="contact-icon contact-icon-chat" href="https://forum.decentraland.org" target="_blank"></a>
+              <a class="contact-icon contact-icon-reddit" href="https://reddit.com/r/decentraland" target="_blank"></a>
+              <a class="contact-icon contact-icon-facebook" href="https://www.facebook.com/decentraland/" target="_blank"></a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="skew"></div>
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h2 class="title"><b>A virtual world</b> that runs on open standards  </h2>
+          <div class="description">
+            <p>Decentraland is an open source protocol to create and explore shared experiences in virtual reality</p>
+          </div>
+          <div id="js-play-video" class="play-video">
+            <i class="icon icon-play-button"></i><span>watch video</span>
+          </div>
+          <div class="contact">
+            <div class="hidden-xs big-input">
+              <form action="http://decentraland.us15.list-manage.com/subscribe?u=6f74047a4693dbc82dc4f3131&id=da075b1985" method="POST">
+                <input type="email" name="email" placeholder="Enter your email to receive updates">
+                <input type="submit" class="btn btn-primary request-demo" value="Subscribe" />
+              </form>
+            </div>
+            <div class="visible-xs small-input">
+              <form action="http://decentraland.us15.list-manage.com/subscribe?u=6f74047a4693dbc82dc4f3131&id=da075b1985" method="POST">
+                <input type="email" name="email" placeholder="Subscribe">
+                <input type="submit" class="btn btn-primary request-demo icon icon-arrow" value="" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <a name="why-decentraland"></a>
+    <div class="main explanation">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="title">Why Decentraland?</h2>
+          </div>
+        </div>
+
+        <div class="row cards">
+          <div class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-duration="0.2s">
+            <div class="card left">
+              <i class="card-icon card-icon-virtual-world"></i>
+              <p>A public virtual world should be ruled by open standards, shielded from the agenda of any central organization.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-duration="0.2s" data-wow-delay="0.1s">
+            <div class="card">
+              <i class="card-icon card-icon-control"></i>
+              <p>In Decentraland, users have full control over the content of the land they own and keep all the proceeds from the value they generate for other users.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-duration="0.2s" data-wow-delay="0.2s">
+            <div class="card right">
+              <i class="card-icon card-icon-blockchain"></i>
+              <p>To make this possible, Decentraland uses blockchain technology as an unforgeable record of ownership.</p>
+            </div>
+          </div>
+         </div>
+      </div>
     </div>
 
-    <section class="why">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 heading">
-            <h3>Why Decentraland?</h3>
-          </div>
-        </div>
+    <a name="roadmap"></a>
+    <div class="main container-fluid roadmap">
+      <h2 class="title">Roadmap</h2>
 
-        <div class="row">
-          <div class="col-md-6 col-ms-12">
-            <p>A public VR world should be ruled by open standards, shielded from the agenda of any central organization. </p>
-            <p>In Decentraland, users are land owners and have full control over the content of their tiles.</p>
-            <p>To make this possible, Decentraland uses blockchain technology as a permanent immutable record of ownership.</p>
-          </div>
-          <div class="col-md-6 col-ms-12">
-            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/xxmPJ0DFRPI" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+      <div class="timeline">
+        <div class="timeline-title hidden">Done</div>
 
-<!--
-    <section class="odd ico">
-      <div class="container">
-        <img class="section-icon" src="img/coin-icon.svg"></img>
-
-        <div class="row">
-          <div class="col-xs-12 heading">
-            <h3>Token Sale</h3>
-            <p>Crowdsale of Genesis: the first Decentraland city</p>
-            <p><a href="http://eepurl.com/cGdaAv">Subscribe to our mailing list to stay updated</a></p>
-
+        <div class="row milestone">
+          <div class="col-xs-12 col-sm-6 milestone-left first-milestone-done">
+            <div class="mobile-circle circle-container">
+              <div class="circle outer-circle">
+                <div class="circle inner-circle"></div>
+              </div>
+            </div>
+            <div class="milestone-tooltip wow" data-wow-duration="0.2s">
+              <h3 class="title">Stone Age</h3>
+              <h5 class="subtitle visible-xs">June 2015</h5>
+              <div class="dash"></div>
+              <p>Land is modeled as a simple grid, and a Bitcoin-like proof-of-work algorithm is used to allocate pixels to users.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <p> We're looking for funding to continue development! We'll have a token sale event where we'll give away land parcels for the first settlement in Decentraland, Genesis City. </p>
-            <p>Be one of the first settlers!
-            <strong>To be announced soon.</strong></p>
-          </div>
-        </div>
-      </div>
-    </section>
--->
-
-    <section class="odd who">
-      <div class="container">
-        <img class="section-icon" src="img/people-icon.svg"></img>
-
-        <div class="row">
-          <div class="col-xs-12 heading">
-            <h3>Who is this for?</h3>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <p class="strong">Artists</p>
-            <p>To create immersive experiences for anyone in the world to enjoy.</p>
-          </div>
-          <div class="col-md-6">
-            <p class="strong">Developers</p>
-            <p>To push the limits of what is possible in virtual reality interactions.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <p class="strong">Online Communities</p>
-            <p>To gather in an open virtual world and share experiences.</p>
-          </div>
-          <div class="col-md-6">
-            <p><a href="https://www.facebook.com/pg/decentraland/photos/?tab=album&album_id=759405290895993" target="_blank">See some examples →</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="future">
-      <div class="container">
-        <img class="section-icon" src="img/future-icon.svg"></img>
-
-        <div class="row">
-          <div class="col-xs-12 heading">
-            <h3>Future plans</h3>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <p><strong>Add multiplayer support with avatars and live chat. Allow custom items and scripting on the land you own.</strong></p>
-          </div>
-          <div class="col-md-6">
-            <p><strong>A full-fledged 3D world, with full VR support and customization of the laws of physics.</strong></p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <p><strong>This year we’ll grow a community of content creators and developers that will join us building our virtual world.</strong></p>
-          </div>
-          <div class="col-md-6">
-            <p><strong>We will host a crowdfund to cover development of the livenet version of the network and content creation.</strong></p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-badge stone-age-badge"></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4 class="timeline-title">Stone Age</h4>
-                    <p><small class="text-muted"> June 2015</small></p>
-                  </div>
-                  <div class="timeline-body">
-                    <p>Land is modeled as a simple grid, and a Bitcoin-like proof of work algorithm is used to allocate pixels to users.</p>
-                  </div>
+          <div class="col-sm-6 milestone-right hidden-xs">
+            <div class="milestone-landmark wow" data-wow-delay="0.1">
+              <div class="circle-container">
+                <div class="circle outer-circle">
+                  <div class="circle inner-circle"></div>
                 </div>
-              </li>
-
-              <li class="timeline-inverted">
-                <div class="timeline-badge bronze-age-badge"></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4 class="timeline-title">Bronze Age</h4>
-                    <p><small class="text-muted"> March 2017</small></p>
-                  </div>
-                  <div class="timeline-body">
-                    <p>Land is modeled in a 3D space. Blockchain and torrent full node. World Editor. Unity Browser.</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="timeline-badge iron-age-badge"></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <div class="timeline-heading">
-                        <h4 class="timeline-title">Iron Age</h4>
-                    </div>
-                  </div>
-                  <div class="timeline-body">
-                    <p>Add multiplayer support with avatars and live chat. Allow custom items and scripting on the land you own.</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="timeline-inverted ">
-                <div class="timeline-badge silicon-age-badge"></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4 class="timeline-title">Silicon Age</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>A full-fledged 3D world, with full VR support and customization of the laws of physics. Live in the blockchain.</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+              </div>
+              <div class="milestone-date">June 2015</div>
+            </div>
           </div>
         </div>
 
+        <div class="row milestone">
+          <div class="col-sm-6 milestone-left last-milestone-done hidden-mobile">
+            <div class="milestone-landmark wow" data-wow-delay="0.1">
+              <div class="milestone-date">March 2017</div>
+              <div class="circle-container">
+                <div class="circle outer-circle">
+                  <div class="circle inner-circle"></div>
+                </div>
+              </div>
+             </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 milestone-right">
+            <div class="mobile-circle circle-container">
+              <div class="circle outer-circle">
+                <div class="circle inner-circle"></div>
+              </div>
+            </div>
+            <div class="milestone-tooltip wow" data-wow-duration="0.2s">
+              <h3 class="title">Bronze Age</h3>
+              <h5 class="subtitle visible-xs">March 2017</h5>
+              <div class="dash"></div>
+              <p>Land is modeled in a 3D space. Blockchain and torrent full node. World Editor. Unity Browser.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <section class="odd team">
+      <div class="plus-sign">+</div>
+
+      <div class="timeline">
+        <div class="timeline-title hidden">The future</div>
+
+        <div class="row milestone">
+          <div class="col-xs-12 col-sm-6 milestone-left">
+            <div class="mobile-circle circle-container">
+              <div class="circle outer-circle">
+                <div class="circle inner-circle"></div>
+              </div>
+            </div>
+            <div class="milestone-tooltip wow" data-wow-duration="0.2s">
+              <h3 class="title">Mana Token Sale</h3>
+              <h5 class="subtitle visible-xs">August 8 through 15, 2017</h5>
+              <div class="dash"></div>
+              <p>An ERC20 token, MANA, will allow users to claim parcels of LAND and interact with each other within Decentraland.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 milestone-right hidden-xs">
+            <div class="milestone-landmark wow" data-wow-delay="0.1">
+              <div class="circle-container">
+                <div class="circle outer-circle">
+                  <div class="circle inner-circle"></div>
+                </div>
+              </div>
+              <div class="milestone-date">August 8 through 15, 2017</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row milestone">
+          <div class="col-sm-6 milestone-left hidden-mobile">
+            <div class="milestone-landmark wow" data-wow-delay="0.1">
+              <div class="milestone-date">Q3 2017</div>
+              <div class="circle-container">
+                <div class="circle outer-circle">
+                  <div class="circle inner-circle"></div>
+                </div>
+              </div>
+             </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 milestone-right">
+            <div class="mobile-circle circle-container">
+              <div class="circle outer-circle">
+                <div class="circle inner-circle"></div>
+              </div>
+            </div>
+            <div class="milestone-tooltip wow" data-wow-duration="0.2s">
+              <h3 class="title">Terraform Event</h3>
+              <h5 class="subtitle visible-xs">Q3 2017</h5>
+              <div class="dash"></div>
+              <p>The first opportunity to claim land will take place, along with the Beta launch of the Iron Age.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="row milestone">
+          <div class="col-xs-12 col-sm-6 milestone-left">
+            <div class="mobile-circle circle-container">
+              <div class="circle outer-circle">
+                <div class="circle inner-circle"></div>
+              </div>
+            </div>
+            <div class="milestone-tooltip wow" data-wow-duration="0.2s">
+              <h3 class="title">Iron Age</h3>
+              <h5 class="subtitle visible-xs">Q4 2017</h5>
+              <div class="dash"></div>
+              <p>Add multiplayer support with avatars and live chat. Allow custom items and scripting on the land you own.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 milestone-right hidden-xs">
+            <div class="milestone-landmark wow" data-wow-delay="0.1">
+              <div class="circle-container">
+                <div class="circle outer-circle">
+                  <div class="circle inner-circle"></div>
+                </div>
+              </div>
+              <div class="milestone-date">Q4 2017</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row milestone milestone-offset">
+          <div class="col-sm-6 milestone-left hidden-mobile">
+            <div class="milestone-landmark wow" data-wow-delay="0.1">
+              <div class="milestone-date">2018</div>
+              <div class="circle-container">
+                <div class="circle outer-circle">
+                  <div class="circle inner-circle"></div>
+                </div>
+              </div>
+             </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 milestone-right">
+            <div class="mobile-circle circle-container">
+              <div class="circle outer-circle">
+                <div class="circle inner-circle"></div>
+              </div>
+            </div>
+            <div class="milestone-tooltip wow" data-wow-duration="0.2s">
+              <h3 class="title">Silicon Age</h3>
+              <h5 class="subtitle visible-xs">2018</h5>
+              <div class="dash"></div>
+              <p>A full-fledged 3D world, with full VR support and customization of the laws of physics. Live in the blockchain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a name="faqs"></a>
+    <div class="main faqs">
       <div class="container">
-        <img class="section-icon" src="img/rocket-icon.svg"></img>
-
         <div class="row">
-          <div class="col-xs-12 heading">
-            <h3>Team</h3>
+          <div class="col-xs-12">
+            <h2 class="title">FAQs</h2>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-6">
-            <p class="strong">Manuel Araoz</p>
-            <p>Founder and Advisor</p>
-            <p class="handle"><a target="_blank" href="https://twitter.com/maraoz">@maraoz</a></p>
+        <div class="row questions">
+          <div class="col-xs-12 col-sm-6 col-md-4 wow fadeIn">
+            <h3 class="title">Does it run on top of its own blockchain?</h3>
+            <div class="dash"></div>
+            <p>Decentraland uses the Ethereum blockchain to store information about land ownership and its content.</p>
           </div>
-          <div class="col-md-6">
-            <p class="strong">Esteban Ordano</p>
-            <p>Founder and Core Developer</p>
-            <p class="handle"><a target="_blank" href="https://twitter.com/eordano">@eordano</a></p>
+          <div class="col-xs-12 col-sm-6 col-md-4 wow fadeIn">
+            <h3 class="title">How is land assigned to users?</h3>
+            <div class="dash"></div>
+            <p>Users can use MANA to buy any empty land parcel.</p>
           </div>
-        </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 wow fadeIn">
+            <h3 class="title">How large is a tile of land?</h3>
+            <div class="dash"></div>
+            <p>10m x 10m, or 33ft x 33ft. You can build upwards without any limits.</p>
+          </div>
 
-        <div class="row">
-          <div class="col-md-6">
-            <p class="strong">Yemel Jardi</p>
-            <p>Founder and Advisor</p>
-            <p class="handle"><a target="_blank" href="https://twitter.com/yemeljardi">@yemeljardi</a></p>
+          <div class="col-xs-12 col-sm-6 col-md-4 wow fadeIn">
+            <h3 class="title">Who validates transactions?</h3>
+            <div class="dash"></div>
+            <p>The Ethereum smart contract validates that modifications were made by the owner of the land.</p>
           </div>
-          <div class="col-md-6">
-            <p class="strong">Dario Sneidermanis</p>
-            <p>Core Developer</p>
-            <p class="handle"><a target="_blank" href="https://twitter.com/esneider">@esneider</a></p>
+          <div class="col-xs-12 col-sm-6 col-md-4 wow fadeIn">
+            <h3 class="title">How is world content distributed?</h3>
+            <div class="dash"></div>
+            <p>Content will be distributed using the IPFS network, while data hashes are stored in the blockchain.</p>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <p class="strong">Demian Brener</p>
-            <p>Advisor</p>
-            <p class="handle"><a target="_blank" href="https://twitter.com/demibrener">@demibrener</a></p>
-          </div>
-          <div class="col-md-6">
-            <p class="strong">Ariel Meilich</p>
-            <p>Business Development</p>
-            <p class="handle"><a target="_blank" href="https://twitter.com/arimeilich">@arimeilich</a></p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <p class="strong">Martín Triay</p>
-            <p>Web Developer</p>
-            <p class="handle"><a target="_blank" href="https://twitter.com/martriay">@martriay</a></p>
-          </div>
-          <div class="col-md-6">
-            <p class="strong">Mariano Rodríguez</p>
-            <p>Designer & Illustrator</p>
-            <p class="handle"><a target="_blank" href="https://twitter.com/marianorod1541">@marianorod1541</a></p>
+          <div class="col-xs-12 col-sm-6 col-md-4 wow fadeIn">
+            <h3 class="title">Why is land scarce?</h3>
+            <div class="dash"></div>
+            <p>Without scarcity, most LAND would be left abandoned, which would hurt content discoverability and the user experience overall.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="faqs">
+    <a name="team"></a>
+    <div class="main team">
       <div class="container">
-        <img class="section-icon" src="img/ufo-icon.svg"></img>
-
         <div class="row">
-          <div class="col-xs-12 heading">
-            <h3>FAQs</h3>
+          <div class="col-xs-12">
+            <h2 class="title">Team</h2>
+            <p class="subtitle">From the creators of <a href="https://proofofexistence.com/" target="_blank">Proof of Existence</a>, <a href="https://streamium.io/" target="_blank">Streamium</a>, <a href="https://github.com/bitpay/bitcore" target="_blank">Bitcore</a>, and <a href="https://openzeppelin.org/" target="_blank">OpenZeppelin</a>.</p>
+          </div>
+        </div>
+        <div class="row team-members">
+          <div class="col-xs-12 col-sm-4 col-md-3 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/arimeilich" target="_blank"><img class="team-member-image" src="images/arimeilich-avatar.jpg" alt="Ari Meilich avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Ari <b>Meilich</b></h3>
+                <p>Project Lead</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/arimeilich" target="_blank">@arimeilich</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-3 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/eordano" target="_blank"><img class="team-member-image" src="images/eordano-avatar.jpg" alt="Esteban Ordano avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Esteban <b>Ordano</b></h3>
+                <p>Technical Lead</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/eordano" target="_blank">@eordano</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4 col-md-3 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/yemeljardi" target="_blank"><img class="team-member-image" src="images/yemeljardi-avatar.jpg" alt="Yemel Jardi avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Yemel <b>Jardi</b></h3>
+                <p>Board Member</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/yemeljardi" target="_blank">@yemeljardi</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-3 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/maraoz" target="_blank"><img class="team-member-image" src="images/maraoz-avatar.jpg" alt="Manu Aráoz avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Manuel <b>Araoz</b></h3>
+                <p>Board Member</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/maraoz" target="_blank">@maraoz</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/esneider" target="_blank"><img class="team-member-image" src="images/esneider-avatar.jpg" alt="Dario Sneidermanis avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Dario <b>Sneidermanis</b></h3>
+                <p>Core Developer</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/esneider" target="_blank">@esneider</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/martriay" target="_blank"><img class="team-member-image" src="images/martriay-avatar.jpg" alt="Martín Triay avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Martín <b>Triay</b></h3>
+                <p>Core Developer</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/martriay" target="_blank">@martriay</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/marianorod1541" target="_blank"><img class="team-member-image" src="images/mariano-avatar.jpg" alt="Mariano Rodríguez avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Mariano <b>Rodríguez</b></h3>
+                <p>Illustrator</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/marianorod1541" target="_blank">@marianorod1541</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-md-4 col-md-offset-2 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/jbrukh" target="_blank"><img class="team-member-image" src="images/jbrukh-avatar.jpg" alt="Mariano Rodríguez avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Jake <b>Brukhman</b></h3>
+                <p>Advisor</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/jbrukh" target="_blank">@jbrukh</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4 wow fadeIn">
+            <div class="team-member">
+              <a href="https://twitter.com/demibrener" target="_blank"><img class="team-member-image" src="images/demibrener-avatar.jpg" alt="Mariano Rodríguez avatar" width="110" height="110"></a>
+              <div class="team-member-data">
+                <h3 class="title">Demian <b>Brener</b></h3>
+                <p>Smart Contracts</p>
+                <div class="twitterhandle">
+                  <i class="contact-icon contact-icon-twitter"></i>
+                  <a href="https://twitter.com/demibrener" target="_blank">@demibrener</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-6">
-            <p class="question">Why is Decentraland important for VR?</p>
-            <p class="answer">For VR to reach its full potential, users need to own the content they build. Blockchain technology is a tool that enables a decentralized digital record of ownership, so it seemed like the perfect tool to create a fair VR world were nobody is in control.</p>
-
-            <p class="question">Does it run on top of Bitcoin's blockchain?</p>
-            <p class="answer">No. Decentraland utilizes its own blockchain and network, and thus requires some users to run mining nodes.</p>
-
-            <p class="question">How is land assigned to miners?</p>
-            <p class="answer">A miner chooses a random tile to mine. It needs to be adjacent to existing land.</p>
-
-            <p class="question">How large is a tile of land?</p>
-            <p class="answer">25m x 25m, or 82ft x 82ft (vertical height to be specified in the near future).</p>
-
-            <p class="question">How can I become a land owner?</p>
-            <p class="answer">You can become a land owner either by having someone transfer you some of their tiles, or by <a href="https://github.com/decentraland/bronzeage-node" target="_blank">mining a new one</a>.</p>
-
-            <p class="question">How can I create content for my land?</p>
-            <p class="answer">You can use Unity3D Editor to create and publish your tile to the Blockchain. Check out <a href="https://github.com/decentraland/bronzeage-editor#how-to-edit-your-tiles-content" target="_blank">these instructions</a> or <a href="https://www.youtube.com/watch?v=H34gES_CJiY" target="_blank">this video</a> to see how to do it.</p>
-
-            <p class="question">Does it support Oculus Rift or HTC Vive?</p>
-            <p class="answer">The current version doesn't support either of them, but we are almost there! You can still explore Decentraland <a href="https://decentraland.org/app" target="_blank">here</a>.</p>
+        <a name="partners"></a>
+        <div class="partners">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="title">Technical Partners</h3>
+            </div>
           </div>
 
-          <div class="col-md-6">
-            <p class="question">Is Decentraland open source?</p>
-            <p class="answer">Yes, it is. We ❤️&nbsp; open source.</p>
-
-            <p class="question">Who validates transactions?</p>
-            <p class="answer">Miners validates transactions. The network rewards miners by assigning them land. Decentraland uses proof of work, just like Bitcoin.</p>
-
-            <p class="question">How often is land created?</p>
-            <p class="answer">Land is created on every new block. Time between blocks is 10 minutes for testnet. For livenet it will be ~6 hours (livenet is not yet enabled).</p>
-
-            <p class="question">How is world content distributed?</p>
-            <p class="answer">In the Decentraland blockchain, transactions can transfer the ownership of a given tile, as well as announce the hash of the scene content of the tile.</p>
-
-            <p class="question">How is the content (i.e., asset files, graphics, etc.) for my land hosted?</p>
-            <p class="answer">Content of each tile is distributed in a P2P manner via the BitTorrent network.</p>
-
-            <p class="question">What kind of content can I add to my land?</p>
-            <p class="answer">There are some limitations on what you can do on your tile. For the moment, the browser implementation only supports primitive meshes (Cube, Plane, Sphere, Cylinder and Capsule), plain colors and textures.</p>
-
-            <p class="question">How can I keep in touch?</p>
-            <p class="answer">Please subscribe to <a href="http://eepurl.com/cGdaAv" target="_blank">our newsletter</a> for important updates and join the conversation on <a href="https://slack.decentraland.org" target="_blank">Slack</a>.</p>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-offset-1 left wow fadeIn">
+              <a href="https://coinfund.io/" target="_blank"><img src="images/coinfund-logo.png" alt="CoinFund logo" width="104" height="21"></a>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-2 center wow fadeIn">
+              <a href="https://openzeppelin.org" target="_blank"><img src="images/zeppelin-logo.png" alt="OpenZeppelin logo" width="104" height="30"></a>
+            </div>
+            <div class="col-xs-12 col-sm-4 right wow fadeIn">
+              <a href="http://smartcontractsolutions.com" target="_blank"><img src="images/scs-logo.png" alt="Smart Contract Solutions logo" width="104"></a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-
-    <footer>
-      <p>Decentraland</p>
-
-      <div class="social">
-        <a class="github" href="https://github.com/decentraland" target="_blank">Github</a>
-        <a class="twitter" href="https://twitter.com/decentraland" target="_blank">Twitter</a>
-        <a class="slack" href="https://slack.decentraland.org" target="_blank">Slack</a>
-        <a class="forum" href="https://forum.decentraland.org/" target="_blank">Forum</a>
+    <a name="blog"></a>
+    <div class="main container-fluid blog">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="title">Blog</h2>
+        </div>
       </div>
+
+      <div class="cards">
+        <div class="card wow fadeInRight">
+          <a href="https://medium.com/decentraland/announcing-the-decentraland-token-sale-da46f9c6d2ed" target="_blank">
+            <img src="images/token-sale-blog-image.png" alt="Token sale blog" class="card-image" width="260" height="150">
+            <div class="card-body">
+              <h3>Announcing the Decentraland token sale</h3>
+              <p>Bootstrapping the creation of a public virtual world.</p>
+            </div>
+          </a>
+        </div>
+        <div class="card wow fadeInRight">
+          <a href="https://medium.com/decentraland/why-we-are-building-decentraland-570a6790f293" target="_blank">
+            <img src="images/why-decentraland-blog-image.png" alt="Why decentraland blog" class="card-image" width="260" height="150">
+            <div class="card-body">
+              <h3>Why we are building Decentraland</h3>
+              <p>It’s time to think about <a href="https://medium.com/decentraland/why-we-are-building-decentraland-570a6790f293" target="_blank">what kind of world we will create</a> for our digital lives.</p>
+            </div>
+          </a>
+        </div>
+        <div class="card wow fadeInRight">
+          <a href="https://medium.com/decentraland/the-decentraland-development-roadmap-51bf7903ff16" target="_blank">
+            <img src="images/roadmap-blog-image.png" alt="Why decentraland blog" class="card-image" width="260" height="150">
+            <div class="card-body">
+              <h3>The Decentraland Development Roadmap</h3>
+              <p>Introducing our technical vision for the next era of Decentraland.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main container-fluid communicate">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="title">Decentraland is for
+            <br>
+            <span class="highlighted">artists, gamers, students and online communities.</span>
+          </h2>
+          <div class="contact join-slack">
+            <a href="https://slack.decentraland.org" class="btn btn-primary" target="_blank">
+              <i class="contact-icon contact-icon-slack"></i> Join our Slack
+            </a>
+            <div class="hidden-xs">
+              <form action="http://decentraland.us15.list-manage.com/subscribe?u=6f74047a4693dbc82dc4f3131&id=da075b1985" method="POST">
+                <input class="suscribe-input" type="email" placeholder="Enter your email address to subscribe">
+                <input type="submit" class="submit icon icon-arrow" value="" />
+              </form>
+            </div>
+            <div class="visible-xs small-input">
+              <form action="http://decentraland.us15.list-manage.com/subscribe?u=6f74047a4693dbc82dc4f3131&id=da075b1985" method="POST">
+                <input class="suscribe-input" type="email" placeholder="Subscribe">
+                <input type="submit" class="submit icon icon-arrow" value="" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid footer">
+      <h2 class="company-name wow fadeIn">Decentraland Foundation</h2>
+      <div class="row footer-links wow fadeIn">
+        <a class="link" href="#blog">Blog</a>
+        <a class="link" href="https://medium.com/decentraland" target="_blank">Press</a>
+        <a class="link" href="#faqs">FAQ</a>
+        <a class="link" href="/tokensale">Token sale</a>
+        <div class="link last-link hidden-xs">Get in touch: <br class="visible-xs" /> <a class="email-link" href="mailto:hello@decentraland.org">hello@decentraland.org</a></div>
+        <div class="link last-link get-in-touch visible-xs">Get in touch: <br class="visible-xs" /> <a class="email-link" href="mailto:hello@decentraland.org">hello@decentraland.org</a></div>
+      </div>
+      <div class="contact-icons wow fadeIn">
+        <a class="contact-icon contact-icon-twitter" href="https://twitter.com/decentraland" target="_blank"></a>
+        <a class="contact-icon contact-icon-slack" href="https://slack.decentraland.org" target="_blank"></a>
+        <a class="contact-icon contact-icon-github" href="https://github.com/decentraland" target="_blank"></a>
+        <a class="contact-icon contact-icon-chat" href="https://forum.decentraland.org" target="_blank"></a>
+        <a class="contact-icon contact-icon-reddit" href="https://reddit.com/r/decentraland" target="_blank"></a>
+        <a class="contact-icon contact-icon-facebook" href="https://www.facebook.com/decentraland/" target="_blank"></a>
+      </div>
+      <p class="copyright wow fadeIn">Copyright © 2017 Decentraland. All right reserved</p>
     </footer>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
+    <script src="js/picoModal.min.js"></script>
+    <script src="js/main.min.js"></script>
 
     <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-63691338-1','auto');ga('send','pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-63691338-1', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>

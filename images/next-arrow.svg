@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="21px" viewBox="0 0 12 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Desktop-principal-UI-Copy-2" transform="translate(-1179.000000, -5690.000000)" stroke="#3F5669" stroke-width="2">
+            <g id="blog" transform="translate(248.000000, 5386.000000)">
+                <g id="Arrow" transform="translate(936.500000, 314.000000) rotate(-90.000000) translate(-936.500000, -314.000000) translate(926.000000, 308.000000)">
+                    <path d="M10.5,10.5 L19.1437767,1.85622328" id="Line"></path>
+                    <path d="M9.72727273,10.7272727 L0.954545455,2.86363636" id="Line"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
