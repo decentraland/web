@@ -349,6 +349,17 @@ h3.title {
 }
 .nav.navbar-nav li .contact-icon-slack { background-position: -28px -55px; }
 
+.nav.navbar-nav li .navbar-slack {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #30D7A9;
+  border: 1px solid;
+  border-radius: 40px;
+}
+.nav.navbar-nav li .navbar-slack .contact-icon-slack { background-position: -28px -1px; }
+
 .navbar-logo {
   padding: 20px 15px;
   float: left;
