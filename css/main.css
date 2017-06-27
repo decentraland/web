@@ -246,19 +246,6 @@ h3.title {
 
 
 /* -----------------------------------------------------------------------
-  Slider */
-
-.slider {
-  width: 20px;
-  height: 20px;
-  margin-top: 170px; /*(360px / 2) + (20px / 2)*/
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-
-/* -----------------------------------------------------------------------
   News Bar */
 
 .news-bar {
@@ -1170,6 +1157,10 @@ header .scroll p {
 }
 
 .blog .cards {
+  width: 100%;
+  padding-bottom: 5px;
+  margin: auto;
+  position: relative;
   text-align: center;
 }
 
@@ -1198,7 +1189,37 @@ header .scroll p {
   border-top-right-radius: 10px;
 }
 
+.blog .arrow {
+  top: 0;
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blog .prev {
+  background-image: url("../images/prev-arrow.svg");
+  left: -10px;
+}
+
+.blog .next {
+  background-image: url("../images/next-arrow.svg");
+  right: -10px;
+}
+
+@media (min-width: 370px) {
+  .blog .cards {
+    width: 85%;
+  }
+}
+
 @media (min-width: 790px) {
+  .blog .cards {
+    width: 65%;
+  }
+
   .blog .cards .card {
     width: 240px;
     margin-right: 10px;

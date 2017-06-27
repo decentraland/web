@@ -6,12 +6,14 @@
   on('#js-close-navbar', 'click', toggleNavbar)
   on('.full-nav a',      'click', toggleNavbar)
 
+  // Subscribe form
   on('form', 'submit', function(event) {
     var email = this.querySelector('[type="email"]').value
     window.open(this.action + '&MERGE0=' + email, '_blank')
     event.preventDefault()
   })
 
+  // Main embeded video
   on('#js-play-video', 'click', function(event) {
     var modal = picoModal({
       content: '<iframe class="embed wow fadeIn" width="560" height="315" src="https://www.youtube.com/embed/O6DUV19Ri_8?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>',
@@ -38,6 +40,32 @@
     }).show()
   })
 
+  // Slider
+  var slider = new Siema({
+    selector: '#js-blog-carousel',
+    perPage: {
+      800: 2,
+      1240: 3
+    },
+    loop: true
+  })
+
+  var prevArrow = document.createElement('div')
+  var nextArrow = document.createElement('div')
+  prevArrow.className = 'arrow prev'
+  nextArrow.className = 'arrow next'
+
+  slider.selector.appendChild(prevArrow)
+  slider.selector.appendChild(nextArrow)
+
+  on(prevArrow, 'click', function() {
+    slider.prev()
+  })
+  on(nextArrow, 'click', function() {
+    slider.next()
+  })
+
+
   // ---------------------------------------------------
   // Utils
 
@@ -56,9 +84,9 @@
   }
 
   function on(selector, type, event) {
-    var elements = Array.prototype.slice.call(
-      document.querySelectorAll(selector)
-    )
+    var elements = typeof selector === 'string'
+    ? Array.prototype.slice.call(document.querySelectorAll(selector))
+    : [ selector ] // asume DOM element
 
     for (var i = 0; i < elements.length; i++) {
       elements[i].addEventListener(type, event, true)
