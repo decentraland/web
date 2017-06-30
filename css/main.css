@@ -340,12 +340,14 @@ h3.title {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 10px;
-  margin-left: 10px;
-  color: #30D7A9;
+  margin-left: 6px;
   border: 1px solid;
   border-radius: 40px;
+  color: #30D7A9;
 }
 .nav.navbar-nav li .navbar-slack .contact-icon-slack { background-position: -28px -1px; }
+
+.nav.navbar-nav li .navbar-launch { color: #FFA500; }
 
 .navbar-logo {
   padding: 20px 15px;
