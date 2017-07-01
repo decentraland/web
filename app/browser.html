@@ -1,30 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Decentraland | Bronze Age</title>
+    <title>Unity WebGL Player | Decentraland</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="../css/foundation.css" />
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="stylesheet" href="TemplateData/pace.css">
     <link rel="shortcut icon" href="../img/decentraland.ico" />
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="TemplateData/pace.min.js"></script>
-    <script src="./js/vendor/jquery.js"></script>
-    <script src="./js/foundation/foundation.js"></script>
-    <script src="./js/foundation/foundation.alert.js"></script>
+    <script src="../js/vendor/jquery.js"></script>
+    <script src="../js/foundation/foundation.js"></script>
+    <script src="../js/foundation/foundation.alert.js"></script>
   </head>
-  <body class="template">
-    <div class="row">
-
-    <div class="template-wrap clear">
-      <canvas style="margin-top: 0px;" class="emscripten" id="canvas" oncontextmenu="" height="600px" width="960px"></canvas>
-      <br>
-      <div class="logo"><img src="../img/decentraland.svg" width="38" height="38"/></div>
-      <div class="title" style="float: left; font-size: 24px;">Decentraland</div>
-
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Full Screen</div>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="title" style="float: left; font-size: 24px;">
+		<img src="../img/decentraland.svg" width="38" height="38"/>
+		<div style="position: relative; display: inline-block;">Decentraland</div>
+        </div>
+<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)" style="float: right;"></div>
+        <div style="float: right;">Fullscreen&nbsp;</div>
+      </div>
     </div>
     <script type='text/javascript'>
       var Module = {
@@ -33,13 +34,15 @@
         compatibilitycheck: null,
         backgroundColor: "#222C36",
         splashStyle: "Light",
-        dataUrl: "Release/decentraland.data",
-        codeUrl: "Release/decentraland.js",
-        asmUrl: "Release/decentraland.asm.js",
-        memUrl: "Release/decentraland.mem",
+        dataUrl: "Build/decentraland.data",
+        codeUrl: "Build/decentraland.js",
+        asmUrl: "Build/decentraland.asm.js",
+        memUrl: "Build/decentraland.mem",
       };
     </script>
-    <script src="Release/UnityLoader.js"></script>
-
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/decentraland.json", {onProgress: UnityProgress});
+    </script>
   </body>
 </html>
