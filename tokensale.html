@@ -32,10 +32,10 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right min-nav">
             <li><a href="#why-decentraland">Why Decentraland?</a></li>
+            <li><a href="#token-sale-terms">Terms</a></li>
             <li><a href="#team">Team</a></li>
-            <li><a href="/#faqs">FAQs</a></li>
             <li><a href="#blog">Blog</a></li>
-            <li><a href="https://slack.decentraland.org" target="_blank">Slack <i class="contact-icon contact-icon-slack"></i></a></li>
+            <li><a href="https://slack.decentraland.org" class="navbar-slack" target="_blank">Slack <i class="contact-icon contact-icon-slack"></i></a></li>
           </ul>
 
           <div class="full-nav">
@@ -89,36 +89,25 @@
           <div class="description">
             <p>Join the crowdsale on August 8th to help build the first virtual world that runs on open standards.</p>
           </div>
-          <div class="contact join-slack">
-            <a href="https://slack.decentraland.org" class="btn btn-primary" target="_blank">
-              <i class="contact-icon contact-icon-slack"></i>
-              Slack
-            </a>
+          <div class="contact">
+            <div class="hidden-xs big-input">
+              <form action="http://decentraland.us15.list-manage.com/subscribe?u=6f74047a4693dbc82dc4f3131&id=da075b1985" method="POST">
+                <input type="email" name="email" placeholder="Enter your email to receive updates">
+                <input type="submit" class="btn btn-primary request-demo" value="Subscribe" />
+              </form>
+            </div>
+            <div class="visible-xs small-input">
+              <form action="http://decentraland.us15.list-manage.com/subscribe?u=6f74047a4693dbc82dc4f3131&id=da075b1985" method="POST">
+                <input type="email" name="email" placeholder="Subscribe">
+                <input type="submit" class="btn btn-primary request-demo icon icon-arrow" value="" />
+              </form>
+            </div>
           </div>
       </div>
     </header>
 
     <div class="main explanation">
       <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3 class="title">Join us</h3>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="contact-icons text-center">
-              <a class="contact-icon contact-icon-twitter" href="https://twitter.com/decentraland" target="_blank"></a>
-              <a class="contact-icon contact-icon-slack" href="https://slack.decentraland.org" target="_blank"></a>
-              <a class="contact-icon contact-icon-github" href="https://github.com/decentraland" target="_blank"></a>
-              <a class="contact-icon contact-icon-chat" href="https://forum.decentraland.org" target="_blank"></a>
-              <a class="contact-icon contact-icon-reddit" href="https://reddit.com/r/decentraland" target="_blank"></a>
-              <a class="contact-icon contact-icon-facebook" href="https://www.facebook.com/decentraland/" target="_blank"></a>
-            </div>
-          </div>
-        </div>
-
         <div class="row">
           <div class="col-xs-12">
             <h2 class="title">Why Decentraland?</h2>
@@ -149,7 +138,7 @@
       </div>
     </div>
 
-    <a name="#token-sale-terms"></a>
+    <a name="token-sale-terms"></a>
     <div class="main container-fluid token-sale-terms">
       <div class="row">
         <div class="col-xs-12">
@@ -159,47 +148,70 @@
 
       <div class="row">
         <div class="col-xs-12 col-sm-4">
-          <div class="stats">
-            <h4 class="token-sale-title">1 Billion</h3>
-            <div class="token-sale-subtitle">Tokens issued</div>
-
-            <h4 class="token-sale-title">$33 million</h3>
-            <div class="token-sale-subtitle">Maximum cap on crowdsale</div>
-
-            <h4 class="token-sale-title">1 Billion</h3>
-            <div class="token-sale-subtitle">Total token suppy</div>
-          </div>
-          <br />
           <ul class="stats">
-            <li>Ethereum ERC20 token</li>
-            <li>Purchase methods accepted:</li>
-            <li>BTC and ETH</li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-          <canvas id="js-dognut-chart" class="dognut-chart hidden-xs"></canvas>
-          <canvas id="js-line-chart" class="line-chart visible-xs" width="327" height="327"></canvas>
-        </div>
+            <li>
+              <h4 class="token-sale-title">1000 MANA = 1 LAND</h4>
+            </li>
 
-        <div class="col-xs-offset-1 col-xs-11 col-sm-offset-0 col-sm-4">
-          <ul class="chart-legend">
-            <li class="foundation">
-              <h4 class="token-sale-title">40%</h4>
-              <span class="token-sale-subtitle">Foundation</span>
+            <li>
+              <h4 class="token-sale-title">$30 million</h4>
+              <div class="token-sale-subtitle">Hard cap</div>
             </li>
-            <li class="crowdsale">
-              <h4 class="token-sale-title">40%</h4>
-              <span class="token-sale-subtitle">Crowdsale</span>
+
+            <li>
+              <h4 class="token-sale-title">1 Billion</h4>
             </li>
-            <li class="team-and-contributors">
-              <h4 class="token-sale-title">19%</h4>
-              <span class="token-sale-subtitle">Team and early contributors</span>
+
+            <li>
+              <h4 class="token-sale-title">3000 Million</h4>
+              <div class="token-sale-subtitle">Max initial MANA supply</div>
             </li>
-            <li class="crowdsale-expenses">
-              <h4 class="token-sale-title">1%</h4>
-              <span class="token-sale-subtitle">Crowdsale expenses</span>
+
+            <li>
+              <h4 class="token-sale-title">MANA is an ERC20 token</h4>
+            </li>
+
+            <li>
+              <div class="token-sale-subtitle">Purchase methods accepted</div>
+              <h4 class="token-sale-title">ETH and altcoins</h4>
+              <div class="token-sale-subtitle">(powered by ShapeShift)</div>
+            </li>
+
+            <li>
+              <div class="token-sale-subtitle">Crowdsale period:</div>
+              <h4 class="token-sale-title">Aug-8 through Aug-15</h4>
             </li>
           </ul>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="dynamic-charts">
+            <canvas id="js-dognut-chart" class="dognut-chart hidden-xs"></canvas>
+
+            <div class="token-distribution token-sale-subtitle">Token distribution</div>
+
+            <canvas id="js-line-chart" class="line-chart visible-xs" width="327" height="327"></canvas>
+
+            <ul class="chart-legend">
+              <li class="foundation">
+                <h4 class="token-sale-title percentage visible-xs">20%</h4>
+                <span class="token-sale-subtitle"><b class="hidden-xs percentage">20%&nbsp;&nbsp;</b>Foundation</span>
+              </li>
+              <li class="team-and-contributors">
+                <h4 class="token-sale-title percentage visible-xs">20%</h4>
+                <span class="token-sale-subtitle"><b class="hidden-xs percentage">20%&nbsp;&nbsp;</b>Team and early contributors</span>
+              </li>
+              <li class="community-and-partners">
+                <h4 class="token-sale-title percentage visible-xs">20%</h4>
+                <span class="token-sale-subtitle"><b class="hidden-xs percentage">20%&nbsp;&nbsp;</b>Community and partners</span>
+              </li>
+              <li class="crowdsale">
+                <h4 class="token-sale-title percentage visible-xs">40%</h4>
+                <span class="token-sale-subtitle"><b class="hidden-xs percentage">40%&nbsp;&nbsp;</b>Crowdsale</span>
+              </li>
+            </ul>
+          </div>
+          <img src="images/inflation.png" class="img-chart img-responsive" alt="MANA Inflation rate per year">
+          <img src="images/price.png"     class="img-chart img-responsive" alt="Price of 1000 MANA">
         </div>
       </div>
     </div>
@@ -358,16 +370,6 @@
       </div>
     </div>
 
-    <div class="main container-fluid we-are-hiring">
-      <div class="row">
-        <div class="col-xs-12">
-          <h2 class="title">
-            we are hiring <br class="visible-xs" /> <a href="mailto:hello@decentraland.org">Contact us</a>
-          </h2>
-        </div>
-      </div>
-    </div>
-
     <a name="blog"></a>
     <div class="main container-fluid blog">
       <div class="row">
@@ -378,15 +380,27 @@
 
       <div id="js-blog-carousel" class="cards">
         <div class="card">
-          <a href="https://medium.com/decentraland/announcing-the-decentraland-token-sale-da46f9c6d2ed" target="_blank">
-            <img src="images/token-sale-blog-image.png" alt="Token sale blog" class="card-image" width="260" height="150">
+          <a href="https://medium.com/decentraland/building-a-land-economy-with-the-mana-token-ccb8d0d5e010" target="_blank">
+            <img src="images/coin-blog-image.png" alt="MANA Token" class="card-image" width="260" height="150">
           </a>
           <div class="card-body">
-            <a href="https://medium.com/decentraland/announcing-the-decentraland-token-sale-da46f9c6d2ed" target="_blank">
-              <h3>Announcing the Decentraland token sale</h3>
+            <a href="https://medium.com/decentraland/building-a-land-economy-with-the-mana-token-ccb8d0d5e010" target="_blank">
+              <h3>MANA Token</h3>
             </a>
-            <p>Bootstrapping the creation of a public virtual world.</p>
+            <p>Building a LAND Economy with the MANA Token.</p>
           </div>
+        </div>
+        <div class="card">
+          <a href="https://medium.com/decentraland/the-decentraland-development-roadmap-51bf7903ff16" target="_blank">
+            <img src="images/roadmap-blog-image.png" alt="Why decentraland blog" class="card-image" width="260" height="150">
+          </a>
+          <div class="card-body">
+            <a href="https://medium.com/decentraland/the-decentraland-development-roadmap-51bf7903ff16" target="_blank">
+              <h3>Development Roadmap</h3>
+            </a>
+            <p>Introducing our technical vision for the next era of Decentraland.</p>
+          </div>
+          </a>
         </div>
         <div class="card">
           <a href="https://medium.com/decentraland/why-we-are-building-decentraland-570a6790f293" target="_blank">
@@ -400,26 +414,14 @@
           </div>
         </div>
         <div class="card">
-          <a href="https://medium.com/decentraland/the-decentraland-development-roadmap-51bf7903ff16" target="_blank">
-            <img src="images/roadmap-blog-image.png" alt="Why decentraland blog" class="card-image" width="260" height="150">
+          <a href="https://medium.com/decentraland/announcing-the-decentraland-token-sale-da46f9c6d2ed" target="_blank">
+            <img src="images/token-sale-blog-image.png" alt="Token sale blog" class="card-image" width="260" height="150">
           </a>
           <div class="card-body">
-            <a href="https://medium.com/decentraland/the-decentraland-development-roadmap-51bf7903ff16" target="_blank">
-              <h3>The Decentraland Development Roadmap</h3>
+            <a href="https://medium.com/decentraland/announcing-the-decentraland-token-sale-da46f9c6d2ed" target="_blank">
+              <h3>Announcing the Decentraland token sale</h3>
             </a>
-            <p>Introducing our technical vision for the next era of Decentraland.</p>
-          </div>
-          </a>
-        </div>
-        <div class="card">
-          <a href="https://medium.com/decentraland/building-a-land-economy-with-the-mana-token-ccb8d0d5e010" target="_blank">
-            <img src="images/coin-blog-image.png" alt="MANA Token" class="card-image" width="260" height="150">
-          </a>
-          <div class="card-body">
-            <a href="https://medium.com/decentraland/building-a-land-economy-with-the-mana-token-ccb8d0d5e010" target="_blank">
-              <h3>MANA Token</h3>
-            </a>
-            <p>Building a LAND Economy with the MANA Token.</p>
+            <p>Bootstrapping the creation of a public virtual world.</p>
           </div>
         </div>
       </div>
@@ -480,6 +482,7 @@
     <script src="js/vendor/chartjs.min.js"></script>
     <script src="js/tokensale.min.js"></script>
 
+    <script src="js/vendor/siema.min.js"></script>
     <script src="js/main.min.js"></script>
 
     <script>

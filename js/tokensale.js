@@ -5,11 +5,11 @@
   new Chart(document.getElementById('js-dognut-chart'), {
     type: 'doughnut',
     data: {
-      labels: ['Crowdsale expenses', 'Foundation', 'Crowdsale', 'Team and early contributors'],
+      labels: ['Foundation', 'Team and early contributors', 'Community and partners', 'Crowdsale'],
       datasets:[{
         label: "Token Sale Terms",
-        data: [1,40,40,19],
-        backgroundColor: ['#000', '#30D7A9', '#04A9FD', '#4959DD']
+        data: [20,20,20,40],
+        backgroundColor: ['#30D7A9', '#04A9FD', '#4959DD', '#000']
       }]
     },
     options: {
@@ -23,20 +23,20 @@
     data: {
       labels: ['Data'],
       datasets:[{
-        label: 'Crowdsale expenses',
-        data: [1],
+        label: 'Crowdsale',
+        data: [40],
         backgroundColor: '#000'
       },{
         label: 'Team and early contributors',
-        data: [19],
+        data: [20],
         backgroundColor: '#4959DD'
       }, {
-        label: 'Crowdsale',
-        data: [40],
+        label: 'Community and partners',
+        data: [20],
         backgroundColor: '#04A9FD'
       }, {
         label: 'Foundation',
-        data: [40],
+        data: [20],
         backgroundColor: '#30D7A9'
       }]
     },
