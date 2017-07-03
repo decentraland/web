@@ -1173,11 +1173,13 @@ header .scroll p {
   display: block;
 }
 
+
 .blog .cards .card .card-body {
   padding: 10px 20px 30px;
 }
 
 .blog .cards .card h3 {
+  margin-bottom: 35px;
   color: #3E396B;
 }
 
@@ -1497,33 +1499,6 @@ header .scroll p {
 
 
 /* -----------------------------------------------------------------------
-  Token Sale: Join slack button */
-
-.token-sale .join-slack .btn {
-  padding: 15px 30px;
-}
-
-.token-sale .join-slack .contact-icon {
-  width: 19px;
-  height: 19px;
-  margin-right: 4px;
-  margin-left: 0;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.token-sale .join-slack .contact-icon-slack {
-  background-position: -34px -70px;
-}
-
-@media (min-width: 768px) {
-  .token-sale .join-slack .btn {
-    padding: 22px 52px;
-  }
-}
-
-
-/* -----------------------------------------------------------------------
   Token Sale: Explanation */
 
 .token-sale .explanation {
@@ -1532,39 +1507,9 @@ header .scroll p {
   background: #FFF;
 }
 
-.token-sale .explanation .contact-icons {
-  margin: 48px 0 96px;
-}
-.token-sale .explanation .contact-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 14px;
-  border-radius: 50%;
-  background-size: 300px;
-  background-color: #30D7A9;
-}
-.token-sale .explanation .contact-icon:hover {
-    box-shadow: 0 8px 30px rgba(48, 215, 169, 0.5);
-}
-
-.token-sale .explanation .contact-icon-twitter  { background-position: 19px -76px; }
-.token-sale .explanation .contact-icon-slack    { background-position: -29px -75px; }
-.token-sale .explanation .contact-icon-github   { background-position: -75px -75px; }
-.token-sale .explanation .contact-icon-chat     { background-position: -120px -75px; }
-.token-sale .explanation .contact-icon-reddit   { background-position: -210px -75px; }
-.token-sale .explanation .contact-icon-facebook { background-position: -256px -74px; }
-
 @media (min-width: 768px) {
   .token-sale .explanation {
     padding-bottom: 0;
-  }
-
-  .token-sale .explanation .contact-icons {
-    margin-bottom: 106px;
-  }
-
-  .token-sale .explanation .contact-icon {
-    margin-bottom: 4px;
   }
 }
 
@@ -1597,6 +1542,7 @@ header .scroll p {
   margin: 10px auto 0;
   max-width: 327px;
   max-height: 327px;
+  float: left;
 }
 
 .token-sale-terms .line-chart {
