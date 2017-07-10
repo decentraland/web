@@ -1683,3 +1683,18 @@ header .scroll p {
   margin-top: 100px;
   margin-bottom: 90px;
 }
+
+
+/* -----------------------------------------------------------------------
+  Thankyou: Header */
+
+.thankyou header {
+  height: 100%;
+  background-image: url("../images/tokensale-background.png");
+  background-position: 0 0;
+}
+
+.thankyou header h2.title {
+  margin-top: 100px;
+  margin-bottom: 90px;
+}
