@@ -1,0 +1,25 @@
+{
+  "name": "Decentraland",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack --config webpack.browser.js --watch",
+    "build": "webpack --config webpack.browser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:decentraland/web.git"
+  },
+  "author": "Decentraland",
+  "homepage": "https://github.com/decentraland/web",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {}
+}
