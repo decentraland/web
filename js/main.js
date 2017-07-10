@@ -8,8 +8,26 @@
 
   // Subscribe form
   on('form', 'submit', function(event) {
-    var email = this.querySelector('[type="email"]').value
-    window.open(this.action + '&MERGE0=' + email, '_blank')
+    var form = this
+    var formData = new FormData(form)
+    var url = form.action + '&EMAIL='  + formData.get('email')
+    var notice = form.querySelector('.js-submit-notice')
+
+    notice.innerHTML = 'Sending...'
+
+    http({
+      url: url,
+      method: 'GET',
+      success: function(response) {
+        window.location.href = '/thankyou.html?email=' + formData.get('email')
+      },
+      error: function() {
+        notice.innerHTML = 'We seem to be having problems subscribing you to the newsletter, please try again later.'
+
+        setTimeout(function() { notice.innerHTML = ''}, 2200)
+      }
+    })
+
     event.preventDefault()
   })
 
@@ -40,30 +58,32 @@
     }).show()
   })
 
-  // Slider
-  var slider = new Siema({
-    selector: '#js-blog-carousel',
-    perPage: {
-      800: 2,
-      1240: 3
-    },
-    loop: true
-  })
+  if (typeof Siema !== 'undefined') {
+    // Slider
+    var slider = new Siema({
+      selector: '#js-blog-carousel',
+      perPage: {
+        800: 2,
+        1240: 3
+      },
+      loop: true
+    })
 
-  var prevArrow = document.createElement('div')
-  var nextArrow = document.createElement('div')
-  prevArrow.className = 'arrow prev'
-  nextArrow.className = 'arrow next'
+    var prevArrow = document.createElement('div')
+    var nextArrow = document.createElement('div')
+    prevArrow.className = 'arrow prev'
+    nextArrow.className = 'arrow next'
 
-  slider.selector.appendChild(prevArrow)
-  slider.selector.appendChild(nextArrow)
+    slider.selector.appendChild(prevArrow)
+    slider.selector.appendChild(nextArrow)
 
-  on(prevArrow, 'click', function() {
-    slider.prev()
-  })
-  on(nextArrow, 'click', function() {
-    slider.next()
-  })
+    on(prevArrow, 'click', function() {
+      slider.prev()
+    })
+    on(nextArrow, 'click', function() {
+      slider.next()
+    })
+  }
 
 
   // ---------------------------------------------------
@@ -95,6 +115,31 @@
 
   function getById(id) {
     return document.getElementById(id)
+  }
+
+  function http(options, success) {
+    var xmlhttp = new XMLHttpRequest()
+
+    xmlhttp.onreadystatechange = function(result) {
+      if (xmlhttp.readyState === 4) {
+        if(xmlhttp.status >= 400) {
+          options.error && options.error(xmlhttp.responseText, xmlhttp)
+        } else {
+          options.success && options.success(xmlhttp.responseText, xmlhttp)
+        }
+      }
+    }
+
+    xmlhttp.open(options.method, options.url, true)
+
+    if (options.headers) {
+      for(var header in options.headers) {
+        xmlhttp.setRequestHeader(header, options.headers[header])
+      }
+    }
+
+    var data = options.formData || JSON.stringify(options.data || null)
+    xmlhttp.send(data)
   }
 
 })()
