@@ -1,6 +1,7 @@
 /*
   Fonts:
     "Source Sans Pro"
+    "Source Sans Pro SemiBold"
     "Source Sans Pro Bold"
     "Source Sans Pro Light"
     "Source Sans Pro LightItalic"
@@ -9,6 +10,7 @@
   Colors:
     highlight #30D7A9
     background color dark #091446
+    border color blue   #E0E6ED
     font color contrast #17152F
     font color dark     #3E396B
     font color light    #7570A0
@@ -19,6 +21,11 @@
 @font-face {
   font-family: "Source Sans Pro";
   src: url("../fonts/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro SemiBold";
+  src: url("../fonts/SourceSansPro-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
@@ -1525,83 +1532,92 @@ header .scroll p {
 .token-sale-terms .token-sale-title {
   font-size: 28px;
   margin-bottom: 0;
+  color: #3E396B;
 }
 .token-sale-terms .token-sale-subtitle {
   font-size: 17px;
+  color: #7571A0;
 }
 .token-sale-terms .chart-legend {
   font-size: 14px;
 }
 
 .token-sale-terms .stats {
-  padding-left: 25px;
+  text-align: center;
 }
-.token-sale-terms .stats li {
-  margin-bottom: 70px;
+
+.token-sale-terms .stats > .stat {
+  padding: 20px 0;
+  border-right: 1px solid #E0E6ED;
 }
+.token-sale-terms .stats > .stat:last-child {
+  border-right: none;
+}
+.token-sale-terms .stats > .stat:after {
+  content: " ";
+  width: 40%;
+  height: 1px;
+  left: 30%;
+  border-bottom: 1px solid #E0E6ED;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+.token-sale-terms .stats > .stat.no-border:after {
+  border: none;
+}
+
 .token-sale-terms .stats .token-sale-title {
   margin-top: 0;
 }
+.token-sale-terms .stats .token-sale-subtitle {
+  font-size: 16px;
+}
 
+.token-sale-terms .charts {
+  margin-top: 45px;
+}
 
-.token-sale-terms .dynamic-charts {
+.token-sale-terms .chart-container {
+  padding: 30px 5px;
+  border: 1px solid #E0E6ED;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 15px auto;
+  text-align: center;
   overflow: hidden;
+}
+.token-sale-terms .chart-container .token-sale-title {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .token-sale-terms .dognut-chart {
-  padding: 10px;
-  margin: 10px auto 0;
-  max-width: 277px;
-  max-height: 277px;
-  float: left;
+  margin: 0 auto;
+  max-width: 161px;
+  max-height: 161px;
 }
 
-.token-sale-terms .line-chart {
-  margin: 10px auto 0;
-  max-width: 89%;
-  max-height: 35px;
+.token-sale-terms .chart-container img {
+  margin: 20px auto;
 }
 
-.token-sale-terms .img-chart {
-  width: 95%;
-  max-width: 500px;
-  margin: 40px auto 0;
-}
+.token-sale-terms  .percentage { font-family: "Source Sans Pro SemiBold", serif; }
 
-.token-sale-terms .token-distribution {
-  color: #3E396B;
-  font-weight: 800;
-  text-align: center;
-}
+.crowdsale  .percentage             { color: #3E396B; }
+.community-and-partners .percentage { color: #4959DD; }
+.team-and-contributors .percentage  { color: #04A9FD; }
+.foundation .percentage             { color: #30D7A9; }
+.legal  .percentage                 { color: #65F5AC; }
 
-.token-sale-terms .foundation .percentage             { color: #30D7A9; }
-.token-sale-terms .team-and-contributors .percentage  { color: #04A9FD; }
-.token-sale-terms .community-and-partners .percentage { color: #4959DD; }
-.token-sale-terms .crowdsale  .percentage             { color: #000; }
+.token-sale-terms .chart-legend {
+  margin: 10px 18px 0;
+}
 
 .token-sale-terms .chart-legend li {
-  width: 45%;
-  min-height: 90px;
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-}
-
-@media (min-width: 450px) {
-  .token-sale-terms .stats {
-    padding-left: 0;
-  }
-
-  .token-sale-terms .stats,
-  .token-sale-terms .chart-legend {
-    text-align: center;
-  }
-
-  .token-sale-terms .chart-legend li {
-    width: 100%;
-    min-height: inherit;
-    display: block;
-  }
+  width: 100%;
+  min-height: inherit;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -1610,33 +1626,39 @@ header .scroll p {
     padding-top: 200px; /*80 + 120*/
   }
 
-  .token-sale-terms .stats,
-  .token-sale-terms .stats h3.title {
-    text-align: right;
-  }
-  .token-sale-terms .token-distribution,
-  .token-sale-terms .chart-legend,
-  .token-sale-terms .chart-legend li {
-    text-align: left;
-  }
-
-  .token-sale-terms .stats {
-    padding-right: 25px;
-  }
-
-  .token-sale-terms .token-distribution {
-    margin-top: 20px;
-    left: 21px;
-    position: relative;
-  }
-
   .token-sale-terms .chart-legend {
-    margin-top: 20px;
-    right: -25px;
-    position: relative;
+    margin: 15px 8px 0;
+    display: inline-block;
+  }
+  .chart-legend.left {
+    float: left;
+  }
+  .chart-legend.right {
+    float: right;
   }
 
-  .token-sale-terms .img-chart {
-    margin-left: 20px;
+  .dognut-chart.left {
+    margin-left: 25px;
+    float: left;
+  }
+  .dognut-chart.right {
+    margin-right: 25px;
+    float: right;
+  }
+}
+
+@media (min-width: 992px) {
+  .token-sale-terms .divider {
+    width: 78%;
+    border-top: 1px solid #CCC;
+    margin: auto;
+  }
+
+  .token-sale-terms .stats > .stat {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+  .token-sale-terms .stats > .stat:after {
+    display: none;
   }
 }
