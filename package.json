@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "webpack --config webpack.browser.js --watch"
+    "start": "webpack --config webpack.browser.js --watch",
+    "build": "webpack --config webpack.browser.js"
   },
   "repository": {
     "type": "git",
