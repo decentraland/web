@@ -20,33 +20,10 @@ module.exports = {
   module: {
       loaders: [
         {
-          test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-          loader: 'url-loader?mimetype=application/font-woff'
-        },
-        {
-          test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-          loader: 'url-loader?mimetype=application/octet-stream'
-        },
-        {
-          test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-          loader: 'file-loader'
-        },
-        {
-          test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-          loader: 'url-loader?mimetype=image/svg+xml'
-        },
-
-        // Images
-        {
-          test: /\.(png|jpg)$/,
-          loader: 'file-loader'
-        },
-
-        {
           test: /\.css$/,
           loader: ExtractTextPlugin.extract({
             fallback: 'style-loader',
-            use: { loader: 'css-loader', options: { minimize: true } }
+            use: { loader: 'css-loader', options: { url: false, minimize: true } }
           })
         }
       ]
