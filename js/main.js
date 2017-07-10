@@ -1,6 +1,20 @@
 ;(function () {
   "use strict";
 
+  // Analytics events
+  on('[data-event-category]', 'click', function() {
+    sendEvent(this.dataset.eventCategory, this.dataset.eventAction)
+  })
+  on('#js-blog-carousel a', 'click', function() {
+    sendEvent('Blog', 'click', this.href)
+  })
+  on('#js-team-members a', 'click', function() {
+    sendEvent('Team Member', 'click', this.href)
+  })
+  on('#js-partners a', 'click', function() {
+    sendEvent('Partner Logo', 'click', this.href)
+  })
+
   // Mobile navbar hooks
   on('.navbar-toggle',   'click', toggleNavbar)
   on('#js-close-navbar', 'click', toggleNavbar)
@@ -140,6 +154,10 @@
 
     var data = options.formData || JSON.stringify(options.data || null)
     xmlhttp.send(data)
+  }
+
+  function sendEvent(category, action, label) {
+    ga('send', 'event', category, action, label)
   }
 
 })()
