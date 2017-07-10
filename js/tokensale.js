@@ -2,59 +2,41 @@
   "use strict"
 
   // Token Sale Terms charts
-  new Chart(document.getElementById('js-dognut-chart'), {
+  new Chart(document.getElementById('js-revenue-chart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Legal', 'Research', 'Marketing and community dev', 'Operations and Business Dev', 'Development'],
+      datasets:[{
+        label: "Token Sale Terms",
+        data: [5, 10, 15, 20, 50],
+        backgroundColor: ['#65F5AC', '#30D7A9', '#04A9FD', '#4959DD', '#3E396B']
+      }]
+    },
+    options: {
+      tooltips: {
+        enabled: false
+      },
+      legend: false,
+      cutoutPercentage: 80
+    }
+  })
+
+  new Chart(document.getElementById('js-distribution-chart'), {
     type: 'doughnut',
     data: {
       labels: ['Foundation', 'Team and early contributors', 'Community and partners', 'Crowdsale'],
       datasets:[{
         label: "Token Sale Terms",
-        data: [20,20,20,40],
-        backgroundColor: ['#30D7A9', '#04A9FD', '#4959DD', '#000']
+        data: [20, 20, 20, 40],
+        backgroundColor: ['#30D7A9', '#04A9FD', '#4959DD', '#3E396B']
       }]
     },
     options: {
-      legend: false,
-      cutoutPercentage: 90
-    }
-  })
-
-  new Chart(document.getElementById('js-line-chart'), {
-    type: 'horizontalBar',
-    data: {
-      labels: ['Data'],
-      datasets:[{
-        label: 'Crowdsale',
-        data: [40],
-        backgroundColor: '#000'
-      },{
-        label: 'Team and early contributors',
-        data: [20],
-        backgroundColor: '#4959DD'
-      }, {
-        label: 'Community and partners',
-        data: [20],
-        backgroundColor: '#04A9FD'
-      }, {
-        label: 'Foundation',
-        data: [20],
-        backgroundColor: '#30D7A9'
-      }]
-    },
-    options: {
-      legend: false,
       tooltips: {
         enabled: false
       },
-      scales: {
-        xAxes: [{
-          display: false,
-          stacked: true,
-        }],
-        yAxes: [{
-          display: false,
-          stacked: true,
-        }]
-      }
+      legend: false,
+      cutoutPercentage: 80
     }
   })
 
