@@ -19,7 +19,7 @@
       url: url,
       method: 'GET',
       success: function(response) {
-        window.location.href = '/thankyou.html?email=' + formData.get('email')
+        window.location.href = '/thankyou?email=' + formData.get('email')
       },
       error: function() {
         notice.innerHTML = 'We seem to be having problems subscribing you to the newsletter, please try again later.'
