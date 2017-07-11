@@ -1684,7 +1684,6 @@ header .scroll p {
   margin-bottom: 90px;
 }
 
-
 /* -----------------------------------------------------------------------
   Thankyou: Header */
 
@@ -1697,4 +1696,7 @@ header .scroll p {
 .thankyou header h2.title {
   margin-top: 100px;
   margin-bottom: 90px;
+}
+.thankyou header .description {
+  max-width: 590px;
 }
