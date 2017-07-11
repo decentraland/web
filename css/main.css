@@ -1683,3 +1683,7 @@ header .scroll p {
   margin-top: 100px;
   margin-bottom: 90px;
 }
+
+.thankyou header .description {
+  max-width: 590px;
+}
