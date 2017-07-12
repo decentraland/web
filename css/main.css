@@ -1138,9 +1138,22 @@ header .scroll p {
   margin-bottom: 0;
 }
 
-.partners .left, .partners .center, .partners .right {
+.partners .logos {
+  margin: 20px auto 0;
+  overflow: hidden;
   text-align: center;
+  width: 100%;
+}
+
+.partners .logos a {
   margin-top: 40px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .partners .logos a {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1148,18 +1161,15 @@ header .scroll p {
     margin-bottom: 30px;
   }
 
-  .partners .left {
-    text-align: right;
-    padding-right: 50px;
+  .partners .logos a {
+    margin-top: 0;
+    display: inline-block;
+    width: 220px;
+    margin-right: 100px;
   }
 
-  .partners .center {
-    text-align: center;
-  }
-
-  .partners .right {
-    text-align: left;
-    padding-left: 50px;
+  .partners .logos a:last-child {
+    margin-right: 0;
   }
 }
 
@@ -1452,7 +1462,7 @@ header .scroll p {
 }
 
 .token-sale .countdown h1 {
-  margin: 40px 0px 20px;
+  margin: 40px 0 20px;
 }
 
 .token-sale .countdown {
