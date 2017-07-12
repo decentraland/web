@@ -1642,6 +1642,21 @@ header .scroll p {
     padding-top: 200px; /*80 + 120*/
   }
 
+  .token-sale-terms .charts {
+    margin: 45px auto 0;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .token-sale-terms .chart-container {
+    width: 500px;
+    margin: 0 auto 20px;
+  }
+  .token-sale-terms .chart-container:last-child {
+    margin-right: 0;
+  }
+
   .token-sale-terms .chart-legend {
     margin: 15px 8px 0;
     display: inline-block;
@@ -1676,6 +1691,13 @@ header .scroll p {
   }
   .token-sale-terms .stats > .stat:after {
     display: none;
+  }
+}
+
+@media (min-width: 1050px) {
+  .token-sale-terms .chart-container {
+    margin: 0 20px 0 0;
+    float: left;
   }
 }
 
