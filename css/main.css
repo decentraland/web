@@ -1075,21 +1075,22 @@ header .scroll p {
   font-family: "Source Sans Pro Light";
 }
 
-.team .team-member-data .twitterhandle a {
+.team .team-member-data .handles a {
   display: inline-block;
   position: relative;
   color: #7570A0;
 }
 
 .team .team-member .contact-icon {
-  background-size: 200px;
+  background-size: 220px;
   margin: 0;
   top: 2px;
   opacity: 0.6;
   position: relative;
 }
 
-.team .team-member .contact-icon-twitter { background-position: 1px -28px; }
+.team .team-member .contact-icon-twitter  { background-position: 1px -29px; }
+.team .team-member .contact-icon-linkedin { background-position: -202px -28px; }
 
 @media (min-width: 550px) {
   .team .team-member {
@@ -1165,11 +1166,17 @@ header .scroll p {
     margin-top: 0;
     display: inline-block;
     width: 220px;
-    margin-right: 100px;
+    margin-right: 20px;
   }
 
   .partners .logos a:last-child {
     margin-right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .partners .logos a {
+    margin-right: 100px;
   }
 }
 
