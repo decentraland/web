@@ -1,8 +1,9 @@
-var webpack = require('webpack')
-var path = require('path')
+var webpack  = require('webpack')
+var nunjucks = require('nunjucks')
+var path     = require('path')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
-var CopyFilesPlugin = require('copy-webpack-plugin')
-var lastCommitSHA = require('child_process').execSync('git rev-parse HEAD').toString().trim().slice(0, 5)
+var CopyFilesPlugin   = require('copy-webpack-plugin')
+var lastCommitSHA     = require('child_process').execSync('git rev-parse HEAD').toString().trim().slice(0, 5)
 
 
 module.exports = {
@@ -27,22 +28,22 @@ module.exports = {
             fallback: 'style-loader',
             use: { loader: 'css-loader', options: { url: false, minimize: true } }
           })
-        }
+        },
       ]
   },
 
   plugins: [
-    // This is not ideal but rather a fast solution to version static files via commit hash
+    // This is not ideal but rather a fast solution to compile static html files
     new CopyFilesPlugin([{
-        from: './views/**/*', to: __dirname, flatten: true,
-        transform: function(content, absolutePath) {
-          if (process.env.NODE_ENV === 'production') {
-            let contentString = content.toString()
-            contentString = contentString.replace(/__RESOURCE_VERSION__/g, lastCommitSHA)
-            content = new Buffer(contentString)
-          }
+        from: './views/*.html', to: __dirname, flatten: true,
+        transform: function(buffer, absolutePath) {
+          let content = buffer.toString()
 
-          return content
+          content = nunjucks.renderString(content, {
+            RESOURCE_VERSION: lastCommitSHA
+          })
+
+          return new Buffer(content)
         }
       }
     ]),
