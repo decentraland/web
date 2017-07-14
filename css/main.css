@@ -1683,10 +1683,6 @@ header .countdown small {
   text-align: center;
   overflow: hidden;
 }
-.token-sale-terms .chart-container .token-sale-title {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
 
 .token-sale-terms .dognut-chart {
   margin: 0 auto;
