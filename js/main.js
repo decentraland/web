@@ -4,7 +4,7 @@
   // Countdown
   var deadline = new Date(2017, 7, 8)
   initializeClock('js-clock', deadline, function() {
-    document.getElementById('js-clock').classList.add('hidden')
+    getElementById('js-clock').classList.add('hidden')
   })
 
   // Analytics events
@@ -22,9 +22,9 @@
   })
 
   // Mobile navbar hooks
-  on('.navbar-toggle',   'click', toggleNavbar)
-  on('#js-close-navbar', 'click', toggleNavbar)
-  on('.full-nav a',      'click', toggleNavbar)
+  on('#js-open-navbar',  'click', toggleNavbar)
+  on('#js-close-navbar', 'click', closeNavbar)
+  on('#js-menu a',      'click', closeNavbar)
 
   // Subscribe form
   on('form', 'submit', function(event) {
@@ -71,10 +71,10 @@
       }
     })
     .afterShow(function() {
-      getById('js-background-video').pause()
+      getElementById('js-background-video').pause()
     })
     .afterClose(function() {
-      getById('js-background-video').play()
+      getElementById('js-background-video').play()
       modal.destroy()
     }).show()
   })
@@ -108,67 +108,10 @@
 
 
   // ---------------------------------------------------
-  // Utils
-
-  function toggleClass(el, className) {
-    el.classList.toggle(className)
-    return el
-  }
-
-  function toggleNavbar() {
-    var navbarCollapse = document.querySelector('.navbar-collapse')
-    var navbar = document.querySelector('.navbar')
-
-    toggleClass(toggleClass(navbarCollapse, 'collapse'), 'expand')
-    toggleClass(navbar, 'navbar-fixed-top')
-    toggleClass(document.body, 'fixed-scroll-xs')
-  }
-
-  function on(selector, type, event) {
-    var elements = typeof selector === 'string'
-    ? Array.prototype.slice.call(document.querySelectorAll(selector))
-    : [ selector ] // asume DOM element
-
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener(type, event, true)
-    }
-  }
-
-  function getById(id) {
-    return document.getElementById(id)
-  }
-
-  function http(options, success) {
-    var xmlhttp = new XMLHttpRequest()
-
-    xmlhttp.onreadystatechange = function(result) {
-      if (xmlhttp.readyState === 4) {
-        if(xmlhttp.status >= 400) {
-          options.error && options.error(xmlhttp.responseText, xmlhttp)
-        } else {
-          options.success && options.success(xmlhttp.responseText, xmlhttp)
-        }
-      }
-    }
-
-    xmlhttp.open(options.method, options.url, true)
-
-    if (options.headers) {
-      for(var header in options.headers) {
-        xmlhttp.setRequestHeader(header, options.headers[header])
-      }
-    }
-
-    var data = options.formData || JSON.stringify(options.data || null)
-    xmlhttp.send(data)
-  }
-
-  function sendEvent(category, action, label) {
-    ga('send', 'event', category, action, label)
-  }
+  // Countdown Utils
 
   function initializeClock(id, endtime, callback) {
-    var clock = document.getElementById(id)
+    var clock = getElementById(id)
     if (! clock) return
 
     var daysSpan    = clock.querySelector('.days')
@@ -208,6 +151,84 @@
       'minutes': minutes,
       'seconds': seconds
     }
+  }
+
+
+  // ---------------------------------------------------
+  // Utils
+
+  function toggleNavbar() {
+    var menu = getElementById('js-menu')
+
+    if (menu.className.search('menu-open') === -1) {
+      document.body.addEventListener('click', closeNavbarOnOutsideClick, true)
+      menu.className = 'menu menu-open'
+    } else {
+      closeNavbar()
+    }
+
+  }
+
+  function closeNavbar(event) {
+    document.body.removeEventListener('click', closeNavbarOnOutsideClick, true)
+    getElementById('js-menu').className = 'menu'
+  }
+
+  function closeNavbarOnOutsideClick(event) {
+    if (! isChildrenOf(event.target, getElementById('js-menu'))) {
+      closeNavbar()
+    }
+  }
+
+  function isChildrenOf(el, parent) {
+    if (el === parent) return true
+
+    while(el = el.parentElement) {
+      if (el === parent) return true
+    }
+  }
+
+  function on(selector, type, event) {
+    var elements = typeof selector === 'string'
+    ? Array.prototype.slice.call(document.querySelectorAll(selector))
+    : [ selector ] // asume DOM element
+
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].addEventListener(type, event, true)
+    }
+  }
+
+  function getElementById(id) {
+    return document.getElementById(id)
+  }
+
+  function http(options, success) {
+    var xmlhttp = new XMLHttpRequest()
+
+    xmlhttp.onreadystatechange = function(result) {
+      if (xmlhttp.readyState === 4) {
+        if(xmlhttp.status >= 400) {
+          options.error && options.error(xmlhttp.responseText, xmlhttp)
+        } else {
+          options.success && options.success(xmlhttp.responseText, xmlhttp)
+        }
+      }
+    }
+
+    xmlhttp.open(options.method, options.url, true)
+
+    if (options.headers) {
+      for(var header in options.headers) {
+        xmlhttp.setRequestHeader(header, options.headers[header])
+      }
+    }
+
+    var data = options.formData || JSON.stringify(options.data || null)
+    xmlhttp.send(data)
+  }
+
+  function sendEvent(category, action, label) {
+    ga('send', 'event', category, action, label)
   }
 
 })()

@@ -314,38 +314,49 @@ form .notice {
   color: #FFF;
 }
 
-.navbar .icon-hamburger {
-  top: 2px;
-  vertical-align: bottom;
+.navbar-header {
+  float: left;
 }
 
-.navbar-fixed-top {
-  height: 100%;
-  background: #FFF;
-}
-
-.navbar-fixed-top .navbar-header, .navbar-fixed-top .min-nav {
-  display: none;
-}
-.navbar-fixed-top .full-nav {
+.navbar-logo {
+  padding: 20px 10px;
+  float: left;
   display: block;
 }
 
-.navbar-collapse.collapse {
-  text-align: center;
+.navbar-logo > h1 {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+  color: #FFF;
 }
 
-.navbar-toggle, .navbar-collapse {
+.navbar-container {
   margin-top: 18px;
+  float: right;
+}
+
+.navbar-container .icon-hamburger {
+  position: relative;
+  cursor: pointer;
 }
 
 .nav.navbar-nav {
-  float: none;
+  padding-right: 18px;
+}
+
+.nav.navbar-nav li {
+  float: left;
 }
 
 .nav.navbar-nav li a {
   font-size: 16px;
   color: #FFF;
+}
+
+.nav > li > a {
+  padding: 10px 5px;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
@@ -367,109 +378,146 @@ form .notice {
 .nav.navbar-nav li .navbar-slack {
   padding-top: 5px;
   padding-bottom: 5px;
-  margin-top: 10px;
+  margin-top: 4px;
   margin-left: 6px;
-  border: 1px solid;
-  border-radius: 40px;
   color: #30D7A9;
 }
 .nav.navbar-nav li .navbar-slack .contact-icon-slack { background-position: -25px 1px; }
 
 .nav.navbar-nav li .navbar-launch { color: #FFA500; }
 
-.navbar-logo {
-  padding: 20px 15px;
-  float: left;
-  display: block;
+@media (min-width: 400px) {
+  .navbar-logo {
+    padding: 20px 15px;
+  }
+
+  .nav > li > a {
+    padding: 10px;
+  }
 }
 
-.navbar-logo > h1 {
-  margin: 0 10px;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 50px;
-  color: #FFF;
+@media (min-width: 768px) {
+  .navbar-logo {
+    margin-left: -15px;
+  }
+
+  .navbar-container {
+    margin-top: 25px;
+  }
+
+  .nav.navbar-nav {
+    padding-right: 0;
+  }
+
+  .nav.navbar-nav li .navbar-slack {
+    border: 1px solid #30D7A9;
+    border-radius: 40px;
+  }
+
+  .nav > li > a {
+    padding: 10px 15px;
+  }
 }
 
-.full-nav {
+
+/* -----------------------------------------------------------------------
+  Menu */
+
+.menu {
   font-size: 18px;
+  height: 100%;
+  width: 95%;
+  top: 0;
+  right: 0;
+  position: fixed;
   text-align: center;
   color: #36316D;
-  display: none;
+  background-color: #F8FAFF;
+  border-left: 1px solid #31419E;
+  transform: translate(100%, 0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  z-index: 999999;
 }
 
-.full-nav h4 {
+.menu-open {
+  display: block;
+  transform: translate(0, 0);
+}
+
+.menu h4 {
+  margin-top: 30px;
   margin-bottom: 28px;
   font-size: 24px;
   position: relative;
 }
 
-.full-nav .icon-close {
+.menu .icon-close {
   top: 5px;
   right: 15px;
   position: absolute;
   cursor: pointer;
 }
 
-.full-nav .link-list a {
+.menu .menu-item, .menu .link-list-in-columns a {
+  margin-bottom: 20px;
+}
+
+.menu .link-list a {
   margin-bottom: 5px;
   display: inline-block;
 }
 
-.full-nav .link-list-in-columns {
+.menu .link-list-in-columns {
   margin-top: 17px;
   margin-bottom: 17px;
 }
-.full-nav .link-list-in-columns a {
-  margin-bottom: 15px;
+.menu .link-list-in-columns a {
   display: block;
 }
 
-.full-nav a {
+.menu a {
   color: #36316D;
 }
 
-.full-nav .contact-icons {
+.menu .contact-icons {
   margin-top: 35px;
 }
-.full-nav .contact-icon {
+.menu .contact-icon {
   margin: 0 10px;
 }
 
-.full-nav .contact-icon-twitter  { background-position: 0 -35px; }
-.full-nav .contact-icon-slack    { background-position: -35px -35px; }
-.full-nav .contact-icon-github   { background-position: -70px -35px; }
-.full-nav .contact-icon-chat     { background-position: -104px -35px; }
-.full-nav .contact-icon-reddit   { background-position: -171px -35px; }
-.full-nav .contact-icon-facebook { background-position: -206px -35px; }
+.menu .contact-icon-twitter  { background-position: 0 -35px; }
+.menu .contact-icon-slack    { background-position: -35px -35px; }
+.menu .contact-icon-github   { background-position: -70px -35px; }
+.menu .contact-icon-chat     { background-position: -104px -35px; }
+.menu .contact-icon-reddit   { background-position: -171px -35px; }
+.menu .contact-icon-facebook { background-position: -206px -35px; }
 
-.full-nav .email-link {
+.menu .whitepaper-link {
+  padding: 3px 20px;
+  border: 1px solid;
+  border-radius: 40px;
+  color: #30d7a9;
+  display: inline-block;
+}
+
+.menu .email-link {
   text-decoration: underline;
 }
 
-.full-nav .menu-item {
-  margin-bottom: 15px;
+@media (min-width: 360px) {
+  .menu {
+    width: 85%;
+  }
 }
 
 @media (min-width: 768px) {
-  .navbar-fixed-top {
-    height: inherit;
-    background: transparent;
-    position: static;
-  }
-
-  .navbar-fixed-top .navbar-header, .navbar-fixed-top .min-nav {
-    display: block;
-    position: relative;
-  }
-  .navbar-fixed-top .full-nav {
-    display: none;
-  }
-
-  .navbar-logo {
-    margin-left: -15px;
+  .menu {
+    width: 50%;
   }
 }
+
 
 /* -----------------------------------------------------------------------
   Header */
@@ -482,6 +530,7 @@ header {
   position: relative;
   overflow: hidden;
   color: #FFF;
+  z-index: 100;
 }
 
 header .video-overlay {
@@ -1517,14 +1566,6 @@ header .countdown small {
 
 
 /* -----------------------------------------------------------------------
-  Token Sale: Nav */
-
-.full-nav .link-list a {
-  margin-bottom: 15px;
-}
-
-
-/* -----------------------------------------------------------------------
   Token Sale: Header */
 
 .token-sale header {
@@ -1544,6 +1585,14 @@ header .countdown small {
   .token-sale header .description {
     margin: 30px auto;
   }
+}
+
+
+/* -----------------------------------------------------------------------
+  Token Sale: Menu */
+
+.token-sale .menu .dash {
+  margin-bottom: 10px;
 }
 
 
@@ -1751,19 +1800,6 @@ p.subtitle {
   margin-bottom: 90px;
 }
 
-/* -----------------------------------------------------------------------
-  Thankyou: Header */
-
-.thankyou header {
-  height: 100%;
-  background-image: url("../images/tokensale-background.png");
-  background-position: 0 0;
-}
-
-.thankyou header h2.title {
-  margin-top: 100px;
-  margin-bottom: 90px;
-}
 .thankyou header .description {
   max-width: 590px;
 }
