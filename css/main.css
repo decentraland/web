@@ -346,7 +346,6 @@ form .notice {
   vertical-align: top;
   display: inline-block;
 }
-.nav.navbar-nav li .contact-icon-slack { background-position: -28px -55px; }
 
 .nav.navbar-nav li .navbar-slack {
   padding-top: 5px;
@@ -357,7 +356,7 @@ form .notice {
   border-radius: 40px;
   color: #30D7A9;
 }
-.nav.navbar-nav li .navbar-slack .contact-icon-slack { background-position: -28px -1px; }
+.nav.navbar-nav li .navbar-slack .contact-icon-slack { background-position: -25px 1px; }
 
 .nav.navbar-nav li .navbar-launch { color: #FFA500; }
 
