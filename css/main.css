@@ -529,7 +529,7 @@ form .notice {
   Header */
 
 header {
-  padding-bottom: 180px;
+  padding-bottom: 97px;
   background-color: #081445;
   background-image: url("../images/main-background.png");
   background-size: cover;
@@ -561,6 +561,11 @@ header .description {
   font-size: 15px;
   line-height: 22px;
   font-family: "Source Sans Pro Light", sans-serif;
+}
+
+header small.subtitle {
+  margin-top: 4px;
+  color: #FFF;
 }
 
 header .play-video {
@@ -1575,6 +1580,7 @@ header .countdown small {
   Token Sale: Header */
 
 .token-sale header {
+  padding-bottom: 180px;
   background-image: url("../images/tokensale-background.png");
   background-position: 0 0;
 }
@@ -1626,14 +1632,6 @@ header .countdown small {
   color: #36316D;
   background: #F8FAFF;
 }
-
-.token-sale-terms h2, small.subtitle {
-  margin-bottom: 40px;
-}
-p.subtitle {
-  margin-bottom: 5px;
-}
-
 
 .token-sale-terms .token-sale-title {
   font-size: 28px;
