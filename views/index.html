@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% set head = { title: 'Decentraland', ogtitle: 'Decentraland a virtual world on open standards', description: 'Decentraland is a VR world that uses a blockchain to determine ownership of land, and its own coin to trade land and purchase goods and services inside the world.' } %}
+    {% include "./views/partials/head.html" %}
+  </head>
+  <body class="landing">
+    <header class="container-fluid">
+      <video id="js-background-video" src="videos/background.mp4" class="hidden-xs hidden-sm" autoplay loop></video>
+      <div class="video-overlay"></div>
+
+      <div class="row news-bar">
+       <span class="news-label hidden-xs">Breaking News:</span>
+        Decentraland Token Sale Announcement - <a href="https://medium.com/decentraland/announcing-the-decentraland-token-sale-da46f9c6d2ed" target="_blank">Lean more</a>
+      </div>
+
+      <div class="navbar" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="icon icon-hamburger"></i>
+          </button>
+          <a href="/" class="navbar-logo">
+            <i class="icon icon-decentraland pull-left"></i>
+            <h1 class="pull-left">Decentraland</h1>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right min-nav">
+            <li><a class="hidden-sm" href="#why-decentraland">Why Decentraland?</a></li>
+            <li><a class="hidden-sm" href="#roadmap">Roadmap</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="https://decentraland.org/whitepaper.pdf" data-event-category="Whitepaper" data-event-action="click">Whitepaper</a></li>
+            <li><a href="https://decentraland.org/app" class="navbar-launch" target="_blank">Launch&nbsp;&nbsp;🚀</a></li>
+            <li><a href="https://slack.decentraland.org" class="navbar-slack" target="_blank" data-event-category="Slack Header" data-event-action="click">Slack <i class="contact-icon contact-icon-slack"></i></a></li>
+          </ul>
+
+          <div class="full-nav">
+            <h4>Menu <i id="js-close-navbar" class="icon icon-close"></i></h4>
+
+            <div class="row">
+              <div class="col-xs-12 menu-item"><a href="#why-decentraland">Why Decentraland?</a></div>
+              <!--<div class="col-xs-12 menu-item"><a href="/tokensale#token-sale-terms">Token Sale Terms</a></div>-->
+              <!-- <div class="col-xs-12 menu-item"><a href="#team">Our team</a></div> -->
+              <div class="col-xs-12 menu-item"><a href="#partners">Technical Advisors</a></div>
+              <div class="col-xs-12 menu-item"><a href="https://decentraland.org/whitepaper.pdf" data-event-category="Whitepaper" data-event-action="click">Whitepaper</a></div>
+            </div>
+
+            <div class="dash"></div>
+
+            <div class="row link-list-in-columns">
+              <div class="col-xs-6">
+                <a href="#blog">Blog</a>
+                <a href="#faqs">FAQs</a>
+              </div>
+              <div class="col-xs-6">
+                <a href="#team">Our team</a>
+                <a href="https://medium.com/decentraland" target="_blank">Press</a>
+                <!--<a href="/tokensale" target="_blank">Token Sale</a>-->
+              </div>
+            </div>
+
+            <div class="link text-center">Get in touch: <a class="email-link" href="mailto:hello@decentraland.org" data-event-category="Email Header" data-event-action="click">hello@decentraland.org</a></div>
+
+            <div class="contact-icons">
+              <a class="contact-icon contact-icon-twitter" href="https://twitter.com/decentraland" target="_blank"></a>
+              <a class="contact-icon contact-icon-slack" href="https://slack.decentraland.org" target="_blank"></a>
+              <a class="contact-icon contact-icon-github" href="https://github.com/decentraland" target="_blank"></a>
+              <a class="contact-icon contact-icon-chat" href="https://forum.decentraland.org" target="_blank"></a>
+              <a class="contact-icon contact-icon-reddit" href="https://reddit.com/r/decentraland" target="_blank"></a>
+              <a class="contact-icon contact-icon-facebook" href="https://www.facebook.com/decentraland/" target="_blank"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h2 class="title"><b>A virtual world</b> that runs on open standards</h2>
+          <div class="description">
+            <p>Decentraland is an open source protocol to create and explore shared experiences in virtual reality</p>
+          </div>
+          <div id="js-play-video" class="play-video" data-event-category="Modal Video" data-event-action="play">
+            <i class="icon icon-play-button"></i><span>watch video</span>
+          </div>
+          <div class="contact">
+            <div class="hidden-xs big-input">
+              <form action="//decentraland.us15.list-manage.com/subscribe/post-json?u=6f74047a4693dbc82dc4f3131&id=da075b1985&subscribe=Subscribe&b_6f74047a4693dbc82dc4f3131_da075b1985=" method="GET">
+                <input type="email" required name="email" placeholder="Enter your email to receive updates">
+                <input type="submit" class="btn btn-primary request-demo" value="Subscribe" />
+                <div class="js-submit-notice notice"></div>
+              </form>
+            </div>
+            <div class="visible-xs small-input">
+              <form action="//decentraland.us15.list-manage.com/subscribe/post-json?u=6f74047a4693dbc82dc4f3131&id=da075b1985&subscribe=Subscribe&b_6f74047a4693dbc82dc4f3131_da075b1985=" method="GET">
+                <input type="email" required name="email" placeholder="Subscribe">
+                <input type="submit" class="btn btn-primary request-demo icon icon-arrow" value="" />
+                <div class="js-submit-notice notice"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {% include "./views/partials/why-decentraland.html" %}
+
+    {% include "./views/partials/roadmap.html" %}
+
+    {% include "./views/partials/faqs.html" %}
+
+    {% include "./views/partials/team.html" %}
+
+    {% include "./views/partials/blog.html" %}
+
+    {% include "./views/partials/communicate.html" %}
+
+    <footer class="container-fluid footer">
+      <h2 class="company-name wow fadeIn">Decentraland Foundation</h2>
+      <div class="row footer-links wow fadeIn">
+        <a class="link" href="#blog">Blog</a>
+        <a class="link" href="https://medium.com/decentraland" target="_blank">Press</a>
+        <a class="link" href="#faqs">FAQ</a>
+        <!--<a class="link" href="/tokensale">Token sale</a>-->
+        <div class="link last-link hidden-xs">Get in touch: <br class="visible-xs" /> <a class="email-link" href="mailto:hello@decentraland.org" data-event-category="Email Footer" data-event-action="click">hello@decentraland.org</a></div>
+        <div class="link last-link get-in-touch visible-xs">Get in touch: <br class="visible-xs" /> <a class="email-link" href="mailto:hello@decentraland.org" data-event-category="Email Footer" data-event-action="click">hello@decentraland.org</a></div>
+      </div>
+      <div class="contact-icons wow fadeIn">
+        <a class="contact-icon contact-icon-twitter" href="https://twitter.com/decentraland" target="_blank"></a>
+        <a class="contact-icon contact-icon-slack" href="https://slack.decentraland.org" target="_blank"></a>
+        <a class="contact-icon contact-icon-github" href="https://github.com/decentraland" target="_blank"></a>
+        <a class="contact-icon contact-icon-chat" href="https://forum.decentraland.org" target="_blank"></a>
+        <a class="contact-icon contact-icon-reddit" href="https://reddit.com/r/decentraland" target="_blank"></a>
+        <a class="contact-icon contact-icon-facebook" href="https://www.facebook.com/decentraland/" target="_blank"></a>
+      </div>
+      <p class="copyright wow fadeIn">Copyright © 2017 Decentraland. All right reserved</p>
+    </footer>
+
+    <link rel="stylesheet" href="css/animate.min.css"> <!-- Stylesheet not needd above the fold -->
+
+    <script src="js/vendor/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
+    <script src="js/vendor/picoModal.min.js"></script>
+    <script src="js/vendor/siema.min.js"></script>
+
+    <script src="js/main.min.js?c={{RESOURCE_VERSION}}"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-63691338-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1926715634274925'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1926715634274925&ev=PageView&noscript=1"
+    /></noscript>
+  </body>
+</html>
