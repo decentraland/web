@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="317px" height="52px" viewBox="0 0 317 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
-    <title>icons</title>
+<svg width="343px" height="52px" viewBox="0 0 343 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>icons 2</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="assets" transform="translate(-354.000000, -465.000000)">
-            <g id="icons" transform="translate(354.000000, 465.000000)">
-                <g id="close" transform="translate(300.000000, 15.000000)" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round">
-                    <path d="M1.14285714,15.2380952 L15.2432423,0.395584543" id="Line-Copy"></path>
-                    <path d="M0.380952381,15.2380952 L14.4813375,0.395584543" id="Line-Copy-2" transform="translate(7.619048, 7.619048) scale(-1, 1) translate(-7.619048, -7.619048) "></path>
-                </g>
-                <g id="icon" transform="translate(150.000000, 1.000000)">
-                    <rect id="Rectangle-8" fill="#30D7A9" x="0" y="5" width="51" height="38" rx="4"></rect>
-                    <polygon id="Rectangle-6" fill="#FFFFFF" points="20 15 35 24.2307692 20 33.4615385"></polygon>
-                </g>
-                <g id="element" transform="translate(139.000000, 1.000000)">
-                    <g id="play"></g>
-                    <g id="scroll" transform="translate(80.000000, 0.000000)" stroke="#FFFFFF" stroke-width="2">
-                        <rect id="Rectangle-11" x="1" y="1" width="28" height="44" rx="14"></rect>
-                        <path d="M15,23.5 L15,13" id="Line" stroke-linecap="round"></path>
+        <g id="icons-2">
+            <g id="Arrow" transform="translate(336.500000, 21.500000) rotate(-90.000000) translate(-336.500000, -21.500000) translate(331.000000, 16.000000)" stroke="#30D7A9" stroke-width="2" stroke-linecap="round">
+                <path d="M5.5,10.5 L10.0276926,5.97230743" id="Line"></path>
+                <path d="M4.5,10.5 L0.5,6.5" id="Line"></path>
+                <path d="M5,10.5 L5,0" id="Line"></path>
+            </g>
+            <g id="icon" transform="translate(156.000000, 7.000000)">
+                <g id="Captura-de-pantalla-2017-07-13-16.56.49" transform="translate(0.080078, 0.810059)">
+                    <g id="Mask" transform="translate(0.000000, 0.000000)">
+                        <g id="path-1-link" transform="translate(0.000000, 0.000000)" fill-rule="nonzero">
+                            <rect id="path-1" x="0.196289062" y="0.196289062" width="31.6074219" height="31.6074219" rx="15.8037109"></rect>
+                        </g>
+                        <rect id="Rectangle-path" stroke="#FFFFFF" stroke-width="2" x="1.19628906" y="1.19628906" width="29.6074219" height="29.6074219" rx="14.8037109"></rect>
                     </g>
-                    <g id="Subscribe" transform="translate(130.000000, 17.000000)" stroke-linecap="round" stroke="#FFFFFF" stroke-width="2">
+                </g>
+                <path d="M14.5240974,11.9379061 L21.6160552,16.3021878 L21.6160552,16.3021878 C22.0864131,16.5916389 22.2330671,17.2075857 21.9436161,17.6779436 C21.8615728,17.811264 21.7493757,17.9234611 21.6160552,18.0055045 L14.5240974,22.3697862 L14.5240974,22.3697862 C14.0537395,22.6592372 13.4377927,22.5125832 13.1483417,22.0422253 C13.0513523,21.8846176 13,21.7031877 13,21.5181279 L13,12.7895644 L13,12.7895644 C13,12.2372797 13.4477153,11.7895644 14,11.7895644 C14.1850598,11.7895644 14.3664897,11.8409168 14.5240974,11.9379061 Z" id="Rectangle-6" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+            <g id="icons">
+                <g id="close" stroke-linecap="round" transform="translate(300.000000, 17.000000)" stroke="#FFFFFF" stroke-width="2">
+                    <path d="M1.14285714,15.2380952 L15.2432423,0.395584543" id="Line-Copy"></path>
+                    <path d="M0.7567584,15.2380952 L14.8571435,0.395584543" id="Line-Copy-2" transform="translate(7.806951, 7.816840) scale(-1, 1) translate(-7.806951, -7.816840) "></path>
+                </g>
+                <g id="element" transform="translate(220.000000, 4.000000)" stroke-width="2" stroke="#FFFFFF">
+                    <g id="scroll">
+                        <rect id="Rectangle-11" x="0" y="0" width="28" height="44" rx="14"></rect>
+                        <path d="M14,22.5 L14,12" id="Line" stroke-linecap="round"></path>
+                    </g>
+                    <g id="Subscribe" stroke-linecap="round" transform="translate(49.000000, 14.000000)">
                         <g id="Arrow" transform="translate(5.500000, 5.500000) rotate(-90.000000) translate(-5.500000, -5.500000) ">
                             <path d="M5.5,10.5 L10.0276926,5.97230743" id="Line"></path>
                             <path d="M4.5,10.5 L0.5,6.5" id="Line"></path>
@@ -29,18 +40,18 @@
                         </g>
                     </g>
                 </g>
-                <g transform="translate(72.000000, 15.000000)" stroke-linecap="round" stroke-width="2">
-                    <g id="Menu" transform="translate(36.000000, 2.000000)" stroke="#FFFFFF">
-                        <path d="M0.5,1 L20.5200005,1" id="Line"></path>
-                        <path d="M0.5,7 L20.5200005,7" id="Line-Copy"></path>
-                        <path d="M0.5,13 L13.5200005,13" id="Line-Copy-2"></path>
+                <g id="Group" transform="translate(73.000000, 14.000000)">
+                    <g id="Menu" transform="translate(36.000000, 3.000000)" stroke="#FFFFFF">
+                        <path d="M0.5,0 L20.5200005,0" id="Line"></path>
+                        <path d="M0.5,6 L20.5200005,6" id="Line-Copy"></path>
+                        <path d="M0.5,12 L13.5200005,12" id="Line-Copy-2"></path>
                     </g>
                     <g id="close" stroke="#3E396B">
                         <path d="M1.14285714,15.2380952 L15.2432423,0.395584543" id="Line-Copy"></path>
-                        <path d="M0.380952381,15.2380952 L14.4813375,0.395584543" id="Line-Copy-2" transform="translate(7.619048, 7.619048) scale(-1, 1) translate(-7.619048, -7.619048) "></path>
+                        <path d="M0.7567584,15.2380952 L14.8571435,0.395584543" id="Line-Copy-2" transform="translate(7.806951, 7.816840) scale(-1, 1) translate(-7.806951, -7.816840) "></path>
                     </g>
                 </g>
-                <g id="Page-1-Copy">
+                <g id="Page-1-Copy" fill-rule="nonzero">
                     <g id="Group-9" transform="translate(0.000000, 1.000000)">
                         <path d="M50.83,27.574 C50.908,26.716 50.96,25.884 50.96,25 C50.96,11.22 39.78,0.04 26,0.04 C12.22,0.04 1.04,11.22 1.04,25 C1.04,25.104 50.44,26.274 50.83,27.574" id="Fill-1" fill="#D7D1C7"></path>
                         <path d="M0.936,25.052 C0.936,38.832 12.116,50.012 25.896,50.012 C39.676,50.012 49.43796,41.536 50.856,28.172 C50.86692,28.06852 0.936,24.194 0.936,25.052" id="Fill-3" fill="#BFB5AF"></path>

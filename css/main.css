@@ -11,7 +11,7 @@
     highlight #30D7A9
     background color dark #091446
     border color blue   #E0E6ED
-    font color contrast #17152F
+    font color contrast #36316D
     font color dark     #3E396B
     font color light    #7570A0
     font color 'white'  #E0E7ED
@@ -116,6 +116,21 @@ h3.title {
   font-size: 26px;
 }
 
+p.subtitle {
+  padding: 0 10px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #36316D;
+}
+small.subtitle {
+  font-size: smaller;
+  text-align: center;
+  color: #36316D;
+  display: block;
+}
+
+
 .fixed-scroll-xs {
   overflow: hidden;
 }
@@ -164,11 +179,11 @@ form .notice {
 
 .icon.icon-decentraland { width: 52px; height: 52px; background-position: 0 0; }
 .icon.icon-close        { width: 16px; height: 16px; background-position: -72px -15px; }
-.icon.icon-hamburger    { width: 21px; height: 14px; background-position: -108px -17px; }
-.icon.icon-play-button  { width: 51px; height: 38px; background-position: -150px -6px; }
+.icon.icon-hamburger    { width: 21px; height: 14px; background-position: -108px -16px; }
+.icon.icon-play-button  { width: 33px; height: 38px; background-position: -157px -5px; }
 .icon.icon-scroll       { width: 30px; height: 46px; background-position: -219px -1px; }
-.icon.icon-arrow        { width: 11px; height: 11px; background-position: -269px -18px; }
-
+.icon.icon-arrow        { width: 12px; height: 11px; background-position: -269px -18px; }
+.icon.icon-arrow-green  { width: 13px; height: 12px; background-position: -330px -16px; }
 
 /* -----------------------------------------------------------------------
  Card Icons */
@@ -216,6 +231,7 @@ form .notice {
   box-shadow:  0 8px 30px rgba(48, 215, 169, 0.5);
 }
 
+
 /* -----------------------------------------------------------------------
   Cards */
 
@@ -247,7 +263,7 @@ form .notice {
 
 .cards .card .card-body p {
   font-size: 15px;
-  color: #17152F;
+  color: #36316D;
 }
 
 @media (min-width: 768px) {
@@ -283,6 +299,7 @@ form .notice {
     font-size: 16px;
   }
 }
+
 
 /* -----------------------------------------------------------------------
   Navbar */
@@ -377,7 +394,7 @@ form .notice {
 .full-nav {
   font-size: 18px;
   text-align: center;
-  color: #17152F;
+  color: #36316D;
   display: none;
 }
 
@@ -409,7 +426,7 @@ form .notice {
 }
 
 .full-nav a {
-  color: #17152F;
+  color: #36316D;
 }
 
 .full-nav .contact-icons {
@@ -492,14 +509,13 @@ header .description {
 }
 
 header .play-video {
-  margin-top: 25px;
-  display: inline-block;
+  margin-top: 20px;
   cursor: pointer;
 }
 
 header .play-video span {
   margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 6px;
   line-height: 30px;
   font-size: 15px;
   font-family: "Source Sans Pro Light", sans-serif;
@@ -583,19 +599,10 @@ header .scroll p {
     line-height: 30px;
   }
 
-  header .play-video {
-    margin-top: 50px;
-  }
-
   header .play-video span {
     margin-top: 0;
-    margin-left: 20px;
     line-height: 40px;
     font-size: 18px;
-  }
-
-  header .contact {
-    margin-top: 85px;
   }
 
   header .contact input[type="email"] {
@@ -650,6 +657,71 @@ header .scroll p {
     width: 100%;
   }
 }
+
+
+/* -----------------------------------------------------------------------
+  Countdown */
+
+header .countdown h1 {
+  margin: 40px 0 20px;
+}
+
+header .countdown {
+  margin: 20px 0;
+  color: #3E396B;
+  display: inline-block;
+  text-align: center;
+}
+
+header .countdown p {
+  font-size: 16px;
+  color: #FFF;
+}
+header .countdown p .icon-arrow-green { vertical-align: middle; }
+
+header .countdown > .time {
+  width: 68px;
+  height: 84px;
+  padding: 10px;
+  border-radius: 3px;
+  background: #FFF;
+  display: inline-block;
+}
+
+header .countdown .counter {
+  border-radius: 3px;
+  font-size: 40px;
+  line-height: 43px;
+}
+
+header .countdown small {
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  header .countdown {
+    margin: 30px 0;
+  }
+
+  header .countdown p {
+    font-size: 18px;
+  }
+
+  header .countdown > .time {
+    width: 88px;
+    height: 104px;
+  }
+  header .countdown .counter {
+    padding-top: 2px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  header .countdown small {
+    font-size: 16px;
+  }
+}
+
 
 /* -----------------------------------------------------------------------
   Explanation */
@@ -710,6 +782,7 @@ header .scroll p {
     margin-bottom: 30px
   }
 }
+
 
 /* -----------------------------------------------------------------------
   Roadmap */
@@ -809,7 +882,7 @@ header .scroll p {
   margin-left: 18px;
   background: #FFF;
   border-radius: 10px;
-  color: #17152F;
+  color: #36316D;
   position: relative;
   text-align: left;
   display: inline-block;
@@ -1021,8 +1094,9 @@ header .scroll p {
 
 .faqs p {
   font-size: 16px;
-  color: #17152F;
+  color: #36316D;
 }
+
 
 /* -----------------------------------------------------------------------
   Team */
@@ -1033,14 +1107,6 @@ header .scroll p {
 
 .team h2.title {
   margin-bottom: 20px;
-}
-
-.team p.subtitle {
-  padding: 0 10px;
-  font-size: 18px;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #17152F;
 }
 
 .team .team-members {
@@ -1126,6 +1192,7 @@ header .scroll p {
   }
 }
 
+
 /* -----------------------------------------------------------------------
   Partners */
 
@@ -1180,6 +1247,7 @@ header .scroll p {
   }
 }
 
+
 /* -----------------------------------------------------------------------
   Blog */
 
@@ -1213,7 +1281,7 @@ header .scroll p {
 }
 
 .blog .cards .card a {
-  color: #17152F;
+  color: #36316D;
   text-decoration: none;
 }
 
@@ -1468,37 +1536,6 @@ header .scroll p {
   margin: 10px auto;
 }
 
-.token-sale .countdown h1 {
-  margin: 40px 0 20px;
-}
-
-.token-sale .countdown {
-  margin: 20px 0;
-  color: #3E396B;
-  display: inline-block;
-  text-align: center;
-}
-
-.token-sale .countdown > .time {
-  width: 68px;
-  height: 84px;
-  padding: 10px;
-  border-radius: 3px;
-  background: #FFF;
-  display: inline-block;
-}
-
-.token-sale .countdown .counter {
-  border-radius: 3px;
-  font-size: 40px;
-  line-height: 43px;
-}
-
-.token-sale .countdown small {
-  padding-top: 5px;
-  font-size: 12px;
-}
-
 @media (min-width: 768px) {
   .token-sale header {
     background-size: cover;
@@ -1506,23 +1543,6 @@ header .scroll p {
 
   .token-sale header .description {
     margin: 30px auto;
-  }
-
-  .token-sale .countdown {
-    margin: 30px 0;
-  }
-
-  .token-sale .countdown > .time {
-    width: 88px;
-    height: 104px;
-  }
-  .token-sale .countdown .counter {
-    padding-top: 2px;
-    font-size: 60px;
-    line-height: 60px;
-  }
-  .token-sale .countdown small {
-    font-size: 16px;
   }
 }
 
@@ -1548,9 +1568,17 @@ header .scroll p {
 
 .token-sale-terms {
   font-family: "Source Sans Pro Light", sans-serif;
-  color: #17152F;
+  color: #36316D;
   background: #F8FAFF;
 }
+
+.token-sale-terms h2, small.subtitle {
+  margin-bottom: 40px;
+}
+p.subtitle {
+  margin-bottom: 5px;
+}
+
 
 .token-sale-terms .token-sale-title {
   font-size: 28px;
