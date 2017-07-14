@@ -180,7 +180,7 @@ form .notice {
 .icon.icon-decentraland { width: 52px; height: 52px; background-position: 0 0; }
 .icon.icon-close        { width: 16px; height: 16px; background-position: -72px -15px; }
 .icon.icon-hamburger    { width: 21px; height: 14px; background-position: -108px -16px; }
-.icon.icon-play-button  { width: 33px; height: 38px; background-position: -157px -5px; }
+.icon.icon-play-button  { width: 33px; height: 38px; background-position: -156px -5px; }
 .icon.icon-scroll       { width: 30px; height: 46px; background-position: -219px -1px; }
 .icon.icon-arrow        { width: 12px; height: 11px; background-position: -269px -18px; }
 .icon.icon-arrow-green  { width: 13px; height: 12px; background-position: -330px -16px; }
@@ -269,34 +269,6 @@ form .notice {
 @media (min-width: 768px) {
   .cards .card {
     margin: auto;
-  }
-}
-
-
-/* -----------------------------------------------------------------------
-  News Bar */
-
-.news-bar {
-  padding: 15px 10px;
-  font-size: 13px;
-  text-align: center;
-  color:#E0E7ED;
-  background-color: #31419e;
-}
-
-.news-bar .news-label {
-  font-family: "Source Sans Pro Light", sans-serif;
-}
-
-.news-bar a {
-  color: #30D7A9;
-  text-decoration: underline;
-}
-
-@media (min-width: 768px) {
-  .news-bar {
-    padding: 15px 0;
-    font-size: 16px;
   }
 }
 
@@ -521,7 +493,7 @@ form .notice {
   Header */
 
 header {
-  padding-bottom: 97px;
+  padding-bottom: 118px;
   background-color: #081445;
   background-image: url("../images/main-background.png");
   background-size: cover;
@@ -672,19 +644,19 @@ header .scroll p {
 @media (min-width: 992px) {
   header {
     background-image: url('../images/hero.jpg');
-    background-position: 0 52px;
+    background-position: 0 0;
   }
 
   header video, header .video-overlay {
     width: 100%;
-    top: 52px;
+    top: 0;
     left: 0;
     position: absolute;
     z-index: 0;
   }
 
   header video {
-    width: 135%;
+    width: 140%;
   }
 
   header .video-overlay {
