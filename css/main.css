@@ -494,14 +494,6 @@ form .notice {
 .menu .contact-icon-reddit   { background-position: -171px -35px; }
 .menu .contact-icon-facebook { background-position: -206px -35px; }
 
-.menu .whitepaper-link {
-  padding: 3px 20px;
-  border: 1px solid;
-  border-radius: 40px;
-  color: #30d7a9;
-  display: inline-block;
-}
-
 .menu .email-link {
   text-decoration: underline;
 }
