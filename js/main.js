@@ -9,7 +9,7 @@
 
   // Analytics events
   on('[data-event-category]', 'click', function() {
-    sendEvent(this.dataset.eventCategory, this.dataset.eventAction)
+    sendEvent(this.dataset.eventCategory, this.dataset.eventAction, this.href)
   })
   on('#js-blog-carousel a', 'click', function() {
     sendEvent('Blog', 'click', this.href)
@@ -19,6 +19,12 @@
   })
   on('#js-partners a', 'click', function() {
     sendEvent('Partner Logo', 'click', this.href)
+  })
+  on('#js-menu a, #navbar a', 'click', function(event) {
+    if (! this.dataset.eventCategory) {
+      var text = (this.innerText || this.textContent)
+      sendEvent(text + ' Header', 'click', this.href)
+    }
   })
 
   // Mobile navbar hooks

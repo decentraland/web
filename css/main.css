@@ -424,9 +424,9 @@ form .notice {
   Menu */
 
 .menu {
-  font-size: 18px;
-  height: 100%;
   width: 95%;
+  height: 100%;
+  font-size: 18px;
   top: 0;
   right: 0;
   position: fixed;
@@ -515,6 +515,12 @@ form .notice {
 @media (min-width: 768px) {
   .menu {
     width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu {
+    width: 30%;
   }
 }
 
@@ -639,7 +645,7 @@ header .scroll p {
   }
 
   header .title {
-    margin-top: 100px;
+    margin-top: 60px;
     font-size: 44px;
   }
 
