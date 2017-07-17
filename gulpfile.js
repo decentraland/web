@@ -23,7 +23,6 @@ var paths = {
   js: [ path.join('js', '*.js') ],
   vendorjs: [
     path.join('js', 'vendor', 'picoModal.min.js'),
-    path.join('js', 'vendor', 'siema.min.js'),
     path.join('js', 'vendor', 'chartjs.min.js')
   ],
   copyjs: [ path.join('js', 'vendor', 'wow.min.js'), path.join('js', 'vendor', 'smooth-scroll.min.js') ],
@@ -40,13 +39,11 @@ var paths = {
 }
 
 gulp.task('clean', function() {
-  if (isProduction()) {
-    return gulp.src(DIST_FOLDER, {read: false})
-        .pipe(clean())
-  }
+  return gulp.src(DIST_FOLDER, {read: false})
+      .pipe(clean())
 })
 
-gulp.task('scripts', ['clean'], function() {
+gulp.task('scripts', function() {
   var dist = toDist('js')
 
   var copy = gulp.src(paths.copyjs)
@@ -69,7 +66,7 @@ gulp.task('scripts', ['clean'], function() {
   return merge(copy, vendor, js)
 })
 
-gulp.task('styles', ['clean'], function() {
+gulp.task('styles', function() {
   var dist = toDist('css')
 
   var copy = gulp.src(paths.copycss)
@@ -83,13 +80,13 @@ gulp.task('styles', ['clean'], function() {
   return merge(copy, css)
 })
 
-gulp.task('views', ['clean'], function() {
+gulp.task('views', function() {
   return gulp.src(paths.views)
     .pipe(nunjucks.compile({}))
     .pipe(gulp.dest(toDist()))
 })
 
-gulp.task('images', ['clean'], function() {
+gulp.task('images', function() {
   var favicon = gulp.src(paths.favicon)
     .pipe(gulp.dest(toDist()))
 
@@ -103,17 +100,17 @@ gulp.task('images', ['clean'], function() {
   return merge(favicon, images)
 })
 
-gulp.task('videos', ['clean'], function() {
+gulp.task('videos', function() {
   return gulp.src(paths.videos)
     .pipe(gulp.dest(toDist('videos')))
 })
 
-gulp.task('pdfs', ['clean'], function() {
+gulp.task('pdfs', function() {
   return gulp.src(paths.pdfs)
     .pipe(gulp.dest(toDist()))
 })
 
-gulp.task('fonts', ['clean'], function() {
+gulp.task('fonts', function() {
   return gulp.src(paths.fonts)
     .pipe(gulp.dest(toDist('fonts')))
 })
@@ -124,7 +121,7 @@ gulp.task('watch', function() {
 })
 
 gulp.task('build', [
-  'clean', 'views', 'scripts', 'styles', 'images', 'fonts', 'videos', 'pdfs'
+  'views', 'scripts', 'styles', 'images', 'fonts', 'videos', 'pdfs'
 ])
 
 gulp.task('revision', ['build'], function() {

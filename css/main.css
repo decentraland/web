@@ -1280,108 +1280,10 @@ header .countdown small {
 
 
 /* -----------------------------------------------------------------------
-  Blog */
-
-.blog {
-  padding-top: 100px;
-  background-color: #F8FAFF;
-}
-
-.blog .cards {
-  width: 100%;
-  max-height: 368px;
-  padding-bottom: 5px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-}
-
-.blog .cards .card {
-  width: 250px;
-  height: 360px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.blog .cards .card .card-body {
-  padding: 10px 20px 30px;
-}
-
-.blog .cards .card h3 {
-  margin-bottom: 30px;
-  color: #3E396B;
-}
-
-.blog .cards .card a {
-  color: #36316D;
-  text-decoration: none;
-}
-
-.blog .cards .card img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.blog .arrow {
-  top: 0;
-  width: 30px;
-  height: 100%;
-  position: absolute;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.blog .prev {
-  background-image: url("../images/prev-arrow.svg");
-  left: -10px;
-}
-
-.blog .next {
-  background-image: url("../images/next-arrow.svg");
-  right: -10px;
-}
-
-@media (min-width: 370px) {
-  .blog .cards {
-    width: 85%;
-  }
-}
-
-@media (min-width: 790px) {
-  .blog .cards {
-    width: 65%;
-  }
-
-  .blog .cards .card {
-    width: 240px;
-    margin-right: 10px;
-    display: inline-block;
-  }
-}
-
-@media (min-width: 880px) {
-  .blog .cards .card {
-    width: 260px;
-    margin-right: 20px;
-  }
-  .blog .cards .card:last-child {
-    margin-right: 0;
-  }
-
-  .blog .cards .card .card-body {
-    padding-left: 23px;
-    padding-right: 23px;
-  }
-}
-
-
-/* -----------------------------------------------------------------------
   Communicate */
 
 .communicate {
-  background-color: #FFF;
+  background: #F8FAFF;
 }
 
 .communicate .title {
@@ -1433,7 +1335,8 @@ header .countdown small {
 
 @media (min-width: 768px) {
   .communicate {
-    padding-bottom: 160px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .communicate .title {

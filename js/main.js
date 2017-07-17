@@ -15,9 +15,6 @@
   on('[data-event-category]', 'click', function() {
     sendEvent(this.dataset.eventCategory, this.dataset.eventAction, this.href)
   })
-  on('#js-blog-carousel a', 'click', function() {
-    sendEvent('Blog', 'click', this.href)
-  })
   on('#js-team-members a', 'click', function() {
     sendEvent('Team Member', 'click', this.href)
   })
@@ -122,34 +119,6 @@
         legend: false,
         cutoutPercentage: 80
       }
-    })
-  }
-
-
-  if (typeof Siema !== 'undefined') {
-    // Blog Slider
-    var slider = new Siema({
-      selector: '#js-blog-carousel',
-      perPage: {
-        800: 2,
-        1240: 3
-      },
-      loop: true
-    })
-
-    var prevArrow = document.createElement('div')
-    var nextArrow = document.createElement('div')
-    prevArrow.className = 'arrow prev'
-    nextArrow.className = 'arrow next'
-
-    slider.selector.appendChild(prevArrow)
-    slider.selector.appendChild(nextArrow)
-
-    on(prevArrow, 'click', function() {
-      slider.prev()
-    })
-    on(nextArrow, 'click', function() {
-      slider.next()
     })
   }
 
