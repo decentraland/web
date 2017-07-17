@@ -2,9 +2,11 @@
 *.swp
 .DS_Store
 
-./*.html
+/*.html
 /css/*.min.css*
 /js/*.min.js*
 
 /node_modules/
 /package-lock.json
+
+/dist/
