@@ -750,9 +750,13 @@ header .countdown small {
 /* -----------------------------------------------------------------------
   Explanation */
 
+/* -----------------------------------------------------------------------
+  Token Sale: Explanation */
+
 .explanation {
-  padding-bottom: 130px;
-  background: #F8FAFF;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: #FFF;
 }
 
 .explanation .cards {
@@ -787,6 +791,10 @@ header .countdown small {
 }
 
 @media (min-width: 768px) {
+  .explanation {
+    padding-bottom: 0;
+  }
+
   .explanation .cards .card {
     width: 230px;
     height: 310px;
@@ -1101,7 +1109,6 @@ header .countdown small {
 
 .faqs {
   width: 100%;
-  padding-top: 140px;
   background-color: #F8FAFF;
 }
 
@@ -1276,13 +1283,16 @@ header .countdown small {
   Blog */
 
 .blog {
+  padding-top: 100px;
   background-color: #F8FAFF;
 }
 
 .blog .cards {
   width: 100%;
+  max-height: 368px;
   padding-bottom: 5px;
   margin: auto;
+  overflow: hidden;
   position: relative;
   text-align: center;
 }
@@ -1293,7 +1303,6 @@ header .countdown small {
   margin-bottom: 20px;
   display: block;
 }
-
 
 .blog .cards .card .card-body {
   padding: 10px 20px 30px;
@@ -1348,7 +1357,6 @@ header .countdown small {
   .blog .cards .card {
     width: 240px;
     margin-right: 10px;
-    margin-bottom: 0;
     display: inline-block;
   }
 }
@@ -1373,8 +1381,7 @@ header .countdown small {
   Communicate */
 
 .communicate {
-  background-color: #F8FAFF;
-  padding-bottom: 100px;
+  background-color: #FFF;
 }
 
 .communicate .title {
@@ -1546,60 +1553,13 @@ header .countdown small {
 
 
 /* -----------------------------------------------------------------------
-  Token Sale: Header */
-
-.token-sale header {
-  padding-bottom: 180px;
-  background-image: url("../images/tokensale-background.png");
-  background-position: 0 0;
-}
-
-.token-sale header .description {
-  margin: 10px auto;
-}
-
-@media (min-width: 768px) {
-  .token-sale header {
-    background-size: cover;
-  }
-
-  .token-sale header .description {
-    margin: 30px auto;
-  }
-}
-
-
-/* -----------------------------------------------------------------------
-  Token Sale: Menu */
-
-.token-sale .menu .dash {
-  margin-bottom: 10px;
-}
-
-
-/* -----------------------------------------------------------------------
-  Token Sale: Explanation */
-
-.token-sale .explanation {
-  padding-top: 60px;
-  padding-bottom: 40px;
-  background: #FFF;
-}
-
-@media (min-width: 768px) {
-  .token-sale .explanation {
-    padding-bottom: 0;
-  }
-}
-
-
-/* -----------------------------------------------------------------------
   Token Sale: Token sale terms */
 
 .token-sale-terms {
-  font-family: "Source Sans Pro Light", sans-serif;
+  margin-top: 30px;
   color: #36316D;
   background: #F8FAFF;
+  font-family: "Source Sans Pro Light", sans-serif;
 }
 
 .token-sale-terms .token-sale-title {
@@ -1695,8 +1655,13 @@ header .countdown small {
     padding-top: 200px; /*80 + 120*/
   }
 
+  .token-sale-terms .stats {
+  }
+
   .token-sale-terms .charts {
-    margin: 45px auto 0;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
     display: inline-block;
     text-align: center;
