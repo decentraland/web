@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Decentraland</title>
+
+    <meta name="description" content="Decentraland is a VR world that uses a blockchain to determine ownership of land, and its own coin to trade land and purchase goods and services inside the world.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="Decentraland a virtual world on open standards"/>
+    <meta property="og:description" content="Decentraland is a VR world that uses a blockchain to determine ownership of land, and its own coin to trade land and purchase goods and services inside the world." />
+    <meta property="og:url" content="https://decentraland.org"/>
+    <meta property="og:site_name" content="Decentraland"/>
+    <meta property="og:image" content="https://decentraland.org/images/logo.png"/>
+
+    <meta name="twitter:title" content="Decentraland a virtual world on open standards">
+    <meta name="twitter:description" content="Decentraland is a VR world that uses a blockchain to determine ownership of land, and its own coin to trade land and purchase goods and services inside the world.">
+    <meta name="twitter:card" value="Decentraland a virtual world on open standards">
+    <meta name="twitter:site" content="@decentraland">
+    <meta name="twitter:creator" content="@decentraland">
+    <meta name="twitter:image" content="https://decentraland.org/images/logo.png">
+
+    <meta itemprop="name" content="Decentraland">
+    <meta itemprop="description" content="Decentraland is a VR world that uses a blockchain to determine ownership of land, and its own coin to trade land and purchase goods and services inside the world.">
+    <meta itemprop="image" content="https://decentraland.org/images/logo.png">
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="canonical" href="https://decentraland.org" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.min.css?c={{RESOURCE_VERSION}}">
+  </head>
+  <body class="landing">
+    {% include "./views/partials/menu.html" %}
+
+    {% include "./views/partials/header.html" %}
+
+    {% include "./views/partials/why-decentraland.html" %}
+
+    {% include "./views/partials/token-sale-terms.html" %}
+
+    {% include "./views/partials/team.html" %}
+
+    {% include "./views/partials/faqs.html" %}
+
+    {% include "./views/partials/roadmap.html" %}
+
+    {% include "./views/partials/blog.html" %}
+
+    {% include "./views/partials/communicate.html" %}
+
+    {% include "./views/partials/footer.html" %}
+
+    <link rel="stylesheet" href="css/animate.min.css"> <!-- Stylesheet not needd above the fold -->
+
+    <script src="js/vendor/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
+    <script src="js/vendor/picoModal.min.js"></script>
+    <script src="js/vendor/siema.min.js"></script>
+    <script src="js/vendor/chartjs.min.js"></script>
+
+    <script src="js/main.min.js?c={{RESOURCE_VERSION}}"></script>
+
+    <script src="js/vendor/smooth-scroll.min.js"></script>
+    <script>smoothScroll.init();</script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-63691338-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1926715634274925'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1926715634274925&ev=PageView&noscript=1"
+    /></noscript>
+  </body>
+</html>

@@ -1,25 +1,8 @@
 ;(function () {
   "use strict";
 
-        var url = encodeURIComponent('https://blog.decentraland.org/feed')
-        var query = 'SELECT * FROM json WHERE url="' + url + '"'
-
-        window.handleResponse = function(rr) {
-          console.log('handleResponse', rr)
-        }
-
-        http({
-          method: 'GET',
-          url: 'https://query.yahooapis.com/v1/public/yql?format=html&callback=handleResponse&q=' + query,
-          success: function(response) {
-            console.log('RESPONSE', response)
-          }
-        })
-
-
   // Countdown
-  var deadline = new Date(2017, 7, 8)
-  initializeClock('js-clock', deadline, function() {
+  initializeClock('js-clock', new Date(2017, 7, 8), function() {
     getElementById('js-clock').className += 'hidden'
   })
 
@@ -101,48 +84,50 @@
     }).show()
   })
 
-  // Token Sale Terms charts
-  new Chart(document.getElementById('js-revenue-chart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Legal', 'Research', 'Marketing and community dev', 'Operations and Business Dev', 'Development'],
-      datasets:[{
-        label: "Token Sale Terms",
-        data: [5, 10, 15, 20, 50],
-        backgroundColor: ['#65F5AC', '#30D7A9', '#04A9FD', '#4959DD', '#3E396B']
-      }]
-    },
-    options: {
-      tooltips: {
-        enabled: false
+  if (typeof Chart !== 'undefined') {
+    // Token Sale Terms charts
+    new Chart(document.getElementById('js-revenue-chart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Legal', 'Research', 'Marketing and community dev', 'Operations and Business Dev', 'Development'],
+        datasets:[{
+          label: "Token Sale Terms",
+          data: [5, 10, 15, 20, 50],
+          backgroundColor: ['#65F5AC', '#30D7A9', '#04A9FD', '#4959DD', '#3E396B']
+        }]
       },
-      legend: false,
-      cutoutPercentage: 80
-    }
-  })
+      options: {
+        tooltips: {
+          enabled: false
+        },
+        legend: false,
+        cutoutPercentage: 80
+      }
+    })
 
-  new Chart(document.getElementById('js-distribution-chart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Foundation', 'Team and early contributors', 'Community and partners', 'Crowdsale'],
-      datasets:[{
-        label: "Token Sale Terms",
-        data: [20, 20, 20, 40],
-        backgroundColor: ['#30D7A9', '#04A9FD', '#4959DD', '#3E396B']
-      }]
-    },
-    options: {
-      tooltips: {
-        enabled: false
+    new Chart(document.getElementById('js-distribution-chart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Foundation', 'Team and early contributors', 'Community and partners', 'Crowdsale'],
+        datasets:[{
+          label: "Token Sale Terms",
+          data: [20, 20, 20, 40],
+          backgroundColor: ['#30D7A9', '#04A9FD', '#4959DD', '#3E396B']
+        }]
       },
-      legend: false,
-      cutoutPercentage: 80
-    }
-  })
+      options: {
+        tooltips: {
+          enabled: false
+        },
+        legend: false,
+        cutoutPercentage: 80
+      }
+    })
+  }
 
 
   if (typeof Siema !== 'undefined') {
-    // Slider
+    // Blog Slider
     var slider = new Siema({
       selector: '#js-blog-carousel',
       perPage: {

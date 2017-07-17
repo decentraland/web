@@ -2,16 +2,9 @@
 *.swp
 .DS_Store
 
-/css/main.min.css
-
-/css/main.min.css.map
-
-/js/main.min.js
-
-/js/tokensale.min.js
+./*.html
+/css/*.min.css*
+/js/*.min.js*
 
 /node_modules/
-
 /package-lock.json
-
-/js/*.js.map
