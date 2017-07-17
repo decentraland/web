@@ -4,7 +4,7 @@
   // Countdown
   var deadline = new Date(2017, 7, 8)
   initializeClock('js-clock', deadline, function() {
-    getElementById('js-clock').classList.add('hidden')
+    getElementById('js-clock').className += 'hidden'
   })
 
   // Analytics events
