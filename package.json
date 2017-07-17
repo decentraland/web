@@ -4,8 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "webpack --config webpack.browser.js --watch",
-    "build": "NODE_ENV='production' webpack --config webpack.browser.js"
+    "start": "gulp watch",
+    "build": "NODE_ENV='production' gulp make"
   },
   "repository": {
     "type": "git",
@@ -14,14 +14,20 @@
   "author": "Decentraland",
   "homepage": "https://github.com/decentraland/web",
   "devDependencies": {
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^2.1.2",
-    "file-loader": "^0.11.2",
-    "nunjucks": "^3.0.1",
-    "style-loader": "^0.18.2",
-    "url-loader": "^0.5.9",
-    "webpack": "^3.0.0"
+    "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-rev-css-url": "^0.1.0",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.0",
+    "merge-stream": "^1.0.1"
   },
   "dependencies": {}
 }
