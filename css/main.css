@@ -1394,16 +1394,6 @@ header .countdown small {
   margin-top: 50px;
 }
 
-.communicate .contact-icon {
-  width: 19px;
-  height: 19px;
-  margin-right: 4px;
-  margin-left: 0;
-  display: inline-block;
-  vertical-align: middle;
-}
-.communicate .contact-icon-slack { background-position: -34px -70px; }
-
 .communicate form {
   margin-top: 25px;
   padding: 20px;
@@ -1449,7 +1439,22 @@ header .countdown small {
 }
 
 
-/* FOOTER */
+/* -----------------------------------------------------------------------
+  Join Slack */
+
+.join-slack .contact-icon {
+  width: 19px;
+  height: 19px;
+  margin-right: 4px;
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.join-slack .contact-icon-slack { background-position: -34px -70px; }
+
+
+/* -----------------------------------------------------------------------
+  Footer */
 
 .footer {
   background-color: #0a1645;
@@ -1760,10 +1765,18 @@ header .countdown small {
 }
 
 .thankyou header h2.title {
-  margin-top: 100px;
-  margin-bottom: 90px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .thankyou header .description {
   max-width: 590px;
+  font-size: 16px;
+}
+
+@media (min-width: 1050px) {
+  .thankyou header h2.title {
+    margin-top: 100px;
+    margin-bottom: 90px;
+  }
 }
