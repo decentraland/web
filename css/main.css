@@ -1556,10 +1556,17 @@ header .countdown small {
   Token Sale: Token sale terms */
 
 .token-sale-terms {
-  margin-top: 30px;
   color: #36316D;
   background: #F8FAFF;
   font-family: "Source Sans Pro Light", sans-serif;
+}
+
+.token-sale-terms h2.title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.token-sale-terms p.subtitle {
+  margin-bottom: 4px;
 }
 
 .token-sale-terms .token-sale-title {
@@ -1576,17 +1583,17 @@ header .countdown small {
 }
 
 .token-sale-terms .stats {
-  text-align: center;
+  margin: 20px 0;
 }
 
-.token-sale-terms .stats > .stat {
+.token-sale-terms .stats .stat {
   padding: 20px 0;
   border-right: 1px solid #E0E6ED;
 }
-.token-sale-terms .stats > .stat:last-child {
+.token-sale-terms .stats .stat:last-child {
   border-right: none;
 }
-.token-sale-terms .stats > .stat:after {
+.token-sale-terms .stats .stat:after {
   content: " ";
   width: 40%;
   height: 1px;
@@ -1596,7 +1603,7 @@ header .countdown small {
   position: absolute;
   bottom: 0;
 }
-.token-sale-terms .stats > .stat.no-border:after {
+.token-sale-terms .stats .stat.no-border:after {
   border: none;
 }
 
@@ -1656,6 +1663,7 @@ header .countdown small {
   }
 
   .token-sale-terms .stats {
+    margin: 35px 0;
   }
 
   .token-sale-terms .charts {
@@ -1703,11 +1711,11 @@ header .countdown small {
     margin: auto;
   }
 
-  .token-sale-terms .stats > .stat {
+  .token-sale-terms .stats .stat {
     padding-bottom: 20px;
     padding-top: 10px;
   }
-  .token-sale-terms .stats > .stat:after {
+  .token-sale-terms .stats .stat:after {
     display: none;
   }
 }
