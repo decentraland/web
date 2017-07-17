@@ -13,6 +13,9 @@ var rev         = require("gulp-rev")
 var revReplace  = require("gulp-rev-replace")
 var revOverride = require('gulp-rev-css-url')
 
+var DIST_FOLDER = process.env.DIST_FOLDER || 'dist'
+var DIST_PATH = './' + DIST_FOLDER
+
 
 var paths = {
   views: [ path.join('views', '*.html') ],
@@ -29,6 +32,7 @@ var paths = {
   copycss: [ path.join('css', 'bootstrap.min.css'), path.join('css', 'animate.min.css') ],
 
   favicon: 'favicon.ico',
+  pdfs: 'whitepaper.pdf',
   images: path.join('images', '*'),
   videos: path.join('videos', '*'),
 
@@ -37,18 +41,20 @@ var paths = {
 
 gulp.task('clean', function() {
   if (isProduction()) {
-    return gulp.src('dist', {read: false})
+    return gulp.src(DIST_FOLDER, {read: false})
         .pipe(clean())
   }
 })
 
 gulp.task('scripts', ['clean'], function() {
+  var dist = toDist('js')
+
   var copy = gulp.src(paths.copyjs)
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(dist))
 
   var vendor = gulp.src(paths.vendorjs)
     .pipe(concat('vendor-bundle.min.js'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(dist))
 
   var js = gulp.src(paths.js)
 
@@ -58,19 +64,21 @@ gulp.task('scripts', ['clean'], function() {
 
   js = js
     .pipe(concat('main.min.js'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(dist))
 
   return merge(copy, vendor, js)
 })
 
 gulp.task('styles', ['clean'], function() {
+  var dist = toDist('css')
+
   var copy = gulp.src(paths.copycss)
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest(dist))
 
   var css = gulp.src(paths.css)
       .pipe(minifyCss({keepSpecialComments: 0}))
       .pipe(concat('main.min.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest(dist))
 
   return merge(copy, css)
 })
@@ -78,61 +86,67 @@ gulp.task('styles', ['clean'], function() {
 gulp.task('views', ['clean'], function() {
   return gulp.src(paths.views)
     .pipe(nunjucks.compile({}))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest(toDist()))
 })
 
 gulp.task('images', ['clean'], function() {
   var favicon = gulp.src(paths.favicon)
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest(toDist()))
 
   var images = gulp.src(paths.images)
 
   if (isProduction() && process.env.MIN_IMAGES) {
     images = images.pipe(imagemin({optimizationLevel: 5}))
   }
-  images = images.pipe(gulp.dest('dist/images'))
+  images = images.pipe(gulp.dest(toDist('images')))
 
   return merge(favicon, images)
 })
 
 gulp.task('videos', ['clean'], function() {
   return gulp.src(paths.videos)
-    .pipe(gulp.dest('dist/videos'))
+    .pipe(gulp.dest(toDist('videos')))
+})
+
+gulp.task('pdfs', ['clean'], function() {
+  return gulp.src(paths.pdfs)
+    .pipe(gulp.dest(toDist()))
 })
 
 gulp.task('fonts', ['clean'], function() {
   return gulp.src(paths.fonts)
-    .pipe(gulp.dest('dist/fonts'))
+    .pipe(gulp.dest(toDist('fonts')))
 })
 
 gulp.task('watch', function() {
   var toWatch = paths.views.concat(paths.js).concat(paths.css)
-  console.log(toWatch.join('\n'))
   gulp.watch(toWatch, [ 'build' ])
 })
 
-gulp.task('build', ['clean', 'views', 'scripts', 'styles', 'images', 'fonts', 'videos'])
+gulp.task('build', [
+  'clean', 'views', 'scripts', 'styles', 'images', 'fonts', 'videos', 'pdfs'
+])
 
 gulp.task('revision', ['build'], function() {
   if (isProduction()) {
-    var toRev = ['png', 'jpg', 'svg', 'css', 'js'].map(function(ext) { return 'dist/**/*' + ext })
+    var toRev = ['.png', '.jpg', '.svg', '.css', '.js'].map(function(ext) { return toDist([ '**', '*' + ext]) })
 
     return gulp.src(toRev)
       .pipe(rev())
       .pipe(revOverride())
-      .pipe(gulp.dest('./dist'))
+      .pipe(gulp.dest(toDist()))
       .pipe(rev.manifest())
-      .pipe(gulp.dest('./dist'))
+      .pipe(gulp.dest(toDist()))
   }
 })
 
 gulp.task('make', ['revision'], function() {
   if (isProduction()) {
-    var manifest = gulp.src('./dist/rev-manifest.json');
+    var manifest = gulp.src(toDist('rev-manifest.json'))
 
-    return gulp.src('./dist/*.html')
+    return gulp.src(toDist('*.html'))
       .pipe(revReplace({manifest: manifest}))
-      .pipe(gulp.dest('./dist'));
+      .pipe(gulp.dest(toDist()));
   }
 })
 
@@ -145,4 +159,12 @@ gulp.task('default', ['watch', 'build'])
 
 function isProduction() {
   return process.env.NODE_ENV === 'production'
+}
+
+function toDist(paths) {
+  if (! paths) return path.join(DIST_FOLDER, '/')
+
+  paths = typeof paths === 'string' ? [ paths ] : paths
+
+  return path.join.apply(null, [ DIST_FOLDER ].concat(paths))
 }
