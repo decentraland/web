@@ -20,7 +20,7 @@ var DIST_PATH = './' + DIST_FOLDER
 var paths = {
   views: [ path.join('views', '*.html') ],
 
-  js: [ path.join('js', '*.js') ],
+  js: [ path.join('js', 'main.js') ],
   vendorjs: [
     path.join('js', 'vendor', 'picoModal.min.js'),
     path.join('js', 'vendor', 'chartjs.min.js')
