@@ -203,6 +203,9 @@ function getCurrentTranslations(lang) {
 
 function getFilenameRenamerForLang(lang) {
   return function(path) {
-    if (lang !== DEFAULT_LANG) path.extname = '.' + lang + '.html'
+    if (lang !== DEFAULT_LANG) {
+      if (path.basename === 'index') path.basename = ''
+      path.extname = lang + '.html'
+    }
   }
 }

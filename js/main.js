@@ -1,6 +1,8 @@
 ;(function () {
   "use strict";
 
+  var DEFAULT_LANG = 'en'
+
   // Countdown
   initializeClock('js-clock', new Date(2017, 7, 8), function() {
     getElementById('js-clock').className += 'hidden'
@@ -42,7 +44,7 @@
       url: url,
       method: 'GET',
       success: function(response) {
-        window.location.href = origin + '/thankyou?email=' + email
+        window.location.href = origin + '/thankyou' + getLangExtension() + '?email=' + email
       },
       error: function() {
         notice.innerHTML = 'We seem to be having problems subscribing you to the newsletter, please try again later.'
@@ -245,6 +247,11 @@
 
   function sendEvent(category, action, label) {
     ga('send', 'event', category, action, label)
+  }
+
+  function getLangExtension() {
+    var lang = document.documentElement.lang
+    return lang === DEFAULT_LANG ? '' : 'lang'
   }
 
 })()
