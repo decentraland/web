@@ -26,6 +26,7 @@
   "t_hours": "时",
   "t_minutes": "分",
   "t_seconds": "秒",
+  "t_timezones": "8月8日, 08:00 AM EST / 12:00 PM GMT (🇬🇧) / 08:00 PM GMT+8 (🇨🇳)",
   "t_what_is_decentraland": "Decentraland是什么?",
   "t_email_updates": "输入您的电子邮件了解最新动态",
   "t_subscribe": "订  阅",
@@ -35,7 +36,7 @@
   "t_why_decentraland_3": "为了实现这一点，Decentraland使用区块链技术作为毫无疑问的所有权记录方式.",
 
   "t_token_join_crowdsale": "参加8月8日的众售，帮助建立第一个以开放标准运行的虚拟世界",
-  "t_token_timezones": "",
+  "t_token_timezones": "8月8日, 08:00 AM EST / 12:00 PM GMT <span class=\"hidden-xs\">(🇬🇧)</span> / 08:00 PM GMT+8 <span class=\"hidden-xs\">(🇨🇳)</span>",
   "t_token_stats_1000_mana": "1000 MANA = 1 LAND",
   "t_token_stats_contribution_period": "贡献期",
   "t_token_stats_period_dates": "8月8日至8月16日",
@@ -115,8 +116,8 @@
   "t_footer_decentraland_foundation": "Decentraland基金会",
   "t_footer_copyright": "Copyright © 2017 Decentraland. All right reserved",
 
-  "t_thankyou_for_subscribing": "谢谢订阅",
-  "t_thankyou_description": "通讯订阅者首先收到重要更新和项目里程碑。我们向您发送了一封电子邮件确认您的访问",
-  "t_thankyou_complete_access": "我们只发送主要公告和发展信息，以便完整访问:",
-  "t_thankyou_connect_ctas": "<a href=\"https://telegram.me/decentraland\" target=\"_blank\" data-event-category=\"Telegram Link\" data-event-action=\"click\">电报频道</a>, 或我们的 <a href=\"https://blog.decentraland.org\" target=\"_blank\" data-event-category=\"Blog Link\" data-event-action=\"click\">博客</a>"
+  "t_thankyou_for_subscribing": "感谢您的订阅",
+  "t_thankyou_description": "订阅我们新闻邮件的朋友将会最先收到重大更新和项目里程碑事件通知。我们已经向您的邮箱发送了一封邮件以确认您的订阅",
+  "t_thankyou_complete_access": "我们只会发送重大消息更新，所以要获得更多情报，请:",
+  "t_thankyou_connect_ctas": "<a href=\"https://blog.decentraland.org\" target=\"_blank\" data-event-category=\"Blog Link\" data-event-action=\"click\">博客</a>"
 }
