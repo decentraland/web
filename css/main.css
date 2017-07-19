@@ -291,7 +291,7 @@ form .notice {
 }
 
 .navbar-logo {
-  padding: 20px 10px;
+  padding: 20px 0;
   float: left;
   display: block;
 }
@@ -347,6 +347,11 @@ form .notice {
   display: inline-block;
 }
 
+.nav.navbar-nav li .translate-link-ch {
+  top: 1px;
+  font-size: 10px;
+}
+
 .nav.navbar-nav li .navbar-slack {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -361,6 +366,10 @@ form .notice {
 @media (min-width: 400px) {
   .navbar-logo {
     padding: 20px 15px;
+  }
+
+  .nav.navbar-nav li .translate-link-ch {
+    font-size: 12px;
   }
 
   .nav > li > a {
