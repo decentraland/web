@@ -1,4 +1,5 @@
 {
+  "t_lang": "en",
   "t_menu": "Menu",
   "t_why_decentraland": "Why Decentraland?",
   "t_roadmap": "Roadmap",
@@ -110,5 +111,10 @@
   "t_communicate_for": "artists, gamers, students and online communities.",
 
   "t_footer_decentraland_foundation": "Decentraland Foundation",
-  "t_footer_copyright": "Copyright © 2017 Decentraland. All right reserved"
+  "t_footer_copyright": "Copyright © 2017 Decentraland. All right reserved",
+
+  "t_thankyou_for_subscribing": "<b>Thank you</b> for subscribing!",
+  "t_thankyou_description": "Newsletter subscribers receive important updates and project milestones first. We sent you an email to confirm your access.",
+  "t_thankyou_complete_access": "We only email major announcements and developments, so for complete access:",
+  "t_thankyou_connect_ctas": "<a href=\"https://telegram.me/decentraland\" target=\"_blank\" data-event-category=\"Telegram Link\" data-event-action=\"click\">Telegram channels</a>, or our <a href=\"https://blog.decentraland.org\" target=\"_blank\" data-event-category=\"Blog Link\" data-event-action=\"click\">blog</a>"
 }

@@ -1,4 +1,5 @@
 {
+  "t_lang": "ch",
   "t_menu": "菜单",
   "t_why_decentraland": "为什么选择Decentraland?",
   "t_roadmap": "路线图",
@@ -112,5 +113,10 @@
   "t_communicate_for": "艺术家，玩家，学生和在线社区而设",
 
   "t_footer_decentraland_foundation": "Decentraland基金会",
-  "t_footer_copyright": "Copyright © 2017 Decentraland. All right reserved"
+  "t_footer_copyright": "Copyright © 2017 Decentraland. All right reserved",
+
+  "t_thankyou_for_subscribing": "谢谢订阅",
+  "t_thankyou_description": "通讯订阅者首先收到重要更新和项目里程碑。我们向您发送了一封电子邮件确认您的访问",
+  "t_thankyou_complete_access": "我们只发送主要公告和发展信息，以便完整访问:",
+  "t_thankyou_connect_ctas": "<a href=\"https://telegram.me/decentraland\" target=\"_blank\" data-event-category=\"Telegram Link\" data-event-action=\"click\">电报频道</a>, 或我们的 <a href=\"https://blog.decentraland.org\" target=\"_blank\" data-event-category=\"Blog Link\" data-event-action=\"click\">博客</a>"
 }

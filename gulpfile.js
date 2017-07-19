@@ -1,6 +1,7 @@
 var fs          = require('fs')
 var path        = require('path')
 var merge       = require('merge2');
+var del         = require('del');
 var gulp        = require('gulp')
 var rename      = require('gulp-rename')
 var addsrc      = require('gulp-add-src')
@@ -9,7 +10,6 @@ var uglify      = require('gulp-uglify')
 var minifyCss   = require('gulp-minify-css')
 var imagemin    = require('gulp-imagemin')
 var rename      = require('gulp-rename')
-var clean       = require('gulp-clean');
 var nunjucks    = require('gulp-nunjucks')
 var rev         = require("gulp-rev")
 var revReplace  = require("gulp-rev-replace")
@@ -42,12 +42,13 @@ var paths = {
 }
 
 gulp.task('clean', function() {
-  return gulp.src(DIST_FOLDER, {read: false})
-      .pipe(clean())
+  return del(DIST_FOLDER)
 })
 
 gulp.task('scripts', function() {
   var dist = toDist('js')
+
+  del.sync(dist)
 
   var copy = gulp.src(paths.copyjs)
     .pipe(gulp.dest(dist))
@@ -71,6 +72,8 @@ gulp.task('scripts', function() {
 
 gulp.task('styles', function() {
   var dist = toDist('css')
+
+  del.sync(dist)
 
   var copy = gulp.src(paths.copycss)
     .pipe(gulp.dest(dist))
@@ -98,18 +101,24 @@ gulp.task('views', function() {
   return merge.apply(null, streams)
 })
 
-gulp.task('images', function() {
-  var favicon = gulp.src(paths.favicon)
+gulp.task('favicon', function() {
+  return gulp.src(paths.favicon)
     .pipe(gulp.dest(toDist()))
+})
+
+gulp.task('images', function() {
+  var dist = toDist('images')
+
+  del.sync(dist)
 
   var images = gulp.src(paths.images)
 
   if (isProduction() && process.env.MIN_IMAGES) {
     images = images.pipe(imagemin({optimizationLevel: 5}))
   }
-  images = images.pipe(gulp.dest(toDist('images')))
+  images = images.pipe(gulp.dest(dist))
 
-  return merge(favicon, images)
+  return images
 })
 
 gulp.task('videos', function() {
@@ -132,7 +141,7 @@ gulp.task('watch', function() {
   gulp.watch(toWatch, [ 'build' ])
 })
 
-gulp.task('revision', ['views', 'scripts', 'styles', 'images', 'fonts', 'videos', 'pdfs'], function() {
+gulp.task('revision', ['views', 'scripts', 'styles', 'favicon', 'images', 'fonts', 'videos', 'pdfs'], function() {
   var toRev = ['.png', '.jpg', '.svg', '.min.css', '.min.js'].map(function(ext) { return toDist([ '**', '*' + ext]) })
 
   return gulp.src(toRev)
@@ -149,14 +158,6 @@ gulp.task('build', ['revision'], function() {
   return gulp.src(toDist('*.html'))
     .pipe(revReplace({manifest: manifest}))
     .pipe(gulp.dest(toDist()))
-})
-
-gulp.task('make', function() {
-  var langs = fs.readdirSync('./translations')
-
-  if (langs) {
-    gulp.start('build')
-  }
 })
 
 gulp.task('default', ['watch', 'build'])

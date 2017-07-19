@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "gulp watch",
-    "build": "NODE_ENV='production' gulp make"
+    "build": "NODE_ENV='production' gulp build"
   },
   "repository": {
     "type": "git",
@@ -14,9 +14,9 @@
   "author": "Decentraland",
   "homepage": "https://github.com/decentraland/web",
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-add-src": "^0.2.0",
-    "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-minify-css": "^1.2.1",
