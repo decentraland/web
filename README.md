@@ -8,14 +8,16 @@
 
 ### Landing
 
-To build the main landing, run:
+To build the main landing you need to build it first. In development run:
+
+```
+npm start
+```
+
+and for a production build, run:
 
 ```
 npm run build
 ```
 
-to develop
-
-```
-npm start
-```
+You'll need to serve the `/dist` folder which will contain the compiled files.

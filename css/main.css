@@ -750,9 +750,13 @@ header .countdown small {
 /* -----------------------------------------------------------------------
   Explanation */
 
+/* -----------------------------------------------------------------------
+  Token Sale: Explanation */
+
 .explanation {
-  padding-bottom: 130px;
-  background: #F8FAFF;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: #FFF;
 }
 
 .explanation .cards {
@@ -787,6 +791,10 @@ header .countdown small {
 }
 
 @media (min-width: 768px) {
+  .explanation {
+    padding-bottom: 0;
+  }
+
   .explanation .cards .card {
     width: 230px;
     height: 310px;
@@ -1101,7 +1109,6 @@ header .countdown small {
 
 .faqs {
   width: 100%;
-  padding-top: 140px;
   background-color: #F8FAFF;
 }
 
@@ -1273,108 +1280,10 @@ header .countdown small {
 
 
 /* -----------------------------------------------------------------------
-  Blog */
-
-.blog {
-  background-color: #F8FAFF;
-}
-
-.blog .cards {
-  width: 100%;
-  padding-bottom: 5px;
-  margin: auto;
-  position: relative;
-  text-align: center;
-}
-
-.blog .cards .card {
-  width: 250px;
-  height: 360px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-
-.blog .cards .card .card-body {
-  padding: 10px 20px 30px;
-}
-
-.blog .cards .card h3 {
-  margin-bottom: 30px;
-  color: #3E396B;
-}
-
-.blog .cards .card a {
-  color: #36316D;
-  text-decoration: none;
-}
-
-.blog .cards .card img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.blog .arrow {
-  top: 0;
-  width: 30px;
-  height: 100%;
-  position: absolute;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.blog .prev {
-  background-image: url("../images/prev-arrow.svg");
-  left: -10px;
-}
-
-.blog .next {
-  background-image: url("../images/next-arrow.svg");
-  right: -10px;
-}
-
-@media (min-width: 370px) {
-  .blog .cards {
-    width: 85%;
-  }
-}
-
-@media (min-width: 790px) {
-  .blog .cards {
-    width: 65%;
-  }
-
-  .blog .cards .card {
-    width: 240px;
-    margin-right: 10px;
-    margin-bottom: 0;
-    display: inline-block;
-  }
-}
-
-@media (min-width: 880px) {
-  .blog .cards .card {
-    width: 260px;
-    margin-right: 20px;
-  }
-  .blog .cards .card:last-child {
-    margin-right: 0;
-  }
-
-  .blog .cards .card .card-body {
-    padding-left: 23px;
-    padding-right: 23px;
-  }
-}
-
-
-/* -----------------------------------------------------------------------
   Communicate */
 
 .communicate {
-  background-color: #F8FAFF;
-  padding-bottom: 100px;
+  background: #F8FAFF;
 }
 
 .communicate .title {
@@ -1393,16 +1302,6 @@ header .countdown small {
   text-align: center;
   margin-top: 50px;
 }
-
-.communicate .contact-icon {
-  width: 19px;
-  height: 19px;
-  margin-right: 4px;
-  margin-left: 0;
-  display: inline-block;
-  vertical-align: middle;
-}
-.communicate .contact-icon-slack { background-position: -34px -70px; }
 
 .communicate form {
   margin-top: 25px;
@@ -1436,7 +1335,8 @@ header .countdown small {
 
 @media (min-width: 768px) {
   .communicate {
-    padding-bottom: 160px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .communicate .title {
@@ -1449,7 +1349,22 @@ header .countdown small {
 }
 
 
-/* FOOTER */
+/* -----------------------------------------------------------------------
+  Join Slack */
+
+.join-slack .contact-icon {
+  width: 19px;
+  height: 19px;
+  margin-right: 4px;
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.join-slack .contact-icon-slack { background-position: -34px -70px; }
+
+
+/* -----------------------------------------------------------------------
+  Footer */
 
 .footer {
   background-color: #0a1645;
@@ -1541,60 +1456,20 @@ header .countdown small {
 
 
 /* -----------------------------------------------------------------------
-  Token Sale: Header */
-
-.token-sale header {
-  padding-bottom: 180px;
-  background-image: url("../images/tokensale-background.png");
-  background-position: 0 0;
-}
-
-.token-sale header .description {
-  margin: 10px auto;
-}
-
-@media (min-width: 768px) {
-  .token-sale header {
-    background-size: cover;
-  }
-
-  .token-sale header .description {
-    margin: 30px auto;
-  }
-}
-
-
-/* -----------------------------------------------------------------------
-  Token Sale: Menu */
-
-.token-sale .menu .dash {
-  margin-bottom: 10px;
-}
-
-
-/* -----------------------------------------------------------------------
-  Token Sale: Explanation */
-
-.token-sale .explanation {
-  padding-top: 60px;
-  padding-bottom: 40px;
-  background: #FFF;
-}
-
-@media (min-width: 768px) {
-  .token-sale .explanation {
-    padding-bottom: 0;
-  }
-}
-
-
-/* -----------------------------------------------------------------------
   Token Sale: Token sale terms */
 
 .token-sale-terms {
-  font-family: "Source Sans Pro Light", sans-serif;
   color: #36316D;
   background: #F8FAFF;
+  font-family: "Source Sans Pro Light", sans-serif;
+}
+
+.token-sale-terms h2.title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.token-sale-terms p.subtitle {
+  margin-bottom: 4px;
 }
 
 .token-sale-terms .token-sale-title {
@@ -1611,17 +1486,17 @@ header .countdown small {
 }
 
 .token-sale-terms .stats {
-  text-align: center;
+  margin: 20px 0;
 }
 
-.token-sale-terms .stats > .stat {
+.token-sale-terms .stats .stat {
   padding: 20px 0;
   border-right: 1px solid #E0E6ED;
 }
-.token-sale-terms .stats > .stat:last-child {
+.token-sale-terms .stats .stat:last-child {
   border-right: none;
 }
-.token-sale-terms .stats > .stat:after {
+.token-sale-terms .stats .stat:after {
   content: " ";
   width: 40%;
   height: 1px;
@@ -1631,7 +1506,7 @@ header .countdown small {
   position: absolute;
   bottom: 0;
 }
-.token-sale-terms .stats > .stat.no-border:after {
+.token-sale-terms .stats .stat.no-border:after {
   border: none;
 }
 
@@ -1690,8 +1565,14 @@ header .countdown small {
     padding-top: 200px; /*80 + 120*/
   }
 
+  .token-sale-terms .stats {
+    margin: 35px 0;
+  }
+
   .token-sale-terms .charts {
-    margin: 45px auto 0;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
     display: inline-block;
     text-align: center;
@@ -1733,11 +1614,11 @@ header .countdown small {
     margin: auto;
   }
 
-  .token-sale-terms .stats > .stat {
+  .token-sale-terms .stats .stat {
     padding-bottom: 20px;
     padding-top: 10px;
   }
-  .token-sale-terms .stats > .stat:after {
+  .token-sale-terms .stats .stat:after {
     display: none;
   }
 }
@@ -1760,10 +1641,18 @@ header .countdown small {
 }
 
 .thankyou header h2.title {
-  margin-top: 100px;
-  margin-bottom: 90px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .thankyou header .description {
   max-width: 590px;
+  font-size: 16px;
+}
+
+@media (min-width: 1050px) {
+  .thankyou header h2.title {
+    margin-top: 100px;
+    margin-bottom: 90px;
+  }
 }
