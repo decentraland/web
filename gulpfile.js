@@ -1,6 +1,8 @@
+var fs          = require('fs')
 var path        = require('path')
+var merge       = require('merge2');
 var gulp        = require('gulp')
-var merge       = require('merge-stream')
+var rename      = require('gulp-rename')
 var addsrc      = require('gulp-add-src')
 var concat      = require('gulp-concat')
 var uglify      = require('gulp-uglify')
@@ -13,6 +15,7 @@ var rev         = require("gulp-rev")
 var revReplace  = require("gulp-rev-replace")
 var revOverride = require('gulp-rev-css-url')
 
+var DEFAULT_LANG = process.env.DEFAULT_LANG || 'en'
 var DIST_FOLDER = process.env.DIST_FOLDER || 'dist'
 var DIST_PATH = './' + DIST_FOLDER
 
@@ -81,9 +84,18 @@ gulp.task('styles', function() {
 })
 
 gulp.task('views', function() {
-  return gulp.src(paths.views)
-    .pipe(nunjucks.compile({}))
-    .pipe(gulp.dest(toDist()))
+  var langs = getAvailableLanguages()
+
+  var streams = langs.map(function(lang) {
+    var translations = getCurrentTranslations(lang)
+
+    return gulp.src(paths.views)
+      .pipe(nunjucks.compile(translations))
+      .pipe(rename(getFilenameRenamerForLang(lang)))
+      .pipe(gulp.dest(toDist()))
+  })
+
+  return merge.apply(null, streams)
 })
 
 gulp.task('images', function() {
@@ -120,30 +132,30 @@ gulp.task('watch', function() {
   gulp.watch(toWatch, [ 'build' ])
 })
 
-gulp.task('build', [
-  'views', 'scripts', 'styles', 'images', 'fonts', 'videos', 'pdfs'
-])
+gulp.task('revision', ['views', 'scripts', 'styles', 'images', 'fonts', 'videos', 'pdfs'], function() {
+  var toRev = ['.png', '.jpg', '.svg', '.min.css', '.min.js'].map(function(ext) { return toDist([ '**', '*' + ext]) })
 
-gulp.task('revision', ['build'], function() {
-  if (isProduction()) {
-    var toRev = ['.png', '.jpg', '.svg', '.css', '.js'].map(function(ext) { return toDist([ '**', '*' + ext]) })
-
-    return gulp.src(toRev)
-      .pipe(rev())
-      .pipe(revOverride())
-      .pipe(gulp.dest(toDist()))
-      .pipe(rev.manifest())
-      .pipe(gulp.dest(toDist()))
-  }
+  return gulp.src(toRev)
+    .pipe(rev())
+    .pipe(revOverride())
+    .pipe(gulp.dest(toDist()))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest(toDist()))
 })
 
-gulp.task('make', ['revision'], function() {
-  if (isProduction()) {
-    var manifest = gulp.src(toDist('rev-manifest.json'))
+gulp.task('build', ['revision'], function() {
+  var manifest = gulp.src(toDist('rev-manifest.json'))
 
-    return gulp.src(toDist('*.html'))
-      .pipe(revReplace({manifest: manifest}))
-      .pipe(gulp.dest(toDist()));
+  return gulp.src(toDist('*.html'))
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest(toDist()))
+})
+
+gulp.task('make', function() {
+  var langs = fs.readdirSync('./translations')
+
+  if (langs) {
+    gulp.start('build')
   }
 })
 
@@ -164,4 +176,32 @@ function toDist(paths) {
   paths = typeof paths === 'string' ? [ paths ] : paths
 
   return path.join.apply(null, [ DIST_FOLDER ].concat(paths))
+}
+
+function getAvailableLanguages() {
+  var jsonRegexp = /\.json$/
+  var langs = fs.readdirSync('./translations')
+
+  return langs.filter(function(langFilename) {
+    return langFilename.search(jsonRegexp) !== -1
+  }).map(function(langFilename) {
+    return langFilename.replace(jsonRegexp, '')
+  })
+}
+
+function getCurrentTranslations(lang) {
+  try {
+    var translations = fs.readFileSync('./translations/' + lang + '.json')
+    return JSON.parse(translations)
+
+  } catch(error) {
+    console.log('Found an error trying to get the translations for the lang: ' + lang)
+    throw error
+  }
+}
+
+function getFilenameRenamerForLang(lang) {
+  return function(path) {
+    if (lang !== DEFAULT_LANG) path.extname = '.' + lang + '.html'
+  }
 }

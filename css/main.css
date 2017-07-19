@@ -1474,7 +1474,8 @@ header .countdown small {
 
 .token-sale-terms .token-sale-title {
   font-size: 28px;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
   color: #3E396B;
 }
 .token-sale-terms .token-sale-subtitle {
@@ -1511,7 +1512,7 @@ header .countdown small {
 }
 
 .token-sale-terms .stats .token-sale-title {
-  margin-top: 0;
+  margin-bottom: 0;
 }
 .token-sale-terms .stats .token-sale-subtitle {
   font-size: 16px;
@@ -1614,10 +1615,6 @@ header .countdown small {
     margin: auto;
   }
 
-  .token-sale-terms .stats .stat {
-    padding-bottom: 20px;
-    padding-top: 10px;
-  }
   .token-sale-terms .stats .stat:after {
     display: none;
   }
