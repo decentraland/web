@@ -188,15 +188,23 @@
     var link = null
 
     for(var i = 0; i < links.length; i++) {
-      if (links[i].href.search(window.location.host) === -1) continue
-
-      qsStart = links[i].search ? '&' : '?'
-      links[i].search += qsStart + qs
+      if (isSubdomain(links[i]) || isPath(links[i])) {
+        qsStart = links[i].search ? '&' : '?'
+        links[i].search += qsStart + qs
+      }
     }
   }
 
   function getQueryString() {
     return window.location.search.slice(1) // Without the leading '?', it's an empty string if there's no search
+  }
+
+  function isSubdomain(link) {
+    return link.hostname.search('.' + window.location.host) !== -1
+  }
+
+  function isPath(link) {
+    return link.hostname === window.location.hostname && link.pathname !== '/'
   }
 
   function toggleNavbar() {
