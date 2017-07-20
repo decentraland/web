@@ -368,7 +368,10 @@ form .notice {
     padding: 20px 15px;
   }
 
-  .nav.navbar-nav li .navbar-launch { color: #FFA500; }
+  .nav.navbar-nav li .navbar-launch {
+    color: #FFA500;
+    display: block;
+  }
   .nav.navbar-nav li .translate-link-ch {
     font-size: 12px;
   }
@@ -530,7 +533,7 @@ header .title b {
 }
 
 header .description {
-  max-width: 550px;
+  max-width: 600px;
   margin: 0 auto;
   font-size: 15px;
   line-height: 22px;
@@ -629,7 +632,7 @@ header .scroll p {
   }
 
   header .description {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 30px;
   }
 
