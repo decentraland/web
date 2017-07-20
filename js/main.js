@@ -3,6 +3,8 @@
 
   var DEFAULT_LANG = 'en'
 
+  forwardQueryStringToLinks()
+
   // Countdown
   initializeClock('js-clock', new Date(2017, 7, 8), function() {
     getElementById('js-clock').className += 'hidden'
@@ -36,7 +38,6 @@
     var email = form.querySelector('[type="email"]').value
     var url = form.action + '&EMAIL='  + email
     var notice = form.querySelector('.js-submit-notice')
-    var origin = window.location.origin
 
     notice.innerHTML = 'Sending...'
 
@@ -44,7 +45,10 @@
       url: url,
       method: 'GET',
       success: function(response) {
-        window.location.href = origin + '/thankyou' + getLangExtension() + '?email=' + email
+        var pathname = '/thankyou' + getLangExtension()
+        var search = '?email=' + email + '&' + getQueryString()
+
+        window.location.href = window.location.origin + pathname + search
       },
       error: function() {
         notice.innerHTML = 'We seem to be having problems subscribing you to the newsletter, please try again later.'
@@ -174,6 +178,26 @@
 
   // ---------------------------------------------------
   // Utils
+
+  function forwardQueryStringToLinks() {
+    var qs = getQueryString()
+    var qsStart = ''
+    if (! qs) return
+
+    var links = document.getElementsByTagName('a')
+    var link = null
+
+    for(var i = 0; i < links.length; i++) {
+      if (links[i].href.search(window.location.host) === -1) continue
+
+      qsStart = links[i].search ? '&' : '?'
+      links[i].search += qsStart + qs
+    }
+  }
+
+  function getQueryString() {
+    return window.location.search.slice(1) // Without the leading '?', it's an empty string if there's no search
+  }
 
   function toggleNavbar() {
     var menu = getElementById('js-menu')
