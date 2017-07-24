@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Decentraland World.data.unityweb",
+"asmCodeUrl": "Decentraland World.asm.code.unityweb",
+"asmMemoryUrl": "Decentraland World.asm.memory.unityweb",
+"asmFrameworkUrl": "Decentraland World.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
